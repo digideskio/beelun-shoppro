@@ -1,0 +1,97 @@
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <allow>
+		<!-- DWR is no longer used in shoppro. We can remove this later on. -->
+        <create creator="spring" javascript="ItemManager">
+            <param name="beanName" value="itemManager"/>
+            <include method="getAll"/>
+            <include method="getItemByUrl"/>
+            <include method="save"/>
+            <include method="removeItem"/>
+            <include method="removeItems"/>
+        </create>
+        <create creator="spring" javascript="BrandManager">
+            <param name="beanName" value="brandManager"/>
+            <include method="getAll"/>
+            <include method="get"/>
+            <include method="getByName"/>
+            <include method="save"/>
+        </create>
+        <create creator="spring" javascript="UserManager">
+            <param name="beanName" value="userManager"/>
+            <include method="getUsers"/>
+            <include method="getUser"/>
+            <include method="saveUser"/>
+        </create>
+        <create creator="spring" javascript="MyGlobManager">
+            <param name="beanName" value="myGlobManager"/>
+            <include method="fetch"/>
+            <include method="save"/>
+        </create>
+        <create creator="spring" javascript="OrderManager">
+            <param name="beanName" value="orderManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="getNewOrder"/>
+            <include method="getPaidOrder"/>
+        </create>
+        <create creator="spring" javascript="TabManager">
+            <param name="beanName" value="tabManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="remove"/>
+        </create>
+        <create creator="spring" javascript="CategoryManager">
+            <param name="beanName" value="categoryManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="remove"/>
+        </create>
+        <create creator="spring" javascript="Tab2CategoryMapManager">
+            <param name="beanName" value="tab2CategoryMapManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="saveLazy"/>
+        </create>
+        <create creator="spring" javascript="Category2ItemMapManager">
+            <param name="beanName" value="category2ItemMapManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="saveLazy"/>
+        </create>
+        <create creator="spring" javascript="PaypalAccessInfoManager">
+            <param name="beanName" value="paypalAccessInfoManager"/>
+            <include method="fetch"/>
+            <include method="save"/>
+        </create>
+        <create creator="spring" javascript="ArticleManager">
+            <param name="beanName" value="articleManager"/>
+            <include method="getAll"/>
+            <include method="save"/>
+            <include method="remove"/>
+        </create>
+        <convert converter="bean" match="com.beelun.shoppro.model.Item"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Brand"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.User"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Address"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.MyGlob"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Tab"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Category"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Tab2CategoryMap"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Role"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Article"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Membership"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Category2ItemMap"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.ExpressCorp"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.PaymentTool"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.Order"/>
+        <convert converter="enum" match="com.beelun.shoppro.model.type.OrderStatusEnum"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.OrderItem"/>
+        <convert converter="enum" match="com.beelun.shoppro.model.type.ShipDateEnum"/>
+        <convert converter="enum" match="com.beelun.shoppro.model.type.ShipTimeEnum"/>
+        <convert converter="bean" match="com.beelun.shoppro.model.PaypalAccessInfo"/>
+        <convert converter="enum" match="com.beelun.shoppro.model.type.USStateEnum"/>
+        <convert converter="enum" match="com.beelun.shoppro.model.type.SiteTypeEnum"/>
+    </allow>
+</dwr>

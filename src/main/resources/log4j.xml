@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="10000KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="File" value="shoppro.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="net.sf.ehcache">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.apache">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="org.hibernate.SQL">
+		<level value="WARN" />
+	</logger>
+
+	<!-- Suppress warnings from Commons Validator -->
+	<logger name="org.apache.commons.validator.ValidatorResources">
+		<level value="ERROR" />
+	</logger>
+
+	<!-- Suppress invalid warning messages from JSF -->
+	<logger name="org.apache.myfaces.shared_impl.renderkit.html">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="com.beelun">
+		<level value="DEBUG" />
+	</logger>
+
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</log4j:configuration>

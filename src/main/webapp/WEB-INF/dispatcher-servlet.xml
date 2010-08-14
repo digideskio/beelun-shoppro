@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="org.springframework.dao.DataAccessException">        
+                    dataAccessFailure
+                </prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="multipartResolver" class="com.beelun.shoppro.web.CustomizedMultipartResolver">
+        <property name="maxUploadSize" value="8388608"/> <!-- 8MB -->
+    </bean>
+
+    <!-- Activates mapping of @Controller -->
+    <context:component-scan base-package="com.beelun.shoppro.web"/>
+
+    <!-- Activates @Autowired for Controllers -->
+	<context:annotation-config/>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="order" value="0"/>
+		<property name="interceptors">
+			<list>
+				<ref local="forceLocaleInterceptor" />
+			</list>
+		</property>        
+	</bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="order" value="1"/>
+        <property name="mappings">
+            <value>
+                /index.html=filenameController
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="filenameController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+
+    <!-- FreeMarker Configurer and View Resolver -->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/"/>
+        <property name="defaultEncoding" value="utf-8" />        
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="datetime_format">MM/dd/yyyy</prop>
+                <prop key="number_format">0.######</prop>
+                <prop key="whitespace_stripping">true</prop>                
+            </props>
+        </property>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="xml_escape" value-ref="fmXmlEscape"/>
+                <entry key="html_escape" value-ref="fmHtmlEscape" />
+            </map>
+        </property>
+    </bean>
+
+    <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+    <bean id="fmHtmlEscape" class="freemarker.template.utility.HtmlEscape" />
+
+	<!-- Locale support -->
+	<!-- localeChangeInterceptor is replaced by myLocaleSetter
+    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
+    -->
+	<bean id="forceLocaleInterceptor" class="com.beelun.shoppro.web.ForceLocaleInterceptor" />
+        
+	<!-- declare the resolver. We must set this because default one AcceptHeaderLocaleResolver is not able to set locale in Interceptor -->  
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	  <property name="cacheSeconds" value="3"/>
+	  <property name="defaultEncoding" value="UTF-8"/>
+	  <property name="basenames">
+	    <list>
+	      <value>classpath:messages</value>
+	    </list>
+	  </property>
+	</bean>
+	
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="cache" value="true"/>        
+        <property name="requestContextAttribute" value="rc"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSessionAttributes" value="true" /> 
+        <property name="contentType"><value>text/html;charset=utf-8</value></property>        
+    </bean>
+    
+</beans>

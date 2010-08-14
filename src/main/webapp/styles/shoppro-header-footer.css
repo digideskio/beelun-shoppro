@@ -1,0 +1,389 @@
+#stage
+{
+    margin: 0 auto;
+    padding: 20px 44px;
+    position: relative;
+    width: 932px;
+}
+
+.header_li
+{
+    display: inline;
+    padding: 0 0 0 20px;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    vertical-align: baseline;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: right;
+    line-height: 100%;
+    color: #3E3E3E;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+}
+.header_li a
+{
+    color: #676767;
+    text-decoration: none;
+    font-weight: normal;
+}
+.header_li a:hover
+{
+    color: blue;
+    text-decoration: underline;
+}
+#myCartButton
+{
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    background: #2C2C2C url(../images/cart_bk.png) repeat-x scroll 0 0;
+    border: 1px solid #2C2C2C;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 100%;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    line-height: 100%;
+    color: #3E3E3E;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+#cartLink
+{
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent url(../images/cartIconSprite.png) no-repeat scroll 10px 0;
+    font-size: 10px;
+    font-weight: normal;
+    color: #FFFFFF !important;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px 0 34px;
+    border: 0 none;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    vertical-align: baseline;
+    text-align: right;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+}
+
+#stage #ms-header h1 {
+	height:58px;
+	left:-10px;
+	position:absolute;
+	top:-6px;
+	width:214px;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent none repeat scroll 0 0;
+	border:0 none;
+	font-size:100%;
+	margin:0;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:0;
+	padding:0;
+	vertical-align:baseline;
+	line-height:100%;
+	color:#3E3E3E;
+	font-family:"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+
+#stage #ms-header h1 span {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/logo.gif) no-repeat scroll left top;
+	cursor:pointer;
+	position:absolute;
+	display:block;
+	height:100%;
+	width:100%;
+	border:0 none;
+	font-size:100%;
+	margin:0;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:0;
+	padding:0;
+	vertical-align:baseline;
+}
+
+#stage #siteSearch input[type="text"] {
+	background-color:transparent;
+	border:0 none;
+	color:#676767;
+	font-size:10px;
+	height:15px;
+	margin:0;
+	padding:0 5px;
+	width:235px;
+}
+
+ul
+{
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#ms-footer-container
+{
+    clear: both;
+    padding: 16px 0 0;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    vertical-align: baseline;
+    line-height: 100%;
+    color: #3E3E3E;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+#ms-footer
+{
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    border-top: 2px solid #565656;
+    clear: both;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    font-size: 100%;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    line-height: 100%;
+    color: #3E3E3E;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+#ms-footer a
+{
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+    color: #676767;
+    text-decoration: none;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 100%;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+#ms-footer a:hover
+{
+    color: blue;
+    text-decoration: underline;
+}
+#intNav a:hover
+{
+    color: none;
+    text-decoration: none;
+}
+#ms-footer > ul > li
+{
+    margin: 0;
+}
+#ms-footer > ul
+{
+    margin: 8px 0 5px;
+    line-height: 100%;
+}
+#poweredby
+{
+    line-height: normal;
+    bottom: 0;
+    position: absolute;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    margin-right: auto;
+    margin-left: auto;
+}
+ul.horizontalLayout > li
+{
+    list-style-type: none;
+    text-align: center;
+    float: left;
+}
+#poweredby_container
+{
+    left: 400px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+#intNav
+{
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    font-size: 11px;
+    width: 120px;
+	border: 1px solid #CCCCCC;
+	padding: 0 2px 0 2px;    
+    z-index: 999;
+}
+#intNav a
+{
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    display: block;
+    padding: 0 7px;
+    width: 106px;
+    color: #676767;
+    text-decoration: none;
+    line-height: 25px;
+    font-family: "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+	background:transparent url(../images/china.gif) no-repeat scroll 100% center;
+	text-align: left;   
+}
+#intNavli
+{
+    margin: 0;
+}
+#corpNav
+{
+    margin: 5px;
+    left: 100px;
+    position: relative;
+}
+div.checkout_steps {
+	height:28px;
+	width:932px;
+	position:relative;	
+	margin-top:-50px;
+	margin-bottom:30px;
+}
+div#checkout_step1 {
+	background-image:url(../images/checkout-step1.png);
+}
+div#checkout_step2 {
+	background-image:url(../images/checkout-step2.png);
+}
+div#checkout_step3 {
+	background-image:url(../images/checkout-step3.png);
+}
+li#company_year {
+	margin: 0 0 0 110px;
+	font-weight: bold;
+}
+#admin_copyright_container
+{
+    left: 350px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+#admin_copyright
+{
+    line-height: normal;
+    bottom: 0;
+    position: absolute;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    margin-right: auto;
+    margin-left: auto;
+}

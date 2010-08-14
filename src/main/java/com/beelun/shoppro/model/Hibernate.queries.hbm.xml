@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  
+  <query name="MediaManager.getByIdList">
+    <![CDATA[
+      select m
+      from com.beelun.shoppro.model.Media as m
+      where m.id in (:idList)
+      order by m.id
+    ]]>
+  </query>
+  
+  <query name="ItemManager.getByIdList">
+    <![CDATA[
+      select item
+      from com.beelun.shoppro.model.Item as item
+      where item.id in (:itemIdList)
+      order by item.id
+    ]]>
+  </query>
+
+  <query name="TabManager.getByIdList">
+    <![CDATA[
+      select tab
+      from com.beelun.shoppro.model.Tab as tab
+      where tab.id in (:idList)
+      order by tab.id
+    ]]>
+  </query>
+
+  <query name="CategoryManager.getByIdList">
+    <![CDATA[
+      select c
+      from com.beelun.shoppro.model.Category as c
+      where c.id in (:idList)
+      order by c.id
+    ]]>
+  </query>
+
+  <query name="BrandManager.getByIdList">
+    <![CDATA[
+      select b
+      from com.beelun.shoppro.model.Brand as b
+      where b.id in (:idList)
+      order by b.id
+    ]]>
+  </query>
+
+  <query name="ArticleManager.getByIdList">
+    <![CDATA[
+      select b
+      from com.beelun.shoppro.model.Article as b
+      where b.id in (:idList)
+      order by b.id
+    ]]>
+  </query>
+  
+  <query name="ItemManager.getItemTotalValue">
+    <![CDATA[
+      select sum(item.sellPrice)
+      from com.beelun.shoppro.model.Item as item
+      where item.id in (:itemIdList)
+    ]]>
+  </query>
+
+  <!-- Need two named query for asc/desc. -->
+  <!-- Refer to: https://forums.hibernate.org/viewtopic.php?f=1&t=961591 -->
+  <query name="ItemManager.getByCondition_Asc">
+    <![CDATA[ 
+	  select m.item from com.beelun.shoppro.model.Category2ItemMap m where m.category.id=(:categoryId)
+	  order by (:myOrderBy) asc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getByCondition_Desc">
+    <![CDATA[ 
+	  select m.item from com.beelun.shoppro.model.Category2ItemMap m where m.category.id=(:categoryId)
+	  order by (:myOrderBy) desc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getCountByCondition">
+    <![CDATA[ 
+	  select count(*) from com.beelun.shoppro.model.Category2ItemMap m where m.category.id=(:categoryId)
+    ]]>
+  </query>
+
+  <query name="ItemManager.getByCondition_All_Desc">
+    <![CDATA[ 
+	  select item from com.beelun.shoppro.model.Item item
+	  order by (:myOrderBy) desc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getByCondition_All_Asc">
+    <![CDATA[ 
+	  select item from com.beelun.shoppro.model.Item item
+	  order by (:myOrderBy) asc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getByCondition_Uncategorized_Asc">
+    <![CDATA[  
+	  select item from com.beelun.shoppro.model.Item item where item not in
+	  (select m.item from com.beelun.shoppro.model.Category2ItemMap m)
+	  order by (:myOrderBy) asc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getByCondition_Uncategorized_Desc">
+    <![CDATA[  
+	  select item from com.beelun.shoppro.model.Item item where item not in
+	  (select m.item from com.beelun.shoppro.model.Category2ItemMap m)
+	  order by (:myOrderBy) desc
+    ]]>
+  </query>
+
+  <query name="ItemManager.getCountByCondition_Uncategorized">
+    <![CDATA[  
+	  select count(*) from com.beelun.shoppro.model.Item item where item not in
+	  (select m.item from com.beelun.shoppro.model.Category2ItemMap m)
+    ]]>
+  </query>
+  
+  <query name="C2IMapManager.removeByItems">
+    <![CDATA[  
+	  delete from com.beelun.shoppro.model.Category2ItemMap m where m.item.id in (:itemIds)
+    ]]>
+  </query>
+
+  <query name="C2IMapManager.getItemIdByCategoryIdAndItemList">
+    <![CDATA[  
+	  select m.item.id from com.beelun.shoppro.model.Category2ItemMap m where m.category.id = (:categoryId) and m.item.id in (:itemIdList)
+    ]]>
+  </query>
+
+  <query name="T2CMapManager.getCategoryIdByTabIdAndCategoryList">
+    <![CDATA[  
+	  select m.category.id from com.beelun.shoppro.model.Tab2CategoryMap m where m.tab.id = (:tabId) and m.category.id in (:categoryIdList)
+    ]]>
+  </query>
+
+  <query name="MediaManager.getByFileName">
+    <![CDATA[  
+	  select m from com.beelun.shoppro.model.Media m where m.fileName = (:fileName)
+    ]]>
+  </query>
+     
+</hibernate-mapping>

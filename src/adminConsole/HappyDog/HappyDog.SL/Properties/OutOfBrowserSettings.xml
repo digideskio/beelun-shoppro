@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="Shoppro Admin Console - Beelun.com" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Beelun Shoppro Admin Console on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Shoppro Admin Console - Beelun.com" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

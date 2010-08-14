@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <table name="shoppro_myglob">
+        <column>id</column>
+        <column>shopName</column>
+        <column>slogan</column>
+        <column>phoneNumber</column>
+        <column>logoAbsoluteUrl</column>
+        <column>address</column>
+        <column>page404</column>
+        <column>page500</column>
+        <column>pageNoSearchResult</column>
+        <column>footer</column>
+        <column>googleCustSearchCode</column>
+        <column>signupAgreement</column>
+        <column>unlockEmailTemplate</column>
+        <column>resetPasswordMailTemplate</column>
+        <column>version</column>
+        <column>siteType</column>
+        <row>
+            <value description=""><![CDATA[1]]></value>
+            <value description=""><![CDATA[SmarTech Consulting Inc.]]></value>
+            <value description=""><![CDATA[Your slogan goes here.]]></value>
+            <value description=""><![CDATA[(949)838-0102]]></value>
+            <value description=""><![CDATA[http://www.smartechconsulting.com/site/graphics/st-logo.gif]]></value>
+            <value description=""><![CDATA[Your address goes here.]]></value>
+            <value description=""><![CDATA[<p>Your 404 error page goes here.</p>]]></value>
+            <value description=""><![CDATA[<p>Your 500 error page goes here.</p>]]></value>
+            <value description=""><![CDATA[<p>No search result.</p>]]></value>
+            <value description=""><![CDATA[<span>Smartech consulting (949)838-0102 </span> <br/>
+				<a href="mailto:sales@smartechconsulting.com">sales@smartechconsulting.com
+				]]></value>
+            <value description=""><![CDATA[Your google cust search code.]]></value>
+            <value description=""><![CDATA[Your signup agreement goes here.]]></value>
+            <value><![CDATA[Dear ${userName}, unlock url is: ${unlockUrl}. Thanks.]]></value>
+            <value><![CDATA[Dear ${userName}, reset password url is: ${resetPasswordUrl}. Thanks.]]></value>
+            <value><![CDATA[5.0]]></value>
+            <value><![CDATA[0]]></value> <!-- CN -->
+        </row>
+    </table> 
+    <table name="shoppro_address">
+        <column>id</column>
+        <column>name</column>
+        <column>address</column>
+        <column>zip</column>
+        <column>recipientName</column>
+        <column>phoneNumber</column>
+        <column>mobileNumber</column>
+        <column>firstName</column>
+        <column>lastName</column>
+        <column>address2</column>
+        <column>city</column>
+        <column>state</column>
+        <row>
+            <value>0</value>
+            <value><![CDATA[Office's address]]></value>
+            <value><![CDATA[NO 888, Huashang Rd.]]></value>
+            <value><![CDATA[200000]]></value>
+            <value><![CDATA[顺溜]]></value>
+            <value><![CDATA[888888]]></value>
+            <value><![CDATA[138000000]]></value>
+            <value><![CDATA[F]]></value>
+            <value><![CDATA[L]]></value>
+            <value><![CDATA[a2]]></value>
+            <value><![CDATA[Seattle]]></value>
+            <value><![CDATA[0]]></value>
+        </row>
+        <row>
+            <value>1</value>
+            <value><![CDATA[Home's address]]></value>
+            <value><![CDATA[NO 999, Huashang Rd.]]></value>
+            <value><![CDATA[300000]]></value>
+            <value><![CDATA[令狐冲]]></value>
+            <value><![CDATA[888888]]></value>
+            <value><![CDATA[138000000]]></value>
+            <value><![CDATA[F2]]></value>
+            <value><![CDATA[L2]]></value>
+            <value><![CDATA[a22]]></value>
+            <value><![CDATA[Seattle]]></value>
+            <value><![CDATA[1]]></value>
+        </row>
+    </table>    
+    <table name="shoppro_user">
+        <column>id</column>
+        <column>name</column>
+        <column>email</column>
+        <column>password</column>
+        <column>enabled</column>
+        <column>accountExpired</column>
+        <column>accountLocked</column>
+        <column>credentialsExpired</column>
+        <column>shippingAddress</column>
+        <column>billingAddress</column>
+        <column>createdWhen</column>
+        <column>lastLogin</column>
+        <column>sameAddress</column>
+        <row>
+            <value description="id">1</value>
+            <value description="name">Bill</value>
+            <value description="email"><![CDATA[bill@beelun.com]]></value>
+            <!-- password:beelun -->
+            <value description="password"><![CDATA[61ef8485fe9d3b54cbc918a19870bdaa6d777e61]]></value>
+            <value>1</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>1</value>
+            <value>2009-10-29</value>
+            <value>2009-11-29</value>
+            <value>0</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="name">Allen</value>
+            <value description="email"><![CDATA[allen@beelun.com]]></value>
+            <!-- password:beelun -->
+            <value description="password"><![CDATA[61ef8485fe9d3b54cbc918a19870bdaa6d777e61]]></value>
+            <value>1</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>1</value>
+            <value>1</value>
+            <value>2009-10-29</value>
+            <value>2009-11-29</value>
+            <value>0</value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="name">Admin</value>
+            <value description="email"><![CDATA[admin@smc.com]]></value>
+            <!-- password:beelun -->
+            <value description="password"><![CDATA[61ef8485fe9d3b54cbc918a19870bdaa6d777e61]]></value>
+            <value>1</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>2009-10-29</value>
+            <value>2009-11-29</value>
+            <value>0</value>
+        </row>
+        <row>
+            <value description="id">4</value>
+            <value description="name">test1</value>
+            <value description="email"><![CDATA[test1@beelun.com]]></value>
+            <!-- password:beelun -->
+            <value description="password"><![CDATA[61ef8485fe9d3b54cbc918a19870bdaa6d777e61]]></value>
+            <value>1</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+            <value>2009-10-29</value>
+            <value>2009-11-29</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value description="id">5</value>
+            <value description="name">locked user</value>
+            <value description="email"><![CDATA[test2@beelun.com]]></value>
+            <!-- password:beelun -->
+            <value description="password"><![CDATA[61ef8485fe9d3b54cbc918a19870bdaa6d777e61]]></value>
+            <value>1</value>
+            <value>0</value>
+            <value>1</value>
+            <value>0</value>
+            <value>1</value>
+            <value>1</value>
+            <!-- 
+            <value>asdgjfq34jr5q324krjw3</value>
+            -->
+            <value>2009-10-29</value>
+            <value>2009-11-29</value>
+            <value>0</value>
+        </row>
+    </table>
+    <table name="shoppro_paymenttool">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>
+        <column>enabled</column>
+        <row>
+            <value>0</value>
+            <value><![CDATA[Paypal]]></value>
+            <value><![CDATA[paypal desp]]></value>
+            <value><![CDATA[1]]></value>
+        </row>
+        <row>
+            <value>1</value>
+            <value><![CDATA[支付宝]]></value>
+            <value><![CDATA[...]]></value>
+            <value><![CDATA[1]]></value>
+        </row>
+        <row>
+            <value>2</value>
+            <value><![CDATA[foo]]></value>
+            <value><![CDATA[bar]]></value>
+            <value><![CDATA[0]]></value>
+        </row>
+    </table>       
+    <table name="shoppro_expresscorp">
+        <column>id</column>
+        <column>shortName</column>
+        <column>fullName</column>
+        <column>enabled</column>
+        <column>webSite</column>
+        <row>
+            <value>0</value>
+            <value><![CDATA[UPS]]></value>
+            <value><![CDATA[UPS desp]]></value>
+            <value><![CDATA[1]]></value>
+            <value><![CDATA[http://ups.com]]></value>
+        </row>
+        <row>
+            <value>1</value>
+            <value><![CDATA[上海申通]]></value>
+            <value><![CDATA[...]]></value>
+            <value><![CDATA[1]]></value>
+            <value><![CDATA[http://st.com]]></value>
+        </row>
+        <row>
+            <value>2</value>
+            <value><![CDATA[foo]]></value>
+            <value><![CDATA[bar]]></value>
+            <value><![CDATA[0]]></value>
+            <value><![CDATA[http://balal.com]]></value>
+        </row>
+    </table>          
+    <table name="shoppro_role">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>
+        <row>
+            <value>0</value>
+            <value><![CDATA[ROLE_ADMIN]]></value>
+            <value><![CDATA[admins who can maintain/run this site.]]></value>
+        </row>
+        <row>
+            <value>1</value>
+            <value><![CDATA[ROLE_CUSTOMER]]></value>
+            <value><![CDATA[customers who buy products from us.]]></value>
+        </row>
+    </table> 
+    <table name="shoppro_membership">
+        <column>id</column>
+        <column>user</column>
+        <column>role</column>
+        <row>
+            <value>0</value>
+            <value>1</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value>1</value>
+            <value>2</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>3</value>
+            <value>0</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>4</value>
+            <value>1</value>
+        </row>
+    </table>    
+    <table name="shoppro_tab">
+        <column>id</column>
+        <column>name</column>
+        <column>isShown</column>
+        <column>content</column>
+        <column>showOrder</column>
+        <column>pageTitle</column>
+        <column>keywords</column>
+        <column>description</column>
+        <column>metaTag</column>
+        <column>url</column>
+        <row>
+        	<value>1</value>
+        	<value>Home</value>
+        	<value>1</value>
+        	<value><![CDATA[
+	<div class="sitestripe">
+	  <a title="Free Shipping!" href="/s/todo.html">
+    	<img alt="Free shipping!" src="/images/free-shipping.png"/>
+      </a>
+	</div>        	
+	<ul class="multihero">
+		<li class="feature"><a title="Save 10%!" href="/a/todo.html" style="outline-color: -moz-use-text-color; outline-style: none; outline-width: medium;"><img alt="Save 10%" src="/images/big-big-ad.png"/></a></li>
+	</ul>]]></value>
+        	<value>0</value>
+        	<value><![CDATA[Smartech Consulting, Inc. (949)838-0102]]></value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[desp1,desp2]]></value>
+        	<value><![CDATA[<meta name="name1" content="content1">]]></value>
+        	<value><![CDATA[index.html]]></value>
+        </row>
+        <row>
+        	<!-- DONT CHANGE THE ID. THIS FIELD IS MUST -->
+        	<value>2</value>
+        	<value>Product</value>
+        	<value>1</value>
+        	<value><![CDATA[<p>Produtct page goes here, for example something on sale, or best sellers.</p>]]></value>
+        	<value>2</value>
+        	<value>Refurbished Enterprise Equipment</value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand1,brand2]]></value>
+        	<value><![CDATA[<meta name="name2" content="content2">]]></value>
+        	<value><![CDATA[product.html]]></value>
+        </row>
+        <row>
+        	<value>3</value>
+        	<value>Test Equipment</value>
+        	<value>1</value>
+        	<value><![CDATA[<p>test equipment page goes here.</p>]]></value>
+        	<value>3</value>
+        	<value><![CDATA[Test Equipment - Refurbished,  Buy, Trade-In,  Lease - Smartech Consulting @ (949)838-0102]]></value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand1,brand2]]></value>
+        	<value><![CDATA[<meta name="name2" content="content2">]]></value>
+        	<value><![CDATA[test-equipment.html]]></value>
+        </row>
+        <row>
+        	<value>4</value>
+        	<value>Service</value>
+        	<value>1</value>
+        	<value><![CDATA[<p>service content goes here.</p>]]></value>
+        	<value>4</value>
+        	<value>Service</value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand1,brand2]]></value>
+        	<value><![CDATA[<meta name="name2" content="content2">]]></value>
+        	<value><![CDATA[service.html]]></value>
+        </row>        
+        <row>
+        	<value>5</value>
+        	<value>About Us</value>
+        	<value>1</value>
+        	<value><![CDATA[
+        	<h1>Reseller of Used Networking Hardware, Fiber optic, Network and Telecom Testing Equipment</h1>
+			<p>Established in 2003 and located in Irvine, CA, Smartech Consulting specialize in the sale of used and refurbished hardware from some of the industries’ top manufacturers like NetApp, Agilent, Spirent, Ixia, etc. By purchasing your remarketed IT from Smartech Consulting, you'll have the opportunity to dramatically reduce your costs while maintaining peace of mind that your gear will be of the highest quality.</p>
+			<p>todo...</p>
+			]]></value>
+        	<value>5</value>
+        	<value>About Us</value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand1,brand2]]></value>
+        	<value><![CDATA[<meta name="name2" content="content2">]]></value>
+        	<value><![CDATA[about-us.html]]></value>
+        </row>        
+        <row>
+        	<value>6</value>
+        	<value>Information</value>
+        	<value>1</value>
+        	<value><![CDATA[<p>info content goes here.</p>]]></value>
+        	<value>6</value>
+        	<value>Information</value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand1,brand2]]></value>
+        	<value><![CDATA[<meta name="name2" content="content2">]]></value>
+        	<value><![CDATA[information.html]]></value>
+        </row>        
+        <row>
+        	<value>50</value>
+        	<value>Hide me</value>
+        	<value>0</value>
+        	<value><![CDATA[<p>hide-me page goes here</p>]]></value>
+        	<value>2</value>
+        	<value>hide me page title</value>
+        	<value><![CDATA[storage,fiber channel]]></value>
+        	<value><![CDATA[brand3,brand4]]></value>
+        	<value><![CDATA[<meta name="name3" content="content3">]]></value>
+        	<value><![CDATA[hide-me.html]]></value>
+        </row>
+    </table>
+    <table name="shoppro_category">
+        <column>id</column>
+        <column>name</column>
+        <column>isShown</column>
+        <column>pageTitle</column>
+        <column>keywords</column>
+        <column>description</column>
+        <column>metaTag</column>
+        <column>url</column>
+        <row>
+             <value><![CDATA[1]]></value>       
+             <value><![CDATA[Spirent]]></value>              
+             <value><![CDATA[1]]></value>       
+             <value><![CDATA[Spirent Communications Refurbished Equipment - Smartech Consulting @ (949)838-0102]]></value>       
+             <value><![CDATA[Spirent SmartBits, Adtech, Abacus, SMB-200, SMB-2000, SMB-6000, LAN POS, AT GX ML SX WN, Spirent Supply, Spirent Equipments, Spirent Suppliers, Spirent Dealers, Spirent Resellers, Spirent Wholesalers, Spirent Brokers, Spirent Parts Suppliers, Spirent Parts Dealers, Spirent Parts Resellers, Spirent Parts Wholesalers, Spirent Parts Brokers, Buy Spirent Parts, Buy Spirent Equipment, Buy Spirent Spare Parts, Sell Spirent Parts, Sell Spirent Equipment, Sell Spirent Spare Parts, Buy Sell Spirent Modules, Buy Sell Spirent Chassis]]]></value>       
+             <value><![CDATA[Spirent Communications, Network and Systems such as Ethernet networks,IP,VoIP,VPNs, TriplePlay,CDMA,and Location Based Services. For Sale at Smartech Consulting, Inc. Specialized in Spirent, Abacus, Adtech, INET Spectura. - Call us at (949)838-0102]]]></value>       
+             <value><![CDATA[<meta name="name3" content="content3">]]></value>       
+             <value><![CDATA[spirent.html]]></value>       
+    	</row>
+        <row>
+             <value><![CDATA[2]]></value>       
+             <value><![CDATA[NetApp]]></value>              
+             <value><![CDATA[1]]></value>       
+             <value><![CDATA[NetApp Refurbished Enterprise Storage]]></value>       
+             <value><![CDATA[NetApp Reseller, Used NetApp, NetApp Equipment, Network Appliance, Network storage, Filer Head, NetCache, NetApp Shelf, NetApp Accessories, NetApp hard drive, Network Appliance network, file, servers, fileservers, native, file sharing, snapshots, WAFL, CIFS, multiprotocol, multi protocol, multi-protocol, filers, filer, network file servers, NFS, network data servers, netapps, NFS Server, Network Appliances, netapp, netcache, failover, cluster, fail-over, decru, alacritus, iscsi, reseller]]]></value>       
+             <value><![CDATA[NetApp provides an integrated solution that enables you to store, deliver, and manage data and content to achieve your business goals.]]]></value>       
+             <value><![CDATA[<meta name="foo" content="bar">]]></value>       
+             <value><![CDATA[netapp.html]]></value>       
+    	</row>
+        <row>
+             <value><![CDATA[3]]></value>       
+             <value><![CDATA[Ixia]]></value>              
+             <value><![CDATA[1]]></value>       
+             <value><![CDATA[Ixia for measuring the communications,electronics,life sciences and chemical analysis.]]></value>       
+             <value><![CDATA[Ixia measuring communications electronics, chassis network life sciences, chemical analysis. General Equipment, For Sale Refurbished, Rent, Lease, Trade-In- Smartech Consulting, Inc- Call us at (949)838-0102]]]></value>       
+             <value><![CDATA[Ixia delivers tools that sense,measure and interpret the communications,electronics,life sciences and chemical analysis. General Equipment, For Sale Refurbished, Rent, Lease, Trade-In- Smartech Consulting, Inc- Call us at (949)838-0102]]]></value>       
+             <value><![CDATA[<meta name="foo" content="bar">]]></value>       
+             <value><![CDATA[ixia.html]]></value>       
+    	</row>
+        <row>
+             <value><![CDATA[4]]></value>
+             <value><![CDATA[Ameritec]]></value>              
+             <value><![CDATA[1]]></value>       
+             <value><![CDATA[Ameritec - Refurbished,  Buy, Trade-In,  Lease - Smartech Consulting @ (949)838-0102]]></value>       
+             <value><![CDATA[Ameritec Test Equipment, Ameritec test generator equipment communications network wireless PTT's providers manufacturers, Ameritec, repair, service, calibration, test equipment, test equipment calibration, test equipment service, test equipment repair , Amplifier, Calibrator, Data Acquisition, Frequency Counter, Function Generator, Hipot  Ground Tester, Meter (General), Multimeter, Optical Test (General), Oscilloscope, Power Supply (DC), RF Network Analyzer, Signal Generator, Spectrum Analyzer. General Equipment, For Sale Refurbished, Rent, Lease, Trade-In- Smartech Consulting, Inc, (949)838-0102]]]></value>       
+             <value><![CDATA[Ameritec test equipment is used by communications equipment manufacturers, telephone companies, network and wireless service providers, and PTT's. Specialized in Spirent, Abacus, Adtech, INET Spectura. General Equipment, For Sale Refurbished, Rent, Lease, Trade-In- Smartech Consulting, Inc- Call us at (949)838-0102]]]></value>       
+             <value><![CDATA[<meta name="foo" content="bar">]]></value>       
+             <value><![CDATA[ameritec.html]]></value>       
+    	</row>
+    </table>
+    <table name="shoppro_tab2categorymap">
+        <column>id</column>
+        <column>categoryOrder</column>
+        <column>shoppro_category</column>
+        <column>shoppro_tab</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+   	    <row>
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[5]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[3]]></value>  
+	    </row>
+	 </table>
+    <table name="shoppro_brand">
+        <column>id</column>
+        <column>name</column>
+        <column>image</column>
+        <column>webSite</column>
+        <row>
+        	<value>0</value>
+        	<value>Spirent</value>
+        	<value>1.jpg</value>
+        	<value><![CDATA[http://www.spirent.com]]></value>
+        </row>
+        <row>
+        	<value>1</value>
+        	<value>NetApp</value>
+        	<value>2.jpg</value>
+        	<value><![CDATA[http://www.netapp.com]]></value>
+        </row>
+        <row>
+        	<!-- DONT CHANGE HE ID. This brand will be assign if there is no brand during import -->
+        	<value>10</value> 
+        	<value>No Brand</value>
+        	<value>no-brand.jpg</value>
+        	<value><![CDATA[http://www.smartechconsulting.com]]></value>
+        </row>
+    </table>	    
+    <table name="shoppro_item">
+        <column>id</column>
+        <column>netSuiteId</column>
+        <column>itemName</column>
+        <column>serialNumber</column>
+        <column>shortDescription</column>
+        <column>detailedDescription</column>
+        <column>image</column>
+        <column>thumbNail</column>
+        <column>listPrice</column>
+        <column>sellPrice</column>
+        <column>inventoryNumber</column>
+        <column>isShown</column>
+        <column>pageTitle</column>
+        <column>keywords</column>
+        <column>description</column>
+        <column>metaTag</column>
+        <column>url</column>
+        <column>shoppro_brand</column>
+	    <row>
+	        <value><![CDATA[0]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+	        <value><![CDATA[Item1]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[this is good product, here is why.]]></value>  	   
+	        <value><![CDATA[media.jpg]]></value>  	   
+	        <value><![CDATA[4.jpg]]></value>  	   
+	        <value><![CDATA[30.0]]></value>  	   
+	        <value><![CDATA[28.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item1,storage]]></value>  	   
+	        <value><![CDATA[desp1,desp2]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-a-b-c-d]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[Item2]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[this is good product, here is why.]]></value>  	   
+	        <value><![CDATA[media2.jpg]]></value>  	   
+	        <value><![CDATA[6.jpg]]></value>  	   
+	        <value><![CDATA[130.0]]></value>  	   
+	        <value><![CDATA[128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-2.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[2]]></value>  	   
+	        <value><![CDATA[2]]></value>  	   
+	        <value><![CDATA[Item3]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[this is good product, here is why.]]></value>  	   
+	        <value><![CDATA[media3.jpg]]></value>  	   
+	        <value><![CDATA[8.jpg]]></value>  	   
+	        <value><![CDATA[1130.0]]></value>  	   
+	        <value><![CDATA[1128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-3.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[3]]></value>  	   
+	        <value><![CDATA[3]]></value>  	   
+	        <value><![CDATA[Item5]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[no fk point to me]]></value>  	   
+	        <value><![CDATA[media5.jpg]]></value>  	   
+	        <value><![CDATA[8.jpg]]></value>  	   
+	        <value><![CDATA[1130.0]]></value>  	   
+	        <value><![CDATA[1128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-5.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[6]]></value>  	   
+	        <value><![CDATA[6]]></value>  	   
+	        <value><![CDATA[Item5]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[no fk point to me]]></value>  	   
+	        <value><![CDATA[media5.jpg]]></value>  	   
+	        <value><![CDATA[8.jpg]]></value>  	   
+	        <value><![CDATA[1130.0]]></value>  	   
+	        <value><![CDATA[1128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-6.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[Item5]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[no fk point to me]]></value>  	   
+	        <value><![CDATA[media5.jpg]]></value>  	   
+	        <value><![CDATA[8.jpg]]></value>  	   
+	        <value><![CDATA[1130.0]]></value>  	   
+	        <value><![CDATA[1128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-5.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+	    <row>
+	        <value><![CDATA[7]]></value>  	   
+	        <value><![CDATA[7]]></value>  	   
+	        <value><![CDATA[Not shown in web site]]></value>  	   
+	        <value><![CDATA[xxxx-yyyy]]></value>  	   
+	        <value><![CDATA[good product]]></value>  	   
+	        <value><![CDATA[no fk point to me]]></value>  	   
+	        <value><![CDATA[media5.jpg]]></value>  	   
+	        <value><![CDATA[8.jpg]]></value>  	   
+	        <value><![CDATA[1130.0]]></value>  	   
+	        <value><![CDATA[1128.99]]></value>  	   
+	        <value><![CDATA[5]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+	        <value><![CDATA[good product, item]]></value>  	   
+	        <value><![CDATA[item2,storage]]></value>  	   
+	        <value><![CDATA[desp3,desp4]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[item-6.html]]></value>  	   
+	        <value><![CDATA[0]]></value>  	   
+    	</row>
+    </table>
+    <table name="shoppro_article">
+        <column>id</column>
+        <column>title</column>
+        <column>content</column>
+        <column>isShown</column>
+        <column>pageTitle</column>
+        <column>keywords</column>
+        <column>description</column>
+        <column>metaTag</column>
+        <column>url</column>
+	    <row>
+	        <value><![CDATA[0]]></value>  	   
+	        <value><![CDATA[To do]]></value>  	   
+	        <value><![CDATA[under construction]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[To do]]></value>  	   
+	        <value><![CDATA[todo]]></value>  	   
+	        <value><![CDATA[aaa]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[todo]]></value>  	   
+		</row>    
+	    <row>
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[Contact us]]></value>  	   
+	        <value><![CDATA[phone: xxx, address: yyy]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[Contact us]]></value>  	   
+	        <value><![CDATA[contact]]></value>  	   
+	        <value><![CDATA[how to contact us]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[contact-us]]></value>  	   
+		</row>    
+	    <row>
+	        <value><![CDATA[2]]></value>  	   
+	        <value><![CDATA[Privacy statement]]></value>  	   
+	        <value><![CDATA[ps content]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[Privacy statement]]></value>  	   
+	        <value><![CDATA[Privacy statement,]]></value>  	   
+	        <value><![CDATA[Privacy statement]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[privacy-statement]]></value>  	   
+		</row>    
+	    <row>
+	        <value><![CDATA[3]]></value>  	   
+	        <value><![CDATA[Terms of Use]]></value>  	   
+	        <value><![CDATA[tos content]]></value>  	   
+	        <value><![CDATA[1]]></value>  	   
+	        <value><![CDATA[Terms of Use]]></value>  	   
+	        <value><![CDATA[Terms of Use]]></value>  	   
+	        <value><![CDATA[Terms of Use]]></value>  	   
+	        <value><![CDATA[<meta name="name3" content="content3">]]></value>  	   
+	        <value><![CDATA[terms-of-use]]></value>  	   
+		</row>
+	</table>
+    <table name="shoppro_category2itemmap">
+        <column>id</column>
+        <column>itemOrder</column>
+        <column>shoppro_category</column>
+        <column>shoppro_item</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[0]]></value>  
+	    </row>
+   	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+     	<row>
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[0]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[5]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[0]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[6]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[7]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[8]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[4]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    </row>
+    </table>
+    <table name="shoppro_order">
+        <column>id</column>
+        <column>orderDate</column>
+        <column>user</column>
+        <column>shippingAddress</column>
+        <column>billingAddress</column>
+        <column>shipDate</column>
+        <column>shipTime</column>
+        <column>notes</column>
+        <column>expressCorp</column>
+        <column>paymentTool</column>
+        <column>status</column>
+        <column>sameAddress</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[2009-11-20]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>    
+	    	<value><![CDATA[my notes]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[0]]></value>
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2009-11-20]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>    
+	    	<value><![CDATA[my notes]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    </row>
+    </table>
+    <table name="shoppro_orderitem">
+        <column>id</column>
+        <column>itemCount</column>
+        <column>sellPrice</column>
+        <column>theOrder</column>
+        <column>itemInXmlString</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[28.99]]></value>  
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item>
+    <brand>
+        <id>0</id>
+        <image>1.jpg</image>
+        <name>Spirent</name>
+        <webSite>http://www.spirent.com</webSite>
+    </brand>
+    <description>desp1,desp2</description>
+    <detailedDescription>this is good product, here is why.</detailedDescription>
+    <id>0</id>
+    <image>media.jpg</image>
+    <inventoryNumber>5</inventoryNumber>
+    <isShown>true</isShown>
+    <keywords>item1,storage</keywords>
+    <listPrice>30.00</listPrice>
+    <metaTag>&lt;meta name=&quot;name3&quot; content=&quot;content3&quot;&gt;</metaTag>
+    <myUrl>item/0-item-a-b-c-d.html</myUrl>
+    <name>Item1</name>
+    <netSuiteId>0</netSuiteId>
+    <pageTitle>good product, item</pageTitle>
+    <sellPrice>28.99</sellPrice>
+    <serialNumber>xxxx-yyyy</serialNumber>
+    <shortDescription>good product</shortDescription>
+    <thumbNail>4.jpg</thumbNail>
+    <updated>2010-01-02T01:14:00.281+08:00</updated>
+    <url>item-a-b-c-d</url>
+</item>
+	    	]]></value>  
+		</row>    
+	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[28.99]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item>
+    <brand>
+        <id>0</id>
+        <image>1.jpg</image>
+        <name>Spirent</name>
+        <webSite>http://www.spirent.com</webSite>
+    </brand>
+    <description>desp1,desp2</description>
+    <detailedDescription>this is good product, here is why.</detailedDescription>
+    <id>0</id>
+    <image>media.jpg</image>
+    <inventoryNumber>5</inventoryNumber>
+    <isShown>true</isShown>
+    <keywords>item1,storage</keywords>
+    <listPrice>30.00</listPrice>
+    <metaTag>&lt;meta name=&quot;name3&quot; content=&quot;content3&quot;&gt;</metaTag>
+    <myUrl>item/0-item-a-b-c-d.html</myUrl>
+    <name>Item1</name>
+    <netSuiteId>0</netSuiteId>
+    <pageTitle>good product, item</pageTitle>
+    <sellPrice>28.99</sellPrice>
+    <serialNumber>xxxx-yyyy</serialNumber>
+    <shortDescription>good product</shortDescription>
+    <thumbNail>4.jpg</thumbNail>
+    <updated>2010-01-02T01:14:00.281+08:00</updated>
+    <url>item-a-b-c-d</url>
+</item>
+	    	]]></value>  
+		</row>    
+	    <row>
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[120]]></value>  
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item>
+    <brand>
+        <id>0</id>
+        <image>1.jpg</image>
+        <name>Spirent</name>
+        <webSite>http://www.spirent.com</webSite>
+    </brand>
+    <description>desp3,desp4</description>
+    <detailedDescription>this is good product, here is why.</detailedDescription>
+    <id>1</id>
+    <image>media2.jpg</image>
+    <inventoryNumber>5</inventoryNumber>
+    <isShown>true</isShown>
+    <keywords>item2,storage</keywords>
+    <listPrice>130.00</listPrice>
+    <metaTag>&lt;meta name=&quot;name3&quot; content=&quot;content3&quot;&gt;</metaTag>
+    <myUrl>item/1-item-2.html</myUrl>
+    <name>Item2</name>
+    <netSuiteId>1</netSuiteId>
+    <pageTitle>good product, item</pageTitle>
+    <sellPrice>128.99</sellPrice>
+    <serialNumber>xxxx-yyyy</serialNumber>
+    <shortDescription>good product</shortDescription>
+    <thumbNail>6.jpg</thumbNail>
+    <updated>2010-01-02T01:21:36.844+08:00</updated>
+    <url>item-2.html</url>
+</item>]]></value>  
+		</row>    
+    </table>
+    <table name="shoppro_paypalaccessinfo">
+        <column>id</column>
+        <column>apiUserName</column>
+        <column>apiPassword</column>
+        <column>apiSignature</column>
+        <column>useSandbox</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[baocun_1255238794_biz_api1.gmail.com]]></value>  
+	    	<value><![CDATA[1255238799]]></value>  
+	    	<value><![CDATA[An5ns1Kso7MWUdW4ErQKJJJ4qi4-AetgJLGWxdyw0Gbl6tsR7j6VsPD.]]></value>  
+	    	<value><![CDATA[1]]></value>  
+		</row>    
+    </table>
+    <table name="shoppro_media">
+        <column>id</column>
+        <column>fileName</column>
+        <column>title</column>
+        <column>caption</column>
+        <column>description</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[478.jpg]]></value>  
+	    	<value><![CDATA[GF825 title]]></value>  
+	    	<value><![CDATA[GF825 caption]]></value>  
+	    	<value><![CDATA[Network Appliance NetApp GF825 V-Series Filer Head]]></value>  
+		</row>    
+	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[479.jpg]]></value>  
+	    	<value><![CDATA[PXI-2565 title]]></value>  
+	    	<value><![CDATA[PXI-2565 caption]]></value>  
+	    	<value><![CDATA[a 16-channel general-purpose relay switch module]]></value>  
+		</row>    
+	    <row>
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[480.jpg]]></value>  
+	    	<value><![CDATA[PXI-2530 title]]></value>  
+	    	<value><![CDATA[PXI-2530 caption]]></value>  
+	    	<value><![CDATA[a high-density, multiconfiguration multiplexer/matrix switch module.]]></value>  
+		</row>    
+    </table>
+    <table name="shoppro_template">
+        <column>id</column>
+        <column>name</column>
+        <column>fileNamePrefix</column>
+        <column>description</column>
+        <column>templateContent</column>
+        <column>templateType</column>
+	    <row>
+	    	<value><![CDATA[0]]></value>  
+	    	<value><![CDATA[item default]]></value>  
+	    	<value><![CDATA[defaultItemTemplate]]></value>  
+	    	<value><![CDATA[item default]]></value>  
+	    	<value><![CDATA[<#--
+	Introduction:
+		This is the default template page for the item. If there is no explicit assigned template
+		Controller will use this template.
+
+	Url: 
+		/item/*
+		
+	Controller:
+		com.beelun.shoppro.web.ItemController.handleRequest(HttpServletRequest, HttpServletResponse)
+		
+	Model:
+	
+		Type		Name				Description
+		-----------------------------------------------------
+		Item		item				item for this page
+		Category	currentCategory		the category in user's latest browsing. This object is put into session
+	
+-->
+
+<#if item?exists>
+<head>
+  <title>${item.pageTitle}</title>
+  <#if item.keywords?exists && item.keywords?length!=0>
+  	<meta name="keywords" content="${item.keywords}" />
+  </#if>
+  <#if item.description?exists && item.description?length!=0>
+  	<meta name="description" content="${item.description}" />
+  </#if> ${item.metaTag}
+</head>
+<body>
+  <#-- show item here -->
+  <div>
+    <p class="ulTitle">
+      ${rc.getMessage("ui.currentLocation")}: <a href="${rc.getContextPath()}/index.html">
+        <span>${rc.getMessage("ui.home")}</span></a> <#if currentCategory?exists> >> <a href="${currentCategory.myUrl}">
+          <span>${currentCategory.name}</span></a> >> <span>${item.name}</span> </#if>
+    </p>
+  </div>
+  <div class="itemDiv grayBackground" style="max-height:10000px;">
+      <img class="producttitle" alt="" title="" src="${rc.getContextPath()}/images/logo.gif" />
+    <div class="productDetailContainer">
+      <div class="divider">
+      </div>
+      <p class="para">
+        <b>${item.name}</b></p>
+        <br/>
+      <div class="middlecontainer" id="middlecontainer">
+      	  <div style="border:1px dashed #CCCCCC;padding:2px">
+      		Serial Number: ${(item.serialNumber)!"N/A"}<br /><br />
+          Inventory Number: ${(item.inventoryNumber)!"N/A"}
+          </div>
+          <br /><br />
+          <div style="border:1px dashed #CCCCCC;padding:2px">
+          Description:<br />
+        
+        ${item.detailedDescription}
+        
+        </div>
+      </div>
+     <br/><br/>
+      <div class="addToCartDiv">
+        <div class="button2 rounded">
+          <span id="${item.id}" class="addToCart_button">Add to Cart</span>
+        </div>
+        <div class="detailPrice">
+          <ins class="displaynone"></ins><del class="normalprice">${item.sellPrice?string.currency}</del>
+          <div class="clearfloat">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="itemBigPicContainer">
+    <#if item.image?contains("http")>
+      <a href="${item.image}"><img class="itemBigPic" src="${item.image}" alt="${item.name}" style="width: 333px;
+        height: 280px" /></a>
+        
+    <#elseif item.image == "">
+    <img class="itemBigPic" src="${rc.getContextPath()}/images/NoPhotoAvailable.jpg" alt="${item.name}" style="width: 333px; height: 280px"/>
+    <#else>
+        <a href="${rc.getContextPath()}/images/${item.image}"><img class="itemBigPic" src="${rc.getContextPath()}/images/${item.image}" alt="${item.name}" style="width: 333px;
+        height: 280px"/></a>
+    </#if>
+    </div>
+    <div class="clearfloat">
+    </div>
+  </div>
+</body>
+<#else> empty page. </#if> ]]></value>  
+	    	<value><![CDATA[0]]></value>   
+		</row>    
+	    <row>
+	    	<value><![CDATA[1]]></value>  
+	    	<value><![CDATA[category defualt]]></value>  
+	    	<value><![CDATA[defaultCategoryTemplate]]></value>  
+	    	<value><![CDATA[category defualt]]></value>  
+	    	<value><![CDATA[
+<#--
+	Introduction:
+		This is the default template page for the category. If there is no explicit assigned template
+		Controller will use this template.
+
+	Url:
+		/category/*
+	
+	Controller:
+		com.beelun.shoppro.web.CategoryController.handleRequest(HttpServletRequest, HttpServletResponse)
+		
+	Model:
+		Type		Name				Description
+		---------------------------------------------
+		Category	currentCategory		the category the request is accessing
+		List<Item>	itemList			the list of item for this category
+
+-->
+
+<#if currentCategory?exists>
+<head>
+    <title>${currentCategory.pageTitle}</title>
+    <#if currentCategory.keywords?exists && currentCategory.keywords?length != 0>
+    	<meta name="keywords" content="${currentCategory.keywords}" />
+    </#if>    
+    <#if currentCategory.description?exists && currentCategory.description?length != 0>
+    	<meta name="description" content="${currentCategory.description}" />
+    </#if>     
+    ${currentCategory.metaTag!""}    
+</head>
+<body>
+<#--
+	show itemList here in some way
+-->
+	<div>
+		<p class="ulTitle">
+			${rc.getMessage("ui.currentLocation")}: 
+			<a href="${rc.getContextPath()}/index.html"><span>${rc.getMessage("ui.home")}</span></a> >>
+			<a href="${currentCategory.myUrl}"><span>${currentCategory.name}</span></a>
+		</p>
+	</div>
+	
+	<!-- Title -->
+	<div class="results-heading" style="">
+	<h3 class="transparent">${currentCategory.name}</h3>
+	</div>
+	<!-- End of Title -->
+	
+	<!-- List -->
+	<ul class="product_list">
+	
+		<#if !itemList?exists || itemList?size==0>
+		<!--TBD-->
+		<#else>
+			<#list itemList as item>
+			<!-- Item -->
+			<!--<li class="product-first" onclick="document.location='http://store.microsoft.com/microsoft/Office-Language-Pack-2007-Language-Spanish/product/2D3A57CF'">-->
+			<li class="product_item"  style="width:99%;height:100px">
+				
+				<#if item.image?contains("http")>
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${item.image}" title="${item.name}" alt=""/>
+				<#elseif item.image == "">
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${rc.getContextPath()}/images/NoPhotoAvailable.jpg" title="${item.name}" alt=""/>
+				<#else>
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${rc.getContextPath()}/images/${item.image}" title="${item.name}" alt=""/>
+				</#if>
+				<h4 style="float:none; margin-left:150px;"> <a href="${item.myUrl}">${item.name}</a> </h4>
+				<ul style="float:none; margin-left:150px;">
+					<li>${(item.shortDescription)!"No description."}</li>
+				</ul>
+				<div class="price" style="top:30px;left:460px">
+					<span>${item.sellPrice?string.currency}</span>
+				</div>
+				<div class="button3 rounded" style="width:95px;">
+					<span id="${item.id}" class="addToCart_button">Add to Cart</span>
+					<!--<a href="#"><span id="${item.id}" class="addToCart">Buy</span></a>-->
+				</div>
+			</li>
+			<!--End of one item-->
+    		</#list>
+		</#if>
+	</ul>
+	<!-- End of List -->
+
+</body>
+<#else>
+	empty page.
+</#if>
+
+]]></value>  
+	    	<value><![CDATA[1]]></value>   
+		</row>    
+	    <row>
+	    	<value><![CDATA[2]]></value>  
+	    	<value><![CDATA[category 1]]></value>  
+	    	<value><![CDATA[categoryTemplate1]]></value>  
+	    	<value><![CDATA[category 1]]></value>  
+	    	<value><![CDATA[<#if currentCategory?exists>
+<head>
+    <title>${currentCategory.pageTitle}</title>
+    <#if currentCategory.keywords?exists && currentCategory.keywords?length != 0>
+    	<meta name="keywords" content="${currentCategory.keywords}" />
+    </#if>    
+    <#if currentCategory.description?exists && currentCategory.description?length != 0>
+    	<meta name="description" content="${currentCategory.description}" />
+    </#if>     
+    ${currentCategory.metaTag!""}    
+</head>
+<body>
+	<p>THIS IS CATETOGRY TEMPLATE 1 </p>
+<#--
+	show itemList here in some way
+-->
+	<div>
+		<p class="ulTitle">
+			${rc.getMessage("ui.currentLocation")}: 
+			<a href="${rc.getContextPath()}/index.html"><span>${rc.getMessage("ui.home")}</span></a> >>
+			<a href="${currentCategory.myUrl}"><span>${currentCategory.name}</span></a>
+		</p>
+	</div>
+	
+	<!-- Title -->
+	<div class="results-heading" style="">
+	<h3 class="transparent">${currentCategory.name}</h3>
+	</div>
+	<!-- End of Title -->
+	
+	<!-- List -->
+	<ul class="product_list">
+	
+		<#if !itemList?exists || itemList?size==0>
+		<!--TBD-->
+		<#else>
+			<#list itemList as item>
+			<!-- Item -->
+			<!--<li class="product-first" onclick="document.location='http://store.microsoft.com/microsoft/Office-Language-Pack-2007-Language-Spanish/product/2D3A57CF'">-->
+			<li class="product_item"  style="width:99%;height:100px">
+				
+				<#if item.image?contains("http")>
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${item.image}" title="${item.name}" alt=""/>
+				<#elseif item.image == "">
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${rc.getContextPath()}/images/NoPhotoAvailable.jpg" title="${item.name}" alt=""/>
+				<#else>
+				<img class="product" style="margin:0;width:102px;height:73px;float:left;margin:10px;" onclick="document.location='${item.myUrl}'" src="${rc.getContextPath()}/images/${item.image}" title="${item.name}" alt=""/>
+				</#if>
+				<h4 style="float:none; margin-left:150px;"> <a href="${rc.getContextPath()}/${item.myUrl}">${item.name}</a> </h4>
+				<ul style="float:none; margin-left:150px;">
+					<li>${(item.shortDescription)!"No description."}</li>
+				</ul>
+				<div class="price" style="top:30px;left:460px">
+					<span>${item.sellPrice?string.currency}</span>
+				</div>
+				<div class="button3 rounded" style="width:95px;">
+					<span id="${item.id}" class="addToCart_button">Add to Cart</span>
+					<!--<a href="#"><span id="${item.id}" class="addToCart">Buy</span></a>-->
+				</div>
+			</li>
+			<!--End of one item-->
+    		</#list>
+		</#if>
+	</ul>
+	<!-- End of List -->
+
+</body>
+<#else>
+	empty page.
+</#if>
+]]></value>  
+	    	<value><![CDATA[1]]></value>   
+		</row>    
+	    <row>
+	    	<value><![CDATA[3]]></value>  
+	    	<value><![CDATA[item 1]]></value>  
+	    	<value><![CDATA[itemTemplate1]]></value>  
+	    	<value><![CDATA[Item 1]]></value>  
+	    	<value><![CDATA[<#if item?exists>
+<head>
+  <title>${item.pageTitle}</title>
+  <#if item.keywords?exists && item.keywords?length!=0>
+  	<meta name="keywords" content="${item.keywords}" />
+  </#if>
+  <#if item.description?exists && item.description?length!=0>
+  	<meta name="description" content="${item.description}" />
+  </#if> ${item.metaTag}
+</head>
+<body>
+	<p>THIS IS ITEM TEMPLATE 1 </p>
+  <#-- show item here -->
+  <div>
+    <p class="ulTitle">
+      ${rc.getMessage("ui.currentLocation")}: <a href="${rc.getContextPath()}/index.html">
+        <span>${rc.getMessage("ui.home")}</span></a> <#if currentCategory?exists> >> <a href="${currentCategory.myUrl}">
+          <span>${currentCategory.name}</span></a> >> <span>${item.name}</span> </#if>
+    </p>
+  </div>
+  <div class="itemDiv grayBackground" style="max-height:10000px;">
+      <img class="producttitle" alt="" title="" src="${rc.getContextPath()}/images/logo.gif" />
+    <div class="productDetailContainer">
+      <div class="divider">
+      </div>
+      <p class="para">
+        <b>${item.name}</b></p>
+        <br/>
+      <div class="middlecontainer" id="middlecontainer">
+      	  <div style="border:1px dashed #CCCCCC;padding:2px">
+      		Serial Number: ${(item.serialNumber)!"N/A"}<br /><br />
+          Inventory Number: ${(item.inventoryNumber)!"N/A"}
+          </div>
+          <br /><br />
+          <div style="border:1px dashed #CCCCCC;padding:2px">
+          Description:<br />
+        
+        ${item.detailedDescription}
+        
+        </div>
+      </div>
+     <br/><br/>
+      <div class="addToCartDiv">
+        <div class="button2 rounded">
+          <span id="${item.id}" class="addToCart_button">Add to Cart</span>
+        </div>
+        <div class="detailPrice">
+          <ins class="displaynone"></ins><del class="normalprice">${item.sellPrice?string.currency}</del>
+          <div class="clearfloat">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="itemBigPicContainer">
+    <#if item.image?contains("http")>
+      <a href="${item.image}"><img class="itemBigPic" src="${item.image}" alt="${item.name}" style="width: 333px;
+        height: 280px" /></a>
+        
+    <#elseif item.image == "">
+    <img class="itemBigPic" src="${rc.getContextPath()}/images/NoPhotoAvailable.jpg" alt="${item.name}" style="width: 333px; height: 280px"/>
+    <#else>
+        <a href="${rc.getContextPath()}/images/${item.image}"><img class="itemBigPic" src="${rc.getContextPath()}/images/${item.image}" alt="${item.name}" style="width: 333px;
+        height: 280px"/></a>
+    </#if>
+    </div>
+    <div class="clearfloat">
+    </div>
+  </div>
+</body>
+<#else> empty page. </#if> ]]></value>  
+	    	<value><![CDATA[0]]></value>   
+		</row>    
+    </table>    
+</dataset>

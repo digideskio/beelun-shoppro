@@ -1,0 +1,138 @@
+div#nav
+{
+  border-bottom: 2px solid #959595;
+  height: 35px;
+  width: 100%;
+  padding-bottom: 0px;
+}
+ul.clearfix
+{
+  height: 35px;
+}
+div#nav a#tab_right
+{
+  background: transparent url(../images/tab_bg3.png) no-repeat scroll;
+  background-position: 0 -70px;
+  line-height: 35px;
+  width: 4px;
+  height: 35px;
+  z-index: 9999;
+  left: -1px;
+  border-left: 0px;
+}
+#tab_left
+{
+  background: transparent url(../images/tab_bg3.png) no-repeat scroll;
+  line-height: 35px;
+  width: 4px;
+  height: 35px;
+  z-index: 9999;
+  left: 27px;
+  position: absolute;
+}
+div#nav a
+{
+  background: transparent url(../images/tab_bg3.png) repeat-x scroll;
+  background-position: 0 -35px;
+  border-left: 1px dotted #C2C2C2;
+  z-index: 100;
+}
+div#nav a span
+{
+  line-height: 29px;
+  width: 120px;
+  text-align: center;
+  font-size: 16px;
+  background: transparent url(../images/tab_bg3.png) repeat-x scroll;
+  background-position: 0 -35px;
+}
+div#nav a:hover {
+	background:transparent url(../images/tab_bg3.png) repeat-x scroll 0 -105px;  				
+}
+
+div#nav a span:hover {
+	background:transparent;
+}
+#stage #leftcontent {
+	float:left;
+}
+
+#stage #leftnav {
+	width:180px;
+}
+
+#stage #leftnav .navheader.rounded {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:0;
+	-moz-border-radius-bottomright:0;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	background:#CCCCCC none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	color:#3E3E3E;
+	display:block;
+	font-size:13px;
+	font-weight:normal;
+	height:27px;
+	line-height:27px;
+	overflow:hidden;
+	padding:0 9px;
+	vertical-align:middle;
+}
+
+#stage #leftnav .navcontent {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-moz-border-radius-topleft:0;
+	-moz-border-radius-topright:0;
+	background:#F7F7F7 none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	min-height:80px;
+	padding:10px 9px;
+}
+
+div#content {
+	padding-top: 35px;
+}
+
+div#main {
+	width: 725px;
+	padding-top: 0px;
+}
+
+div#ct100_SubNavigation li {
+	margin: 0;
+}
+
+#stage #content #leftnav .navcontent li a {
+	display:block;
+	font-size:11px;
+	padding:5px 0 10px;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+	color:#3E3E3E;
+	text-decoration:none;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent none repeat scroll 0 0;
+	border:0 none;
+	margin:0;
+	vertical-align:baseline;
+	font-family:"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+#stage #content #leftnav .navcontent li a:hover
+{
+	background-color:#CCCCCC;
+	color: black;    
+}

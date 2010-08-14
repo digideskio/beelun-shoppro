@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.OrderItem" table="shoppro_orderitem" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>        
+        <property name="itemCount" column="itemCount" not-null="true"/>
+        <property name="sellPrice" column="sellPrice" not-null="true"/>
+        <many-to-one name="theOrder" column="theOrder" cascade="save-update" class="com.beelun.shoppro.model.Order" not-null="true"
+      		foreign-key="FK_ORDERITEM_O"/>
+      	<property name="itemInXmlString" column="itemInXmlString" not-null="true" type="text"/>
+      	<!-- 
+        <many-to-one name="item" column="item" cascade="save-update" class="com.beelun.shoppro.model.Item" not-null="true"
+      		foreign-key="FK_ORDERITEM_I"/>
+      	 -->
+      	                 
+    </class>
+</hibernate-mapping>

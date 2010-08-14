@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="HappyDog.SL.Controls.Toolbar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Res="clr-namespace:HappyDog.SL.Resources"
+    Loaded="UserControl_Loaded"
+    >
+    <StackPanel Orientation="Horizontal" Background="Transparent"
+				x:Name="ButtonStack" >
+    </StackPanel>
+</UserControl>

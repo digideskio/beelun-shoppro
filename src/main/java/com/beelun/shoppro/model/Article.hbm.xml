@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Article" table="shoppro_article" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="title" column="title" length="1000" not-null="true"/>
+        <property name="content" column="content" not-null="true" type="text"/>
+        <property name="isShown" column="isShown" not-null="true"/>        
+        <property name="pageTitle" column="pageTitle" length="1000" not-null="true"/>
+        <property name="keywords" column="keywords" length="4000"/>
+        <property name="description" column="description" length="1000"/>
+        <property name="metaTag" column="metaTag" length="4000"/>
+        <property name="url" column="url" not-null="true"/>
+        <property name="updated" not-null="false" >
+        	<column name="updated" default="now()" not-null="true" sql-type="timestamp" />        	
+        </property>                      
+    </class>
+</hibernate-mapping>

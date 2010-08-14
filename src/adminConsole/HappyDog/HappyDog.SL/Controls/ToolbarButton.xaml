@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="HappyDog.SL.Controls.ToolbarButton"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	Width="100" Height="40" Opacity="0.75" Background="Transparent">
+
+  <UserControl.Resources>
+    <Storyboard x:Name="Activate">
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Width"
+								 To="100"/>
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Height"
+								 To="40"/>
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Opacity"
+								 To="1.0"/>
+
+      <!--<DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetName="buttonBorder" Storyboard.TargetProperty="BorderThickness"
+							 From="0" To="2"/>-->
+      <!--<DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="BorderThickness"
+								 To="3"/>-->
+    </Storyboard>
+    <Storyboard x:Name="Deactivate">
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Width"
+								 To="100"/>
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Height"
+								 To="40"/>
+      <DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetProperty="Opacity"
+								 To="0.75"/>
+      <!--<DoubleAnimation BeginTime="0:0:0" Duration="0:0:0.2" Storyboard.TargetName="buttonBorder" Storyboard.TargetProperty="BorderThickness"
+							 From="2" To="0"/>-->
+    </Storyboard>
+    <Storyboard x:Name="flash">
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="myTransLateTrans"
+                             Storyboard.TargetProperty="(Y)" RepeatBehavior="Forever" >
+        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:0.3" Value="-5" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:0.5" Value="-5" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:0.8" Value="0" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:1" Value="-5" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:1.1" Value="-5" />
+        <SplineDoubleKeyFrame KeySpline="0.3,0 0.6,1" KeyTime="0:0:1.3" Value="0" />
+      </DoubleAnimationUsingKeyFrames>
+
+      <!--<ColorAnimation BeginTime="00:00:00" Storyboard.TargetName="buttonBorder" 
+                    Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                    From="Red" To="Green" Duration="0:0:1" RepeatBehavior="Forever" />-->
+    </Storyboard>
+
+    <Style TargetType="Border" x:Name="buttonBorderNormal">
+      <Setter Property="BorderBrush" Value="Gray"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style TargetType="Border" x:Name="buttonBorderHover" >
+      <Setter Property="BorderBrush" Value="Gray"/>
+      <Setter Property="BorderThickness" Value="1, 0, 1, 1"/>
+    </Style>
+    <Style TargetType="Border" x:Name="buttonBorderActive" >
+      <Setter Property="BorderBrush" Value="White"/>
+      <Setter Property="BorderThickness" Value="2, 0, 2, 2"/>
+      <Setter Property="Background" Value="Magenta"/>
+    </Style>
+    <Style TargetType="Border" x:Name="buttonBorderRightNormal">
+      <Setter Property="BorderBrush" Value="AliceBlue"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style TargetType="Border" x:Name="buttonBorderRightHover" >
+      <Setter Property="BorderBrush" Value="White"/>
+      <Setter Property="BorderThickness" Value="0, 1, 0, 0"/>
+    </Style>
+    <Style TargetType="Border" x:Name="buttonBorderRightActive" >
+      <Setter Property="BorderBrush" Value="Gray"/>
+      <Setter Property="BorderThickness" Value="0, 2, 0, 0"/>
+    </Style>
+
+
+  </UserControl.Resources>
+
+  <Canvas>
+    <Border x:Name="buttonBorder" Background="Transparent" BorderBrush="Gray" BorderThickness="0" Cursor="Hand" Height="40" Padding="2" Width="100" Margin="5,0,5,0">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="32"/>
+          <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="BackgroundImage" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" Width="25">
+          <Image.RenderTransform>
+            <TransformGroup>
+              <TranslateTransform x:Name="myTransLateTrans" X="0" Y="0"/>
+              <ScaleTransform x:Name="myScaleTrans" CenterX="16" CenterY="16"/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="ButtonTextBlock" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+      </Grid>
+    </Border>
+    <Border x:Name="buttonBorderRight" Canvas.ZIndex="100" BorderBrush="AliceBlue" BorderThickness="0" Canvas.Left="1" Padding="1" Width="95" Margin="4,0,4,0"></Border>
+  </Canvas>
+
+</UserControl>
+

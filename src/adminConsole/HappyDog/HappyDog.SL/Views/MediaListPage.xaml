@@ -1,0 +1,84 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.MediaListPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:grid="clr-namespace:DevExpress.Windows.Controls;assembly=DevExpress.AgDataGrid.v8.2"
+           xmlns:layout="clr-namespace:HappyDog.SL.Controls"
+           xmlns:Res="clr-namespace:HappyDog.SL.Resources"              
+           xmlns:ListViewControl="clr-namespace:HappyDog.SL.Content"
+           xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"                 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           NavigationCacheMode="Enabled"
+           Title="MediaListPage Page">
+  
+  <UserControl.Resources>
+    <Res:UIResources x:Name="UILoc" />
+  </UserControl.Resources>
+
+  <Grid x:Name="foo" Background="White">
+    <controlsToolkit:BusyIndicator x:Name="shopproBusyIndicator" IsBusy="false" DisplayAfter="0" BusyContent="Loading...">
+      <controlsToolkit:BusyIndicator.Content>
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+
+          <!-- Content page header -->
+          <Border x:Name="viewHeader" Style="{StaticResource ContentPageHeaderBorderStyle}" Grid.Row="0" >
+            <TextBlock x:Name="BodyViewTitle" Text="" Style="{StaticResource ContentPageHeaderTextBlockStyle}"/>
+          </Border>
+
+          <!--Action toolbar here-->
+          <Border Grid.Row="1"  Style="{StaticResource ActionToolBarBorderStyle}">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition  />
+              </Grid.ColumnDefinitions>
+              <StackPanel x:Name="ActionToolBar" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" >
+                <Button Content="{Binding TOOLBAR_NEW, Source={StaticResource UILoc}}"  Style="{StaticResource ActionButtonStyle}" ToolTipService.ToolTip="Create a new item" Click="Add_Button_Click" />
+                <Button Content="{Binding TOOLBAR_DELETE, Source={StaticResource UILoc}}"  Style="{StaticResource ActionButtonStyle}" Click="Delete_Button_Click" ToolTipService.ToolTip="Delete selected records permanently"/>
+                <Button Content="{Binding TOOLBAR_REFRESH, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" Click="Refresh_Button_Click" ToolTipService.ToolTip="Refresh current view"/>
+              </StackPanel>
+              <layout:SearchNListPagingToolbar Grid.Column="1" x:Name="SummaryListToolbar" Width="Auto" SearchList="SummaryListToolbar_SearchList" PageChanged="SummaryListToolbar_PageChanged" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+            </Grid>
+          </Border>
+
+          <!--List view-->
+          <ListViewControl:AgDataGrid x:Name="MyList" Grid.Row="2" ColumnsAutoWidth="True" ShowGroupPanel="Collapsed"  ChangeOddRowsAppearance="True" SortingChanged="MyList_SortingChanged"  Style="{StaticResource AgDataGridStyle}"  >
+            <ListViewControl:AgDataGrid.Columns>
+              <!-- HappyDog.SL.Beelun.Shoppro.WebService.MediaManager.media -->
+
+              <!-- This column will be sort by 'updated' -->
+              <grid:AgDataGridTextColumn HeaderContent="Image" FieldName="updated" x:Name="A0" AllowEditing="False" TextWrapping="Wrap" Width="160" FixedWidth="True" HorizontalContentAlignment="Left" HeaderToolTip="Sort by last updated">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <CheckBox HorizontalAlignment="Left" Tag="{Binding RowValue.id}" VerticalAlignment="Center" x:Name="ItemSelected" Checked="ItemSelected_Checked" Unchecked="ItemSelected_Unchecked" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">
+                      <Image Width="110" Height="80" Source="{Binding RowValue.myUrl, Converter={StaticResource uriToImageConverter}}" />
+                    </CheckBox>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Attributes" FieldName="id" x:Name="C3" AllowEditing="False" TextWrapping="Wrap" HorizontalContentAlignment="Left"  >
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                      <TextBlock Margin="20,5,0,0" Text="{Binding RowValue.title}" TextWrapping="Wrap" />
+                      <TextBlock Margin="20,5,0,0" Text="{Binding RowValue.caption}" TextWrapping="Wrap" />
+                    </StackPanel>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+            </ListViewControl:AgDataGrid.Columns>
+          </ListViewControl:AgDataGrid>
+        </Grid>
+      </controlsToolkit:BusyIndicator.Content>
+    </controlsToolkit:BusyIndicator>
+  </Grid>
+
+</navigation:Page>

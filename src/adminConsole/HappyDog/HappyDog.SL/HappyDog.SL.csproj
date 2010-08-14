@@ -1,0 +1,761 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58A4A63A-4327-45E1-8361-471C2EC2D6DC}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HappyDog.SL</RootNamespace>
+    <AssemblyName>HappyDog.SL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+      zh-Hans;en-US
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>HappyDog.SL.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>HappyDog.SL.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\SL.Hosting\ClientBin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Loc|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Loc\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blacklight.Silverlight.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\Blacklight.Silverlight.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cooper.Silverlight.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\Cooper.Silverlight.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.AgDataGrid.v8.2, Version=8.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\DevExpress.AgDataGrid.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightMessageInspector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\SilverlightMessageInspector.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Theming.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\HDException.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\PostSubmitter.cs" />
+    <Compile Include="Common\ShopproHelper.cs" />
+    <Compile Include="Common\SyncDownloader.cs" />
+    <Compile Include="Common\TextResFileReader.cs" />
+    <Compile Include="Common\RestWriter.cs" />
+    <Compile Include="ConfigurationSettings.cs" />
+    <Compile Include="Content\AddImageChildWindow.xaml.cs">
+      <DependentUpon>AddImageChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\AgDataGrid.cs" />
+    <Compile Include="Content\MappingPicker.xaml.cs">
+      <DependentUpon>MappingPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\NewAdminWindow.xaml.cs">
+      <DependentUpon>NewAdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\PageEnum.cs" />
+    <Compile Include="Content\ResetPasswordWindow.xaml.cs">
+      <DependentUpon>ResetPasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\TreeNode.cs" />
+    <Compile Include="Controls\BeelunMessageBox.xaml.cs">
+      <DependentUpon>BeelunMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Footer.cs" />
+    <Compile Include="Controls\Header.xaml.cs">
+      <DependentUpon>Header.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchNListPagingToolbar.xaml.cs">
+      <DependentUpon>SearchNListPagingToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Toolbar.xaml.cs">
+      <DependentUpon>Toolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolbarButton.xaml.cs">
+      <DependentUpon>ToolbarButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WaitIndicator.xaml.cs">
+      <DependentUpon>WaitIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomSort\PagedSortableCollectionView.cs" />
+    <Compile Include="CustomSort\RefreshEventArgs.cs" />
+    <Compile Include="CustomSort\SortableCollectionView.cs" />
+    <Compile Include="Data\ContentPageContext.cs" />
+    <Compile Include="Data\FileUploadHelper.cs" />
+    <Compile Include="Data\LogoutTask.cs" />
+    <Compile Include="Data\ResponseParser.cs" />
+    <Compile Include="Data\ITask.cs" />
+    <Compile Include="Data\ModelDataContainer.cs" />
+    <Compile Include="Data\ModelProvider.cs" />
+    <Compile Include="Common\RestReader.cs" />
+    <Compile Include="Data\TaskTracker.cs" />
+    <Compile Include="Data\WhereClauseBuilder.cs" />
+    <Compile Include="EventArguments\HDCallBackEventArgs.cs" />
+    <Compile Include="EventArguments\ListPageChangedArgs.cs" />
+    <Compile Include="EventArguments\ListSearchArgs.cs" />
+    <Compile Include="EventArguments\NavigateRequestArgs.cs" />
+    <Compile Include="EventArguments\PageStatusChangeArgs.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\UIResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UIResources.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIResources.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Beelun.Shoppro.WSEntryManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UIEffect\ISlidable.cs" />
+    <Compile Include="ValueConverters\BrandConverter.cs" />
+    <Compile Include="ValueConverters\BrandIndexConverter.cs" />
+    <Compile Include="ValueConverters\BrandListConverter.cs" />
+    <Compile Include="ValueConverters\ArrayConverter.cs" />
+    <Compile Include="ValueConverters\CategoryTemplateListConverter.cs" />
+    <Compile Include="ValueConverters\DateTimeConverter.cs" />
+    <Compile Include="ValueConverters\CurrencyConverter.cs" />
+    <Compile Include="ValueConverters\DictionaryConverter.cs" />
+    <Compile Include="ValueConverters\EnumConverters.cs" />
+    <Compile Include="ValueConverters\ItemTemplateListConverter.cs" />
+    <Compile Include="ValueConverters\StreamToImageConverter.cs" />
+    <Compile Include="ValueConverters\TemplateConverter.cs" />
+    <Compile Include="ValueConverters\TemplateIndexConverter.cs" />
+    <Compile Include="ValueConverters\TemplateTypeEnumConverter.cs" />
+    <Compile Include="ValueConverters\UriToImageConverter.cs" />
+    <Compile Include="ValueConverters\UrlToThumbnailImageConverter.cs" />
+    <Compile Include="ViewModels\BrandView.cs" />
+    <Compile Include="ViewModels\MappingView.cs" />
+    <Compile Include="ViewModels\CategoryView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\ArticleView.cs" />
+    <Compile Include="ViewModels\PaypallView.cs" />
+    <Compile Include="ViewModels\GlobalView.cs" />
+    <Compile Include="ViewModels\MediasViewModel.cs" />
+    <Compile Include="ViewModels\OrderView.cs" />
+    <Compile Include="ViewModels\TemplateView.cs" />
+    <Compile Include="ViewModels\UserView.cs" />
+    <Compile Include="ViewModels\TabView.cs" />
+    <Compile Include="ViewModels\ItemView.cs" />
+    <Compile Include="ViewModels\MediaView.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewObjectHelper.cs" />
+    <Compile Include="Views\ArticleDetailsPage.xaml.cs">
+      <DependentUpon>ArticleDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArticleListPage.xaml.cs">
+      <DependentUpon>ArticleListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoryDetailsPage.xaml.cs">
+      <DependentUpon>CategoryDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoryListPage.xaml.cs">
+      <DependentUpon>CategoryListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrandListPage.xaml.cs">
+      <DependentUpon>BrandListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrandDetailsPage.xaml.cs">
+      <DependentUpon>BrandDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashBoardPage1.xaml.cs">
+      <DependentUpon>DashBoardPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashBoardPage2.xaml.cs">
+      <DependentUpon>DashBoardPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GlobalPage.xaml.cs">
+      <DependentUpon>GlobalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemDetailsPage.xaml.cs">
+      <DependentUpon>ItemDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemListPage.xaml.cs">
+      <DependentUpon>ItemListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadingProgress.xaml.cs">
+      <DependentUpon>LoadingProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaDetailsPage.xaml.cs">
+      <DependentUpon>MediaDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaListPage.xaml.cs">
+      <DependentUpon>MediaListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderDetailsPage.xaml.cs">
+      <DependentUpon>OrderDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderListPage.xaml.cs">
+      <DependentUpon>OrderListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaypalPage.xaml.cs">
+      <DependentUpon>PaypalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabDetailsPage.xaml.cs">
+      <DependentUpon>TabDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabListPage.xaml.cs">
+      <DependentUpon>TabListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TemplateDetailsPage.xaml.cs">
+      <DependentUpon>TemplateDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TemplateListPage.xaml.cs">
+      <DependentUpon>TemplateListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserDetailsPage.xaml.cs">
+      <DependentUpon>UserDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserListPage.xaml.cs">
+      <DependentUpon>UserListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkSpace.xaml.cs">
+      <DependentUpon>WorkSpace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkSpaceBody.xaml.cs">
+      <DependentUpon>WorkSpaceBody.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Assets\Styles.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\AddImageChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Content\MappingPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Content\NewAdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Content\ResetPasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Controls\BeelunMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Controls\Header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Controls\SearchNListPagingToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Toolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ToolbarButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\WaitIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArticleDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\ArticleListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\CategoryDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\CategoryListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\BrandListPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BrandDetailsPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DashBoardPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\DashBoardPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\GlobalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\ItemDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\ItemListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\LoadingProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\MediaDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\MediaListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\OrderDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\OrderListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\PaypalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\TabDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\TabListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\TemplateDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\TemplateListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\UserDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\UserListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\WorkSpace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+    <Page Include="Views\WorkSpaceBody.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\UIResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UIResources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIResources.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\background.png" />
+    <Resource Include="Img\blue.png" />
+    <Resource Include="Img\chart.png" />
+    <Resource Include="Img\computer.png" />
+    <Resource Include="Img\earth.png" />
+    <Resource Include="Img\Exit_32x32.png" />
+    <Resource Include="Img\favorite.png" />
+    <Resource Include="Img\find.png" />
+    <Resource Include="Img\green.png" />
+    <Resource Include="Img\print.png" />
+    <Resource Include="Img\red.png" />
+    <Resource Include="Img\setting.png" />
+    <Resource Include="Img\Settings_32x32.png" />
+    <Resource Include="Img\system.png" />
+    <Resource Include="Img\system2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\yellow.png" />
+    <Resource Include="Img\bg.png" />
+    <Resource Include="Img\arrow.png" />
+    <Resource Include="Img\Logout.png" />
+    <Resource Include="Img\message.png" />
+    <Resource Include="Img\CompanyLogo.gif" />
+    <Resource Include="Img\user.png" />
+    <Resource Include="Img\order.png" />
+    <Resource Include="Img\article.png" />
+    <Resource Include="Img\global.png" />
+    <Content Include="CustomSort\readme.txt" />
+    <Resource Include="Img\Search_16x16.png" />
+    <Resource Include="Img\Stop_16x16.png" />
+    <Resource Include="Img\warn.png" />
+    <Content Include="Launch.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyTestPage.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+    <Content Include="Resources\!readme!.txt" />
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.changeOrderStatus_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.createNewAdmin_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.createNew_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.enableDisableUserAccess_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.fetch_MyGlobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.fetch_PaypalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAllCount_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAllCount_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAllCount_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAllCount_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAll_ArticleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAll_BrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAll_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAll_TabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getAll_TemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByCondition_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByCondition_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByCondition_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByCondition_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByCondition_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByEmail_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByOrderNo_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getByType_TemplateResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getCountByCondition_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getMappingStatus_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getMappingStatus_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getNewUserTrendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getOrderListByStatus_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.getSalesByBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_ArticleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_BrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.removeMany_TabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.resetPassword_UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_ArticleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_BrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_MyGlobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_OrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_PaypalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_TabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.save_TemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.searchByTextCount_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.searchByTextCount_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.searchByText_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.searchByText_MediaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.setMappingStatus_CategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\HappyDog.SL.Beelun.Shoppro.WSEntryManager.setMappingStatus_ItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\configuration.svcinfo" />
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\configuration91.svcinfo" />
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\WSEntryManager.wsdl" />
+    <None Include="Service References\Beelun.Shoppro.WSEntryManager\WSEntryManagerImplService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Beelun.Shoppro.WSEntryManager\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\v3.0\Microsoft.Silverlight.CSharp.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

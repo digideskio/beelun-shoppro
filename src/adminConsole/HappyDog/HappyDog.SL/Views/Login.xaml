@@ -1,0 +1,54 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.Login" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Res="clr-namespace:HappyDog.SL.Resources"              
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Loaded="LoginPage_Loaded"
+           KeyDown="LoginPage_KeyDown"                 
+           Title="Login Page">
+
+  <UserControl.Resources>
+    <Res:UIResources x:Name="UILoc" />
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot" Background="White">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition Height="130" />
+      <RowDefinition Height="30" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <Canvas Width="265" Margin="10" Grid.Row="1">
+      <Grid Background="White" Canvas.Left="10" Canvas.Top="-8" Canvas.ZIndex="99">
+        <TextBlock Margin="4, 0" FontSize="12" Text="{Binding LOGIN_BUTTON, Source={StaticResource UILoc}}" />
+      </Grid>
+      <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="6">
+        <Grid x:Name="InnerLayoutRoot" Margin="10">
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+
+          <TextBlock Text="{Binding LOGIN_USERID, Source={StaticResource UILoc}}" Grid.Row="0" Grid.Column="0" Margin="0, 5" FontSize="12" VerticalAlignment="Center" />
+          <TextBox x:Name="UserNameTextbox" Grid.Row="0" Grid.Column="1" Margin="0, 5" Text="" Width="160" FontSize="12" VerticalAlignment="Center"/>
+
+          <TextBlock Text="{Binding LOGIN_PSWD, Source={StaticResource UILoc}}" Grid.Row="1" Grid.Column="0" Margin="0, 5" FontSize="12" VerticalAlignment="Center"/>
+          <PasswordBox x:Name="PasswordTextbox" Grid.Row="1" Grid.Column="1" Margin="0, 5" Password="" Width="160" FontSize="12" VerticalAlignment="Center"/>
+
+          <Button x:Name="LoginButton" Grid.Row="2" Grid.Column="1" Margin="0, 5" Width="80" HorizontalAlignment="Left" Content="{Binding LOGIN_BUTTON, Source={StaticResource UILoc}}" Click="LoginButton_Click" />
+        </Grid>
+      </Border>
+    </Canvas>
+  </Grid>
+</navigation:Page>

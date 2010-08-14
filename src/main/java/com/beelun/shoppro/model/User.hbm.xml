@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.User" table="shoppro_user" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" not-null="true" />
+        <property name="email" column="email" not-null="true" unique="true"/>
+        <property name="password" column="password" not-null="true"/>
+        <property name="enabled" column="enabled" not-null="true"/>
+        <property name="accountExpired" column="accountExpired" not-null="true"/>
+        <property name="accountLocked" column="accountLocked" not-null="true"/>
+        <property name="unlockToken" column="unlockToken" />
+        <property name="resetPswdToken" column="resetPswdToken" />
+        <property name="credentialsExpired" column="credentialsExpired" not-null="true"/> 
+        <property name="createdWhen" column="createdWhen" not-null="true"/>
+        <property name="lastLogin" column="lastLogin" not-null="true"/>
+        <property name="sameAddress" column="sameAddress" not-null="false"/>
+	    <many-to-one name="shippingAddress" column="shippingAddress" cascade="all" class="com.beelun.shoppro.model.Address" lazy="false" not-null="false"
+	      foreign-key="FK_USER_S_ADDRESS" />
+	    <many-to-one name="billingAddress" column="billingAddress" cascade="all" class="com.beelun.shoppro.model.Address" lazy="false" not-null="false"
+	      foreign-key="FK_USER_B_ADDRESS" />
+        
+        <!-- 
+        	name="membership"  - name of Set<> in the java file
+        	lazy="false" - get this set right now
+        	key column - column name in the membership class
+        	class - what kind of Set 
+         -->
+         
+	    <set name="memberships" cascade="all" lazy="false">
+	      <key column="user" />
+	      <one-to-many class="com.beelun.shoppro.model.Membership" />
+	    </set>
+        
+    </class>
+</hibernate-mapping>

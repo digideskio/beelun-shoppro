@@ -1,0 +1,14 @@
+Pri	Task
+--------------
+0	Sub-category
+0	Url consistency to keep ranking
+1	Frontend login: capatcha?
+1	Frontend: add sitemap link to frontend
+2	Item list: certain image is not showing 
+2	Global:页面，有些条目不要了，删掉(比如address)。有些没有用起来，用上（比如page404)
+2	Global:把email template单独弄成一些tree node?
+2	Login: add smartech, beelun
+2	Workspace: add smartech logo
+2	Backend: Be able to update google cse code
+2	verifying html closing tag?
+2	A/B testing?

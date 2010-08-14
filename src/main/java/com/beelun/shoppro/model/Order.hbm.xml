@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.beelun.shoppro.model.Order" table="shoppro_order" lazy="false">
+    
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="orderDate" column="orderDate" not-null="true"/>
+        <many-to-one name="user" column="user" cascade="save-update" class="com.beelun.shoppro.model.User" not-null="true"
+      		foreign-key="FK_ORDER_USER"/>
+        <many-to-one name="shippingAddress" column="shippingAddress" cascade="all" class="com.beelun.shoppro.model.Address" not-null="true"
+      		foreign-key="FK_ORDER_S_ADDRESS"/>
+        <many-to-one name="billingAddress" column="billingAddress" cascade="all" class="com.beelun.shoppro.model.Address" 
+      		foreign-key="FK_ORDER_B_ADDRESS"/>
+        <property name="sameAddress" column="sameAddress" not-null="false"/>      		
+        <property name="shipDate" column="shipDate" type="com.beelun.shoppro.model.type.ShipDateHib" not-null="false"/>
+        <property name="shipTime" column="shipTime" type="com.beelun.shoppro.model.type.ShipTimeHib" not-null="false"/>
+        <property name="specifiedShipDate" column="specifiedShipDate" />
+		<property name="notes" column="notes" length="4000"/>
+        <many-to-one name="expressCorp" column="expressCorp" cascade="save-update" class="com.beelun.shoppro.model.ExpressCorp" not-null="false"
+      		foreign-key="FK_ORDER_EXPRESS"/>
+        <many-to-one name="paymentTool" column="paymentTool" cascade="save-update" class="com.beelun.shoppro.model.PaymentTool" not-null="false"
+      		foreign-key="FK_ORDER_PAYMENT"/>
+      	<property name="status" column="status" type="com.beelun.shoppro.model.type.OrderStatusHib" not-null="true"/>
+	    <set name="orderItemSet" cascade="all" lazy="false">
+	      <key column="theOrder" />
+	      <one-to-many class="com.beelun.shoppro.model.OrderItem" />
+	    </set>
+	          		
+    </class>
+</hibernate-mapping>

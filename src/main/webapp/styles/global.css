@@ -1,0 +1,1237 @@
+/* INDEX.PHP */
+
+#banner {
+  text-indent: -9999px;
+  width: 1024px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 105px; /* Works for all Browsers */
+  background-image: url(/i/banner.jpg);
+  background-repeat: no-repeat;
+}
+#rightmessage {
+  width: 524px;
+  height: 190px;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+#rightmessage .content {
+  margin: 5px 25px;
+  padding: 0;
+}
+#rightmessage .content h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-weight: bolder;
+  padding: 0;
+  margin: 0;
+}
+#rightmessage .content p {
+  font-size: 12px;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#logo2 a:link, #logo2 a:visited {
+	text-indent: -9999px;
+	display: block;
+	width: 270px;
+	height: 76px;
+	position: absolute; left: 0px; top: 0px;
+ 	background: url(/i/logo.gif) top left no-repeat;
+	border: 0;
+
+}
+#header #logo {
+  width: 270px;
+  height: 76px;
+  margin: 0;
+ position: absolute; left: 0px; top: 0px;
+   float: left;
+}
+
+
+#message {
+  text-align: center;
+  width: 1024px;
+  height: 190px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 235px;
+  background-image: url(/i/tiling2.gif);
+  background-repeat: repeat-x;
+}
+#leftmessage {
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 190px;
+  float: left;
+}
+#leftmessage .content {
+  margin: 10px;
+  padding: 0;
+}
+
+#midmessage {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 190px;
+  float: left;
+  /* background-image: url(/i/message.jpg); */
+  background-repeat: no-repeat;
+}
+
+#index {
+  text-align: left;
+  width: 1024px;
+  height: 331px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 425px;
+}
+
+#indexleft {
+  text-align: left;
+  width: 199px;
+  height: 331px;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #cccccc;
+  float: left;
+  background-image: url('/i/happycust.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#indexleft .content {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 143px;
+  margin-bottom: 5px;
+}
+#indexmiddle .content, #indexright .content {
+  margin: 5px 10px;
+  padding: 0;
+}
+
+#indexleft .content h1 {
+  color: #174672;
+  font-size: 14px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+#indexleft .content p {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 12px;
+  color: #6a6a6a;
+  margin: 0;
+  padding: 0;
+}
+
+
+#indexmiddle .content .button {
+  border: none;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#indexmiddle .content p, #indexright .content p {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+#indexmiddle .content a:link, #indexmiddle .content a:visited,
+#indexleft .content a:link, #indexleft .content a:visited {
+  font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+#indexmiddle .content a:hover, #indexleft .content a:hover {
+  text-decoration: underline;
+}
+
+#indexmiddle {
+  text-align: left;
+  width: 299px;
+  height: 331px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  border-right: 1px #cccccc solid;
+}
+
+#indexmiddle h1 {
+  font-size: 16px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+#indexright {
+  width: 524px;
+  height: 331px;
+  margin: 0;
+  padding: 0;
+  background-image: url('/i/cargo.jpg');
+  background-repeat: no-repeat;
+  float: right;
+}
+
+/* MAIN */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  text-align: center;
+  min-width: 1024px;
+}
+a:link {
+  color: #174672;
+  text-decoration: none;
+}
+a:visited {
+  color: #174672;
+  text-decoration: none;
+}
+a:hover {
+  color: #174672;
+  text-decoration: underline;
+}
+a:active {
+  color: #174672;
+  text-decoration: none;
+}
+#wrapper {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+#middle {
+	text-align: left;
+	width: 460px;
+	height: 900px;
+	margin: 0;
+	position: absolute;
+	left: 150px;
+	top: 125px;
+}
+#middle #content {
+  margin: 5px;
+  padding: 0;
+}
+#middle #content #columns {
+  padding: 0;
+  margin: 0;
+  width: 450px;
+}
+#middle #content #columns .title,
+#middle #content #columns .largecolumn .title,
+#middle #content #columns .largecolumn .titlelight,
+#middle #content .prodbar2,
+#categories ul,
+.btn
+{
+  background-color: #666699;
+}
+#middle #content #columns .columncontent a:link, #middle #content #columns .columncontent a:visited,
+#middle #content #columns #leftcolumn .columncontent a:link, #middle #content #columns #leftcolumn .columncontent a:visited,
+#middle #content #columns #rightcolumn .columncontent a:link, #middle #content #columns #rightcolumn .columncontent a:visited,
+#middle #content a:link, #middle #content a:visited, #middle #content #columns .largecolumn li,
+#middle #content #columns .largecolumn h5, #middle #content #columns .largecolumn li a:link,
+#middle #content #columns .largecolumn li a:visited, #middle #content .prodbar li.pipe, 
+#navbar li.pipe, #footer li.pipe, #right #nextsteps a:link, #right #nextsteps a:visited,
+#quoteform form label { 
+  color: #666699;
+}
+#middle #content #columns .largecolumn .titlelight h3,
+#middle #content #columns .title h3, #middle #content .title h3,
+#middle #content .prodtitle h5,
+#middle #content .prodbar2 h5,
+#middle #content .prodbar li,
+#middle #content .prodbar li a:link, #middle #content .prodbar li a:visited,
+#navbar .phone,
+#navbar li a:link, #navbar li a:visited,
+#footer li a:link, #footer li a:visited,
+#categories a:link, #categories a:visited,
+.title h3, .btn, 
+#quoteform input.btn {
+  color: white;
+}
+#quoteform input.txt,
+#quoteform input.securitytxt,
+#quoteform textarea.txtbox,
+#quoteform select.txt
+{
+  color: #000088;
+}
+
+body, 
+#middle #content #columns #leftcolumn .columncontent,
+#middle #content #columns #rightcolumn .columncontent,
+#middle #content #columns .largecolumn .columncontent,
+#middle #content #columns .columncontent p,
+#middle #content #dialog,
+#middle #content #dialog h1,
+#middle #content p, #middle #content #dialog p,
+#middle #content h1,
+#middle #content #navigation p,
+#middle #content #navigation li,
+#middle #content #proddetail,
+#middle #content #prodnotes p,
+#right #nextsteps p,
+#left #worryfree .title h3, #right #worryfree .title h3, #right #recommended h3, #right #newsletter h3,
+#right #newsletter p {
+  color: black;
+}
+
+#indexleft .content h1,
+#indexmiddle .content a:link, #indexmiddle .content a:visited,
+#indexleft .content a:link, #indexleft .content a:visited,
+#indexmiddle h1,
+#indexright h1
+{
+  color: #174672;
+}
+
+#middle #content #location li, 
+#middle #content #location a:link,
+#middle #content #location a:visited 
+{
+  color: #cccccc;
+}
+#middle #content #products td a:link, #middle #content #products td a:visited, 
+#middle #content #subcategories a:link, #middle #content #subcategories a:visited,
+#middle #content #products a:link, #middle #content #products a:visited,
+#middle #content #navigation a:link, #middle #content #navigation a:visited,
+#right #nextsteps .icon a:link, #right #nextsteps .icon a:visited,
+#right #worryfree a:link, #right #worryfree a:visited,
+#right #newsletter a:link, #right #newsletter a:visited,
+#left #worryfree a:link, #left #worryfree a:visited
+{
+  color: #333399;
+}
+#middle #content #prodnotes p.disclaimer {
+  color: #a6a6a6;
+}
+#left #help h5,
+#left #help li, #right #recommended li {
+  color: #666666;
+}
+
+#middle #content #columns .largecolumn .title,
+#middle #content .prodbar,
+#right #nextsteps .title,
+#navbar,
+#footer,
+.title,
+#quoteform input.btn {
+  background-color: #333366; 
+}
+
+#middle #content #columns .title,
+#middle #content #columns .largecolumn .title {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+#middle #content #columns .largecolumn .titlelight {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+#middle #content #columns .largecolumn .titlelight h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content #columns .title h3, #middle #content .title h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content #columns #leftcolumn {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+  width: 215px;
+}
+#middle #content #columns #rightcolumn {
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+  width: 215px;
+}
+#middle #content #columns .largecolumn {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+  width: 450px;
+}
+#middle #content #columns #leftcolumn .columncontent, 
+#middle #content #columns #rightcolumn .columncontent, 
+#middle #content #columns .largecolumn .columncontent {
+  margin: 5px;
+  padding: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+#middle #content #columns .columncontent a:link, #middle #content #columns .columncontent a:visited, 
+#middle #content #columns #leftcolumn .columncontent a:link, #middle #content #columns #leftcolumn .columncontent a:visited, 
+#middle #content #columns #rightcolumn .columncontent a:link, #middle #content #columns #rightcolumn .columncontent a:visited, 
+#middle #content a:link, #middle #content a:visited {
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+#middle #content #columns #leftcolumn .columncontent a:hover,
+#middle #content #columns #rightcolumn .columncontent a:hover,
+#middle #content #columns .columncontent a:hover,
+#middle #content a:hover { 
+  text-decoration: underline;
+}
+#middle #content #columns .columncontent p {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+#middle #content #location ul,
+#middle #content #columns .largecolumn ul,
+#middle #content #columns #leftcolumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#middle #content #columns .largecolumn li {
+  display: inline;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 2em;
+}
+#middle #content #columns .largecolumn h5 {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content #location li {
+  display: inline;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 2em;
+}
+#middle #content #location a:link, 
+#middle #content #location a:visited {
+  text-decoration: none;
+}
+#middle #content #location a:hover {
+  text-decoration: underline;
+}
+#middle #content #columns .largecolumn li a:link,
+#middle #content #columns .largecolumn li a:visited {
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+#middle #content #columns .largecolumn li a:hover {
+  text-decoration: underline;
+}
+#middle #content #dialog {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 2em;
+}
+#middle #content #dialog h1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#middle #content p, #middle #content #dialog p {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: verdana, arial, sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+}
+#middle #content #subcategories ul, #middle #content #products ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#middle #content #subcategories li, #middle #content #products li {
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+  line-height: 1.6em;
+}
+#middle #content #subcategories li {
+  font-weight: bold;
+}
+#middle #content #products li {
+  font-size: 9px;
+  font-weight: bold;
+}
+#middle #content #products table {
+  padding: 0;
+  margin: 0;
+}
+#middle #content #products tr {
+  padding: 0;
+  margin: 0;
+}
+#middle #content #products td {
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+  border-bottom: 1px solid #cccccc;
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
+  line-height: 1.3em;
+  min-width: 250px;
+}
+#middle #content #products td a:link, #middle #content #products td a:visited {
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+#middle #content #subcategories a:link, #middle #content #subcategories a:visited,
+#middle #content #products a:link, #middle #content #products a:visited {
+  text-decoration: none;
+}
+#middle #content #subcategories a:hover, #middle #content #products a:hover {
+  text-decoration: underline;
+}
+#middle #content h1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#middle #content #navigation p {
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#middle #content #navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#middle #content #navigation li {
+  display: inline;
+  margin-right: 5px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+}
+#middle #content #navigation a:link, #middle #content #navigation a:visited {
+  text-decoration: none;
+}
+#middle #content #navigation a:hover {
+  text-decoration: underline;
+}
+#middle #content #imagewrapper {
+  padding: 0;
+  margin: 0;
+  height: 125px;
+}
+#middle #content #imagewrapper .prodimg {
+  float: right;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#middle #content #imagewrapper .quoteimg {
+  border: none;
+  padding: 0;
+  float: left;
+  margin-top: 100px;
+}
+#middle #content #imagewrapper .quoteimg img {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#middle #content .prodtitle {
+  background-image: url(/i/proddetail.gif);
+  background-repeat: no-repeat;
+}
+#middle #content .prodtitle h5 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content .prodbar {
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #cccccc;
+}
+#middle #content .prodbar2 {
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #cccccc;
+}
+#middle #content .prodbar2 h5{
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content .prodbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#middle #content .prodbar li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 2em;
+}
+#middle #content .prodbar li a:link, #middle #content .prodbar li a:visited {
+  text-decoration: none;
+}
+#middle #content .prodbar li a:hover {
+  text-decoration: underline;
+}
+#middle #content .prodbar li.pipe, #navbar li.pipe, #footer li.pipe {
+  margin-left: 5px;
+}
+#middle #content #proddetail {
+  margin: 0;
+  padding: 0;
+}
+#middle #content #proddetail .quote_ahref a:link, #middle #content #proddetail .quote_ahref a:visited {
+  font-family: arial, verdana, sans-serif;
+  font-size: 14px;
+  color: #0000cc;
+  text-decoration: underline;
+}
+#middle #content #proddetail h2 {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#middle #content #proddetail p {
+  margin: 0;
+  padding: 0;
+  font-family: verdana, arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+#middle #content #prodnotes p {
+  margin: 0;
+  padding: 0;
+  font-family: verdana, arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+#middle #content #prodnotes p.disclaimer {
+  margin: 0;
+  padding: 0;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+}
+#middle #content #cc {
+  text-align: center;
+  margin: 10px;
+}
+#left {
+	text-align: left;
+	width: 150px;
+	height: 900px;
+	margin: 0;
+	position: absolute;
+	left: 0px;
+	top: 120px;
+}
+#left #help {
+  margin: 0;
+  padding: 0;
+  margin: 5px;
+}
+#left #worryfree {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+}
+#left #worryfree .title {
+  background: #eeeeee;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+#left #worryfree .title h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#left #worryfree ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+#left #worryfree li {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#left #worryfree a:link, #left #worryfree a:visited {
+  text-decoration: none;
+  font-weight: bold;
+}
+#left #worryfree a:hover {
+  text-decoration: underline;
+}
+
+#left #help h5 {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+#left #help ul, #right #recommended ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+#left #help li, #right #recommended li {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+#left #help li a:link, #left #help li a:visited, #right #recommended a:link, #right #recommended a:visited {
+  color: #6a6a6a;
+  text-decoration: none;
+}
+#left #help li a:hover, #right #recommended a:hover {
+  text-decoration: underline;
+}
+#right {
+	text-align: left;
+	width: 150px;
+	height: 900px;
+	margin: 0;
+	position: absolute;
+	left: 610px;
+	top: 120px;
+}
+#right #nextsteps {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+}
+#right #nextsteps a:link, #right #nextsteps a:visited {
+  padding: 0;
+  margin: 0;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+#right #nextsteps a:hover {
+  text-decoration: underline;
+}
+#right #nextsteps .title {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+#right #nextsteps .icon img {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#right #nextsteps img {
+  border: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+#right #nextsteps .picture {
+  float: left;
+  border: none;
+  margin: 8px;
+  padding: 0;
+  border: 1px solid #cccccc;
+}
+#right #nextsteps p {
+  padding: 0;
+  margin: 5px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+#right #nextsteps .icon a:link, #right #nextsteps .icon a:visited {
+  padding: 0;
+  margin: 5px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+  text-decoration: none;
+}
+#right #nextsteps .icon a:hover {
+  text-decoration: underline;
+}
+#right #worryfree, #right #recommended, #right #newsletter {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cccccc;
+}
+#right #worryfree .title, #right #recommended .title, #right #newsletter .title {
+  background: #eeeeee;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+#right #worryfree .title h3, #right #recommended h3, #right #newsletter h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#right #worryfree ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+#right #worryfree li {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#right #worryfree a:link, #right #worryfree a:visited,
+#right #newsletter a:link, #right #newsletter a:visited {
+  text-decoration: none;
+  font-weight: bold;
+}
+#right #worryfree a:hover, #right #newsletter a:hover {
+  text-decoration: underline;
+}
+#right #newsletter p {
+  margin: 5px;
+  padding: 0;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.4em;
+}
+#header {
+  text-align: left;
+  vertical-align: middle;
+  width: 1024px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  position: absolute; left: 0px; top: 0px;
+}
+
+#header .logo {
+  width: 619px;
+  float: left;
+}
+
+#header .logo img {
+  border: none;
+}
+
+#header .needhelp {
+  width: 400px;
+  float: right;
+}
+
+#header .needhelp img {
+  border: none;
+}
+
+#navbar {
+  position: absolute; left: 0px; top: 80px;
+  width: 1024px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  clear: both;
+  background-image: url('/i/navbar_img.gif');
+}
+#navbar .phone {
+  margin-right: 5px;
+}
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+#navbar li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#navbar li a:link, #navbar li a:visited {
+  text-decoration: none;
+}
+#navbar li a:hover {
+  text-decoration: underline;
+}
+#footer {
+  text-align: left;
+  width: 1024px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  position: absolute; left: 0px; top: 1300px; 
+  border-top: 2px #cccccc solid;
+  background-image: url('/i/navbar_img.gif');
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+}
+
+#footer li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+#footer li a:link, #footer li a:visited {
+  text-decoration: none;
+}
+
+#footer li a:hover {
+  text-decoration: underline;
+}
+
+#categories {
+  width: 150px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+#categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#categories li {
+  border-bottom: 1px solid #cccccc;
+  line-height: 1.2em;
+}
+
+#categories a:link, #categories a:visited {
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+#categories a:hover {
+  text-decoration: underline;
+}
+.angle {
+  background-image: url(/i/angled.gif);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+.title h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+#left .searchform, #header .searchform {
+  margin: 10px 5px;
+  padding: 0;
+}
+#header .searchform {
+  float: right;
+}
+#left .searchform form, #header .searchform form {
+  padding: 0;
+  margin: 0;
+}
+#left .searchform .text, #header .searchform .text {
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  border-top: 2px inset #cccccc;
+  border-left: 2px inset #cccccc;
+  border-right: 1px inset #cccccc;
+  border-bottom: 1px inset #cccccc;
+}
+#left .searchform .button, #header .searchform .button {
+  text-align: right;
+}
+#left .searchform img, #header .searchform img {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#header .searchform .button {
+  display: inline;
+}
+.btn {
+  border: 1px solid #cccccc;
+  width: 50px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.hrline {
+  background-image: url(/i/hrline.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 10px;
+  clear: both;
+}
+.hr {
+  padding: 0;
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border: none;
+  border-top: 1px dotted #cccccc;
+  clear: both;
+  height: 1px;
+}
+.shield {
+  float: right; 
+}
+.shield img {
+  border: none;
+  padding: 0;
+  margin: 30px;
+}
+
+#inc500 {
+  width: 150px;
+  height: 110px;
+  border: none;
+  text-align: center;
+}
+#inc500 img {
+  border: none;
+}
+#inc500 a:href, #inc500 a:link {
+  text-decoration: none;
+}
+
+/*QUOTEFORM*/
+#quoteform input.txt {
+        width: 200px;
+}
+#quoteform input.securitytxt {
+        width: 100px;
+        height: 14px;
+}
+#quoteform textarea.txtbox {
+        width: 300px;
+        height: 200px;
+}
+#quoteform select.txt {
+        width: 200px;
+}
+#quoteform input.btn {
+        border: 1px inset #ffffff;
+        border-style: outset;
+        text-decoration: underline;
+}
+#quoteform form p {
+        clear: left;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 5px;
+}
+#quoteform form p label {
+        float: left;
+        width: 30%;
+        font-size: 10px;
+        font-weight: bold;
+}
+#quoteform .offerbtn {
+        float: right;
+        border: none;
+        padding: 40px 10px 10px 10px;
+        margin: 0px;
+}
+#quoteform .offerbtn img {
+        border: none;
+}
+#quoteform table {
+        padding: 0;
+        margin: 0;
+        border: none;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+}
+#quoteform table select, #quoteform table input {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+}
+#quoteform table h5 {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+}
+#txmas {
+        padding: 0;
+        margin: 0;
+        width: 450px;
+}
+#txmas table {
+        clear: both;
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+}
+#txmas td {
+        margin: 0;
+        padding: 2px;
+        font-size: 11px;
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        border-bottom: 1px solid #a6a6a6;
+}
+#txmas td strong {
+        font-size: 12px;
+        color: #666699;
+} 

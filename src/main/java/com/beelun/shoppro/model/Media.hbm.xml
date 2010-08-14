@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Media" table="shoppro_media" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        
+        <!-- We save fileName instead of url in case media are migrated to other location -->
+        <property name="fileName" column="fileName" not-null="true" unique="true"/>
+        <property name="title" column="title" not-null="true"/>
+        <property name="caption" column="caption"/>
+        <property name="description" column="description" length="1024"/>
+        <property name="updated" not-null="false" >
+        	<column name="updated" default="now()" not-null="true" sql-type="timestamp" />        	
+        </property>
+                        
+    </class>
+</hibernate-mapping>

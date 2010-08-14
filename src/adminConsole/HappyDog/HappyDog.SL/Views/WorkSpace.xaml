@@ -1,0 +1,37 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.WorkSpace" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:HDControls="clr-namespace:HappyDog.SL.Controls"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+           xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="WorkSpace Page">
+
+  <Grid x:Name="LayoutRoot" Background="#FFFFFF" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="60" />
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <!--Header-->
+    <HDControls:Header x:Name="HeaderArea" SelectedButtonIndex="1" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Top" Canvas.ZIndex="100"></HDControls:Header>
+    
+    <!-- Work space body -->
+    <navigation:Frame x:Name="ContentFrame" Grid.Row="1" Style="{StaticResource ContentFrameStyle}" JournalOwnership="OwnsJournal" CacheSize="5"  Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+      <navigation:Frame.UriMapper>
+        <uriMapper:UriMapper>
+          <uriMapper:UriMapping Uri="WorkSpaceBody/{targetView}" MappedUri="/Views/WorkSpaceBody.xaml?targetView={targetView}">
+          </uriMapper:UriMapping>
+        </uriMapper:UriMapper>
+      </navigation:Frame.UriMapper>
+    </navigation:Frame>
+
+    <!--
+    <Grid x:Name="Body" Grid.Row="1" Height="300"/>
+    -->
+    
+    </Grid>     
+</navigation:Page>
