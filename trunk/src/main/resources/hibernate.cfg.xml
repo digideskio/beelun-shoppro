@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration SYSTEM  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" >
+          
+<hibernate-configuration>
+  <session-factory>
+    <!-- hibernate dialect -->
+    <!-- 
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    -->
+
+    <!-- JDBC connection properties -->
+    <!-- 
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/shoppro?createDatabaseIfNotExist=true</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"></property>
+    -->    
+
+    <!-- Connection pool provider -->
+    <property name="c3p0.acquire_increment">1</property> 
+    <property name="c3p0.idle_test_period">300</property> <!-- seconds --> 
+    <property name="c3p0.min_size">10</property> 
+    <property name="c3p0.max_size">100</property> 
+    <property name="c3p0.max_statements">50</property> 
+    <property name="c3p0.timeout">300</property> <!-- seconds -->
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>         
+  
+    <!-- JDBC and connection properties -->
+    <property name="hibernate.jdbc.fetch_size">16</property>
+    
+    <!-- Attention: When you change below settings, need also update web.xml/OnlinekCometdServlet.jdbcBatchSize -->
+    <property name="hibernate.jdbc.batch_size">16</property>
+  
+    <!-- Cache provider -->
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+    
+    <!-- Resource mapping -->
+    <mapping resource="com/beelun/shoppro/model/Hibernate.queries.hbm.xml"/>
+    <mapping resource="com/beelun/shoppro/model/User.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Tab.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Category.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Item.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Article.hbm.xml" />
+    <mapping resource="com/beelun/shoppro/model/Brand.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Tab2CategoryMap.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Category2ItemMap.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/MyGlob.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Role.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Membership.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/Order.hbm.xml" />   
+    <mapping resource="com/beelun/shoppro/model/OrderItem.hbm.xml" />    
+    <mapping resource="com/beelun/shoppro/model/Address.hbm.xml" />    
+    <mapping resource="com/beelun/shoppro/model/PaymentTool.hbm.xml" />    
+    <mapping resource="com/beelun/shoppro/model/ExpressCorp.hbm.xml" />
+    <mapping resource="com/beelun/shoppro/model/PaypalAccessInfo.hbm.xml" />
+    <mapping resource="com/beelun/shoppro/model/Media.hbm.xml" />
+    <mapping resource="com/beelun/shoppro/model/Template.hbm.xml" />
+        
+    <!-- Cache definition -->
+    <class-cache class="com.beelun.shoppro.model.User" usage="nonstrict-read-write" />     
+    
+  </session-factory>
+</hibernate-configuration>

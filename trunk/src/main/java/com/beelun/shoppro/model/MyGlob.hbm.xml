@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.MyGlob" table="shoppro_myglob">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="shopName" column="shopName" not-null="true"/>
+        <property name="slogan" column="slogan" not-null="true"/>
+        <property name="phoneNumber" column="phoneNumber" />
+        <property name="logoAbsoluteUrl" column="logoAbsoluteUrl" not-null="true"/>
+        <property name="address" column="address" length="4000" />
+        <property name="page404" column="page404" not-null="true" type="text"/>
+        <property name="page500" column="page500" not-null="true" type="text"/>
+        <property name="pageNoSearchResult" column="pageNoSearchResult" not-null="true" type="text"/>
+        <property name="footer" column="footer" not-null="true" type="text"/>
+        <property name="googleCustSearchCode" column="googleCustSearchCode" length="2000"/>
+        <property name="unlockEmailTemplate" column="unlockEmailTemplate" not-null="true" length="2000"/>
+        <property name="resetPasswordMailTemplate" column="resetPasswordMailTemplate" not-null="true" length="2000"/>
+        <property name="signupAgreement" column="signupAgreement" not-null="true" type="text"/>
+        <property name="version" column="version" not-null="true" />
+		<property name="siteType" column="siteType" type="com.beelun.shoppro.model.type.SiteTypeHib" not-null="true"/>        
+    </class>
+</hibernate-mapping>

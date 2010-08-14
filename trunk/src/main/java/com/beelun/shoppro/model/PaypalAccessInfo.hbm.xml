@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.PaypalAccessInfo" table="shoppro_paypalaccessinfo">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="apiUserName" column="apiUserName" not-null="true" />
+        <property name="apiPassword" column="apiPassword" not-null="true" />
+        <property name="apiSignature" column="apiSignature" not-null="true" />
+        <property name="useSandbox" column="useSandbox" not-null="true" />
+    </class>
+</hibernate-mapping>

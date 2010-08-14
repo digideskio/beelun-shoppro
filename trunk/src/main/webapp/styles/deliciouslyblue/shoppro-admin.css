@@ -1,0 +1,295 @@
+/* CSS of header ftl*/
+.shopName {
+	cursor: pointer;
+	font-color:#6DA6E2;
+}
+
+.headerRight {
+	text-align:right; 
+	vertical-align:top
+	
+}
+
+.headerRight a {
+	vertical-align:middle;
+	cursor:pointer;  
+	padding-right:5px; 
+	padding-left:5px;
+	
+}
+
+.phoneNum {
+	font-size:20px
+}
+
+.searchBar {
+	background-color:#FBFBFB;
+}
+
+.searchItem {
+	text-align:right; 
+	vertical-align:top; 
+	padding-top:5px; 
+	padding-bottom:1px
+
+}
+
+.searchItem img {
+	vertical-align:bottom; 
+	padding-left:2px; 
+	padding-right:10px
+}
+
+.keywords {
+	color:#800000;	
+}
+
+
+/* CSS of footer ftl*/
+
+.copyRight {
+	color:#FF9A35;
+}
+
+.companyInfo {
+	padding-right:10px;	
+}
+
+
+/* CSS of Default ftl*/
+.loginDiv {
+	background-color:#0080FF;
+	color:#FFFFFF;
+	margin-left:5px;
+	padding-left:3px;
+}
+
+.categoryTitle {
+	background-color:#2763A5;
+	color:#FFFFFF;
+	padding: 5px;
+	font-weight: 600;
+	
+}
+
+/**************** categoryPage styles ****************/
+.sellPrice {
+	color:#A80000; 
+	font-size:12px; 
+}
+.listPrice {
+	text-decoration:line-through;
+}
+.buttonGray,
+.addToCart {
+	background:#EFEFEF none repeat scroll 0 0; 
+	border:1px solid #CCCCCC;
+	display:block;
+	padding: 1px 2px; 
+	text-align: center; 
+	width:100px; 
+	cursor: pointer;
+}
+
+/**************** checkout Page styles ****************/
+.hide {
+	display: none;	
+}
+
+.orderMain {
+	background:#F0F0F0 none repeat scroll 0 0; 
+	border:1px solid #D5D5D5; 
+	margin:: 10px 0 0; 
+	padding:7px;
+}
+.orderDiv {
+	border: 1px solid #CCCCCC; 
+	padding: 5px; 
+	background:#FFFFFF none repeat scroll 0 0; 
+	margin-bottom: 7px;
+}
+.orderTable {
+	
+	border-collapse:separate;
+	border:1px solid #DDDDDD; 
+	margin:0; 
+	width:100%; 
+	vertical-align:top;
+	margin-bottom:5px; 
+}
+
+.orderTable th{
+	border-color:#FFFFFF #DDDDDD #DDDDDD #FFFFFF; 
+	border-style:solid; 
+	border-width:1px; 
+	padding:4px; 
+	vertical-align:top;
+	width:190px;
+	text-align:left;
+
+}
+.orderTable td{
+	border-color:#FFFFFF #DDDDDD #DDDDDD #FFFFFF; 
+	border-style:solid; 
+	border-width:1px; 
+	padding:4px; 
+	vertical-align:top;
+
+}
+/* Panel Css */
+.panel {
+	margin: 0 50px;
+}
+
+.narrow {
+	margin: 0 200px;
+}
+
+.wide {
+	margin: 0 10px;
+}
+
+.full {
+	margin: 0;
+}
+
+.panel table{
+	border-collapse:separate;
+	margin:0;
+}
+
+td.PanelTitle {
+	background-image:url(/images/panel_header.gif);
+	color:#FFFFFF;
+	font-size:11px;
+	font-weight:bold;
+	height:15px;
+	padding:0 0 0 10px;
+	text-align:left;
+	vertical-align:bottom;
+}
+.PanelBorder {
+	background-color:#A6A6A6;
+	height:100%;
+	padding:0;
+	border:1px solid;
+}
+table.PanelBox {
+	height:100%;
+	vertical-align:top;
+	width:100%;
+}
+skin1.css (line 343)
+table, img {
+	border:0 none;
+}
+td.PanelBox {
+	background-color:#FFFFFF;
+	padding:10px;
+	text-align:left;
+}
+
+.loginLeft {
+	float:left; 
+	min-height: 300px; 
+	width:45%; 
+	padding-top: 10px;
+}
+.separator {
+	float:left; 
+	height: 300px; 
+	margin:20px 20px; 
+	border: dashed; 
+	border-width:0px 2px 0px 0px; 
+	border-style:dash; 
+	border-color: #ABCDEF;
+}
+.SignupRight {
+	float:right; 
+	min-height: 300px; 
+	width:50%; 
+	padding-top: 10px; 
+	margin-bottom:30px;
+}
+.linkButton {
+	background:#EFEFEF none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	display:block;
+	padding: 1px 2px; 
+	text-align: center; 
+	width:100px; 
+	cursor: pointer;
+}
+
+.red {
+	background:#FF00EE none repeat scroll 0 0; 
+}
+.bigButton {
+	font-size:20px;
+	height:30px;
+	width:100px;
+}
+
+.menuItem
+{
+	border-bottom:1px solid white;
+	padding:2px 0;
+}
+.menubd
+{
+	border:0;
+	background-color:#ABC1FC;
+}
+#menubd
+{
+	border:0;
+	background-color:#ABC1FC;
+}
+.menuTd
+{
+vertical-align:top;
+border-right:5px solid #6F777A;
+}
+.menuTitle
+{
+height:30px;background-color:#2763A5;border-bottom:1px solid #EEEEEE;
+}
+.whiteFont
+{
+color:white;
+}
+.menuItem
+{
+border-bottom:1px solid #EEEEEE;
+}
+.menuItemActive
+{
+background-color:#6F777A
+}
+.menuItemActive span
+{
+color:#EEEEEE
+}
+
+.dataTable
+{
+vertical-align:top;
+border-bottom:5px solid #6F777A;
+border-right:5px solid #6F777A;
+}
+.dataTableTitle
+{
+background-color:#6F777A;
+}
+.dataTableTitle span
+{
+color:#CCCCCC;
+}
+.dataTableToolbar
+{
+background:#F0F0F0 none repeat scroll 0 0;
+border-bottom:3px solid #6F777A;
+border-top:1px solid #FFFFFF;
+line-height:30px;
+padding:0 8px;
+}

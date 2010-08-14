@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns1="http://service.shoppro.beelun.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSEntryManager" targetNamespace="http://service.shoppro.beelun.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:tns="http://service.shoppro.beelun.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.shoppro.beelun.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="item" type="tns:item" />
+      <xs:complexType name="mappingStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="mappingStatus" type="tns:mappingStatusEnum" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="baseObject">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="media">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="caption" type="xs:string" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="fileName" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="myUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="title" type="xs:string" />
+              <xs:element minOccurs="0" name="updated" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="item">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="brand" type="tns:brand" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="detailedDescription" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="image" type="xs:string" />
+              <xs:element minOccurs="0" name="inventoryNumber" type="xs:long" />
+              <xs:element name="isShown" type="xs:boolean" />
+              <xs:element minOccurs="0" name="keywords" type="xs:string" />
+              <xs:element minOccurs="0" name="listPrice" type="xs:decimal" />
+              <xs:element minOccurs="0" name="metaTag" type="xs:string" />
+              <xs:element minOccurs="0" name="myUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="netSuiteId" type="xs:long" />
+              <xs:element minOccurs="0" name="pageTitle" type="xs:string" />
+              <xs:element minOccurs="0" name="sellPrice" type="xs:decimal" />
+              <xs:element minOccurs="0" name="serialNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="shortDescription" type="xs:string" />
+              <xs:element minOccurs="0" name="template" type="tns:template" />
+              <xs:element minOccurs="0" name="thumbNail" type="xs:string" />
+              <xs:element minOccurs="0" name="updated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="url" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="brand">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="image" type="xs:string" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="webSite" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="template">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="fileNamePrefix" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="templateContent" type="xs:string" />
+              <xs:element minOccurs="0" name="templateType" type="tns:templateTypeEnum" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="myGlob">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="address" type="xs:string" />
+              <xs:element minOccurs="0" name="footer" type="xs:string" />
+              <xs:element minOccurs="0" name="googleCustSearchCode" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="logoAbsoluteUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="page404" type="xs:string" />
+              <xs:element minOccurs="0" name="page500" type="xs:string" />
+              <xs:element minOccurs="0" name="pageNoSearchResult" type="xs:string" />
+              <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="resetPasswordMailTemplate" type="xs:string" />
+              <xs:element minOccurs="0" name="shopName" type="xs:string" />
+              <xs:element minOccurs="0" name="signupAgreement" type="xs:string" />
+              <xs:element minOccurs="0" name="siteType" type="tns:siteTypeEnum" />
+              <xs:element minOccurs="0" name="slogan" type="xs:string" />
+              <xs:element minOccurs="0" name="unlockEmailTemplate" type="xs:string" />
+              <xs:element minOccurs="0" name="version" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="order">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+              <xs:element minOccurs="0" name="billingAddress" type="tns:address" />
+              <xs:element minOccurs="0" name="expressCorp" type="tns:expressCorp" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="notes" type="xs:string" />
+              <xs:element minOccurs="0" name="orderDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="orderItemSet" nillable="true" type="tns:orderItem" />
+              <xs:element minOccurs="0" name="paymentTool" type="tns:paymentTool" />
+              <xs:element name="sameAddress" type="xs:boolean" />
+              <xs:element minOccurs="0" name="serialNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="shipDate" type="tns:shipDateEnum" />
+              <xs:element minOccurs="0" name="shipTime" type="tns:shipTimeEnum" />
+              <xs:element minOccurs="0" name="shippingAddress" type="tns:address" />
+              <xs:element minOccurs="0" name="specifiedShipDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="status" type="tns:orderStatusEnum" />
+              <xs:element minOccurs="0" name="user" type="tns:user" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="address">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="address" type="xs:string" />
+              <xs:element minOccurs="0" name="address2" type="xs:string" />
+              <xs:element minOccurs="0" name="city" type="xs:string" />
+              <xs:element minOccurs="0" name="firstName" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="lastName" type="xs:string" />
+              <xs:element minOccurs="0" name="mobileNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="recipientName" type="xs:string" />
+              <xs:element minOccurs="0" name="state" type="tns:usStateEnum" />
+              <xs:element minOccurs="0" name="zip" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="expressCorp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element name="enabled" type="xs:boolean" />
+              <xs:element minOccurs="0" name="fullName" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="shortName" type="xs:string" />
+              <xs:element minOccurs="0" name="webSite" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="orderItem">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="item" type="tns:item" />
+              <xs:element minOccurs="0" name="itemCount" type="xs:long" />
+              <xs:element minOccurs="0" name="itemInXmlString" type="xs:string" />
+              <xs:element minOccurs="0" name="sellPrice" type="xs:decimal" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="paymentTool">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element name="enabled" type="xs:boolean" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="user">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element name="accountExpired" type="xs:boolean" />
+              <xs:element name="accountLocked" type="xs:boolean" />
+              <xs:element minOccurs="0" name="billingAddress" type="tns:address" />
+              <xs:element minOccurs="0" name="createdWhen" type="xs:dateTime" />
+              <xs:element name="credentialsExpired" type="xs:boolean" />
+              <xs:element minOccurs="0" name="email" type="xs:string" />
+              <xs:element name="enabled" type="xs:boolean" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="lastLogin" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="password" type="xs:string" />
+              <xs:element minOccurs="0" name="resetPswdToken" type="xs:string" />
+              <xs:element name="sameAddress" type="xs:boolean" />
+              <xs:element minOccurs="0" name="shippingAddress" type="tns:address" />
+              <xs:element minOccurs="0" name="unlockToken" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="category">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element name="isShown" type="xs:boolean" />
+              <xs:element minOccurs="0" name="keywords" type="xs:string" />
+              <xs:element minOccurs="0" name="metaTag" type="xs:string" />
+              <xs:element minOccurs="0" name="myUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="pageTitle" type="xs:string" />
+              <xs:element minOccurs="0" name="template" type="tns:template" />
+              <xs:element minOccurs="0" name="updated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="url" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="chartDataPointModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="y" type="xs:decimal" />
+          <xs:element minOccurs="0" name="xDate" type="xs:dateTime" />
+          <xs:element name="xInt" type="xs:int" />
+          <xs:element minOccurs="0" name="xString" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="article">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="content" type="xs:string" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element name="isShown" type="xs:boolean" />
+              <xs:element minOccurs="0" name="keywords" type="xs:string" />
+              <xs:element minOccurs="0" name="metaTag" type="xs:string" />
+              <xs:element minOccurs="0" name="myUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="pageTitle" type="xs:string" />
+              <xs:element minOccurs="0" name="title" type="xs:string" />
+              <xs:element minOccurs="0" name="updated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="url" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="tab">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="content" type="xs:string" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element name="isShown" type="xs:boolean" />
+              <xs:element minOccurs="0" name="keywords" type="xs:string" />
+              <xs:element minOccurs="0" name="metaTag" type="xs:string" />
+              <xs:element minOccurs="0" name="myUrl" type="xs:string" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="pageTitle" type="xs:string" />
+              <xs:element minOccurs="0" name="showOrder" type="xs:long" />
+              <xs:element minOccurs="0" name="updated" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="url" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="paypalAccessInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:baseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="apiPassword" type="xs:string" />
+              <xs:element minOccurs="0" name="apiSignature" type="xs:string" />
+              <xs:element minOccurs="0" name="apiUserName" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element name="useSandbox" type="xs:boolean" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="mappingStatusEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ALL" />
+          <xs:enumeration value="NONE" />
+          <xs:enumeration value="PARTIAL" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="templateTypeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ITEM" />
+          <xs:enumeration value="CATEGORY" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="siteTypeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="US" />
+          <xs:enumeration value="CN" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="usStateEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AK" />
+          <xs:enumeration value="AL" />
+          <xs:enumeration value="AR" />
+          <xs:enumeration value="AZ" />
+          <xs:enumeration value="CA" />
+          <xs:enumeration value="CO" />
+          <xs:enumeration value="CT" />
+          <xs:enumeration value="DC" />
+          <xs:enumeration value="DE" />
+          <xs:enumeration value="FL" />
+          <xs:enumeration value="GA" />
+          <xs:enumeration value="HI" />
+          <xs:enumeration value="IA" />
+          <xs:enumeration value="ID" />
+          <xs:enumeration value="IL" />
+          <xs:enumeration value="IN" />
+          <xs:enumeration value="KS" />
+          <xs:enumeration value="KY" />
+          <xs:enumeration value="LA" />
+          <xs:enumeration value="MA" />
+          <xs:enumeration value="MD" />
+          <xs:enumeration value="ME" />
+          <xs:enumeration value="MI" />
+          <xs:enumeration value="MN" />
+          <xs:enumeration value="MO" />
+          <xs:enumeration value="MS" />
+          <xs:enumeration value="MT" />
+          <xs:enumeration value="NC" />
+          <xs:enumeration value="ND" />
+          <xs:enumeration value="NE" />
+          <xs:enumeration value="NH" />
+          <xs:enumeration value="NJ" />
+          <xs:enumeration value="NM" />
+          <xs:enumeration value="NV" />
+          <xs:enumeration value="NY" />
+          <xs:enumeration value="OH" />
+          <xs:enumeration value="OK" />
+          <xs:enumeration value="OR" />
+          <xs:enumeration value="PA" />
+          <xs:enumeration value="RI" />
+          <xs:enumeration value="SC" />
+          <xs:enumeration value="SD" />
+          <xs:enumeration value="TN" />
+          <xs:enumeration value="TX" />
+          <xs:enumeration value="UT" />
+          <xs:enumeration value="VA" />
+          <xs:enumeration value="VT" />
+          <xs:enumeration value="WA" />
+          <xs:enumeration value="WI" />
+          <xs:enumeration value="WV" />
+          <xs:enumeration value="WY" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="shipDateEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ANY_DATE" />
+          <xs:enumeration value="BUSINESS_DAY" />
+          <xs:enumeration value="NON_BUSINESS_DAY" />
+          <xs:enumeration value="SPECIFIED_DATE" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="shipTimeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ANY_TIME" />
+          <xs:enumeration value="MORNING" />
+          <xs:enumeration value="AFTERNOON" />
+          <xs:enumeration value="EVENING" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="orderStatusEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PAID" />
+          <xs:enumeration value="NOTPAID" />
+          <xs:enumeration value="SHIPPING" />
+          <xs:enumeration value="CLOSED" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="timeAccuracyEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="YEAR" />
+          <xs:enumeration value="HALF_YEAR" />
+          <xs:enumeration value="QUARTER" />
+          <xs:enumeration value="MONTH" />
+          <xs:enumeration value="WEEK" />
+          <xs:enumeration value="DAY" />
+          <xs:enumeration value="HOUR" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="getMappingStatus_Item" type="tns:getMappingStatus_Item" />
+      <xs:complexType name="getMappingStatus_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getMappingStatus_ItemResponse" type="tns:getMappingStatus_ItemResponse" />
+      <xs:complexType name="getMappingStatus_ItemResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mappingStatus" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByTextCount_Item" type="tns:searchByTextCount_Item" />
+      <xs:complexType name="searchByTextCount_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByTextCount_ItemResponse" type="tns:searchByTextCount_ItemResponse" />
+      <xs:complexType name="searchByTextCount_ItemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Media" type="tns:removeMany_Media" />
+      <xs:complexType name="removeMany_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="mediaIdList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_MediaResponse" type="tns:removeMany_MediaResponse" />
+      <xs:complexType name="removeMany_MediaResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Brand" type="tns:removeMany_Brand" />
+      <xs:complexType name="removeMany_Brand">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_BrandResponse" type="tns:removeMany_BrandResponse" />
+      <xs:complexType name="removeMany_BrandResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="createNew_Media" type="tns:createNew_Media" />
+      <xs:complexType name="createNew_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:media" />
+          <xs:element minOccurs="0" name="content" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="createNew_MediaResponse" type="tns:createNew_MediaResponse" />
+      <xs:complexType name="createNew_MediaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:media" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Tab" type="tns:removeMany_Tab" />
+      <xs:complexType name="removeMany_Tab">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_TabResponse" type="tns:removeMany_TabResponse" />
+      <xs:complexType name="removeMany_TabResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_Item" type="tns:getByCondition_Item" />
+      <xs:complexType name="getByCondition_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderBy" type="xs:string" />
+          <xs:element name="ascending" type="xs:boolean" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+          <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_ItemResponse" type="tns:getByCondition_ItemResponse" />
+      <xs:complexType name="getByCondition_ItemResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:item" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_MyGlob" type="tns:save_MyGlob" />
+      <xs:complexType name="save_MyGlob">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="myGlob" type="tns:myGlob" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_MyGlobResponse" type="tns:save_MyGlobResponse" />
+      <xs:complexType name="save_MyGlobResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:myGlob" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByOrderNo_Order" type="tns:getByOrderNo_Order" />
+      <xs:complexType name="getByOrderNo_Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByOrderNo_OrderResponse" type="tns:getByOrderNo_OrderResponse" />
+      <xs:complexType name="getByOrderNo_OrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getMappingStatus_Category" type="tns:getMappingStatus_Category" />
+      <xs:complexType name="getMappingStatus_Category">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getMappingStatus_CategoryResponse" type="tns:getMappingStatus_CategoryResponse" />
+      <xs:complexType name="getMappingStatus_CategoryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mappingStatus" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="setMappingStatus_Category" type="tns:setMappingStatus_Category" />
+      <xs:complexType name="setMappingStatus_Category">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="categoryIdList" type="xs:long" />
+          <xs:element minOccurs="0" name="tabId" type="xs:long" />
+          <xs:element minOccurs="0" name="mappingStatus" type="tns:mappingStatusEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="setMappingStatus_CategoryResponse" type="tns:setMappingStatus_CategoryResponse" />
+      <xs:complexType name="setMappingStatus_CategoryResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Category" type="tns:save_Category" />
+      <xs:complexType name="save_Category">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="tns:category" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_CategoryResponse" type="tns:save_CategoryResponse" />
+      <xs:complexType name="save_CategoryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:category" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByType_Template" type="tns:getByType_Template" />
+      <xs:complexType name="getByType_Template">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="templateType" type="tns:templateTypeEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByType_TemplateResponse" type="tns:getByType_TemplateResponse" />
+      <xs:complexType name="getByType_TemplateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:template" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAllCount_User" type="tns:getAllCount_User" />
+      <xs:complexType name="getAllCount_User">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAllCount_UserResponse" type="tns:getAllCount_UserResponse" />
+      <xs:complexType name="getAllCount_UserResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getSalesByBrand" type="tns:getSalesByBrand" />
+      <xs:complexType name="getSalesByBrand">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="specifiedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="accuracy" type="tns:timeAccuracyEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getSalesByBrandResponse" type="tns:getSalesByBrandResponse" />
+      <xs:complexType name="getSalesByBrandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:chartDataPointModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAll_Brand" type="tns:getAll_Brand" />
+      <xs:complexType name="getAll_Brand">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAll_BrandResponse" type="tns:getAll_BrandResponse" />
+      <xs:complexType name="getAll_BrandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Order" type="tns:save_Order" />
+      <xs:complexType name="save_Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="order" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_OrderResponse" type="tns:save_OrderResponse" />
+      <xs:complexType name="save_OrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAll_Article" type="tns:getAll_Article" />
+      <xs:complexType name="getAll_Article">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAll_ArticleResponse" type="tns:getAll_ArticleResponse" />
+      <xs:complexType name="getAll_ArticleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:article" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="fetch_MyGlob" type="tns:fetch_MyGlob" />
+      <xs:complexType name="fetch_MyGlob">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="fetch_MyGlobResponse" type="tns:fetch_MyGlobResponse" />
+      <xs:complexType name="fetch_MyGlobResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:myGlob" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getCountByCondition_Item" type="tns:getCountByCondition_Item" />
+      <xs:complexType name="getCountByCondition_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getCountByCondition_ItemResponse" type="tns:getCountByCondition_ItemResponse" />
+      <xs:complexType name="getCountByCondition_ItemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Item" type="tns:removeMany_Item" />
+      <xs:complexType name="removeMany_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_ItemResponse" type="tns:removeMany_ItemResponse" />
+      <xs:complexType name="removeMany_ItemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAll_Category" type="tns:getAll_Category" />
+      <xs:complexType name="getAll_Category">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAll_CategoryResponse" type="tns:getAll_CategoryResponse" />
+      <xs:complexType name="getAll_CategoryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:category" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Media" type="tns:save_Media" />
+      <xs:complexType name="save_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:media" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_MediaResponse" type="tns:save_MediaResponse" />
+      <xs:complexType name="save_MediaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:media" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getNewUserTrend" type="tns:getNewUserTrend" />
+      <xs:complexType name="getNewUserTrend">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="specifiedStartingTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="timeAccuracy" type="tns:timeAccuracyEnum" />
+          <xs:element name="maxCount" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getNewUserTrendResponse" type="tns:getNewUserTrendResponse" />
+      <xs:complexType name="getNewUserTrendResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:chartDataPointModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="enableDisableUserAccess_User" type="tns:enableDisableUserAccess_User" />
+      <xs:complexType name="enableDisableUserAccess_User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userId" type="xs:long" />
+          <xs:element name="isEnabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="enableDisableUserAccess_UserResponse" type="tns:enableDisableUserAccess_UserResponse" />
+      <xs:complexType name="enableDisableUserAccess_UserResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Brand" type="tns:save_Brand" />
+      <xs:complexType name="save_Brand">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="brand" type="tns:brand" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_BrandResponse" type="tns:save_BrandResponse" />
+      <xs:complexType name="save_BrandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:brand" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_User" type="tns:getByCondition_User" />
+      <xs:complexType name="getByCondition_User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderBy" type="xs:string" />
+          <xs:element name="ascending" type="xs:boolean" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_UserResponse" type="tns:getByCondition_UserResponse" />
+      <xs:complexType name="getByCondition_UserResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_Order" type="tns:getByCondition_Order" />
+      <xs:complexType name="getByCondition_Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderBy" type="xs:string" />
+          <xs:element name="ascending" type="xs:boolean" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_OrderResponse" type="tns:getByCondition_OrderResponse" />
+      <xs:complexType name="getByCondition_OrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Item" type="tns:save_Item" />
+      <xs:complexType name="save_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="item" type="tns:item" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_ItemResponse" type="tns:save_ItemResponse" />
+      <xs:complexType name="save_ItemResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:item" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAll_Tab" type="tns:getAll_Tab" />
+      <xs:complexType name="getAll_Tab">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAll_TabResponse" type="tns:getAll_TabResponse" />
+      <xs:complexType name="getAll_TabResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tab" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAllCount_Order" type="tns:getAllCount_Order" />
+      <xs:complexType name="getAllCount_Order">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAllCount_OrderResponse" type="tns:getAllCount_OrderResponse" />
+      <xs:complexType name="getAllCount_OrderResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_Category" type="tns:getByCondition_Category" />
+      <xs:complexType name="getByCondition_Category">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderBy" type="xs:string" />
+          <xs:element name="ascending" type="xs:boolean" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_CategoryResponse" type="tns:getByCondition_CategoryResponse" />
+      <xs:complexType name="getByCondition_CategoryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:category" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAllCount_Media" type="tns:getAllCount_Media" />
+      <xs:complexType name="getAllCount_Media">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAllCount_MediaResponse" type="tns:getAllCount_MediaResponse" />
+      <xs:complexType name="getAllCount_MediaResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Article" type="tns:removeMany_Article" />
+      <xs:complexType name="removeMany_Article">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_ArticleResponse" type="tns:removeMany_ArticleResponse" />
+      <xs:complexType name="removeMany_ArticleResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="fetch_Paypal" type="tns:fetch_Paypal" />
+      <xs:complexType name="fetch_Paypal">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="fetch_PaypalResponse" type="tns:fetch_PaypalResponse" />
+      <xs:complexType name="fetch_PaypalResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:paypalAccessInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_Media" type="tns:getByCondition_Media" />
+      <xs:complexType name="getByCondition_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderBy" type="xs:string" />
+          <xs:element name="ascending" type="xs:boolean" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByCondition_MediaResponse" type="tns:getByCondition_MediaResponse" />
+      <xs:complexType name="getByCondition_MediaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:media" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="createNewAdmin_User" type="tns:createNewAdmin_User" />
+      <xs:complexType name="createNewAdmin_User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="email" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="createNewAdmin_UserResponse" type="tns:createNewAdmin_UserResponse" />
+      <xs:complexType name="createNewAdmin_UserResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:user" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAllCount_Item" type="tns:getAllCount_Item" />
+      <xs:complexType name="getAllCount_Item">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAllCount_ItemResponse" type="tns:getAllCount_ItemResponse" />
+      <xs:complexType name="getAllCount_ItemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="changeOrderStatus_Order" type="tns:changeOrderStatus_Order" />
+      <xs:complexType name="changeOrderStatus_Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderId" type="xs:long" />
+          <xs:element minOccurs="0" name="newOrderStatus" type="tns:orderStatusEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="changeOrderStatus_OrderResponse" type="tns:changeOrderStatus_OrderResponse" />
+      <xs:complexType name="changeOrderStatus_OrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="setMappingStatus_Item" type="tns:setMappingStatus_Item" />
+      <xs:complexType name="setMappingStatus_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="itemIdList" type="xs:long" />
+          <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+          <xs:element minOccurs="0" name="mappingStatus" type="tns:mappingStatusEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="setMappingStatus_ItemResponse" type="tns:setMappingStatus_ItemResponse" />
+      <xs:complexType name="setMappingStatus_ItemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByEmail_User" type="tns:getByEmail_User" />
+      <xs:complexType name="getByEmail_User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userEmail" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getByEmail_UserResponse" type="tns:getByEmail_UserResponse" />
+      <xs:complexType name="getByEmail_UserResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:user" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByTextCount_Media" type="tns:searchByTextCount_Media" />
+      <xs:complexType name="searchByTextCount_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByTextCount_MediaResponse" type="tns:searchByTextCount_MediaResponse" />
+      <xs:complexType name="searchByTextCount_MediaResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Template" type="tns:save_Template" />
+      <xs:complexType name="save_Template">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="template" type="tns:template" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_TemplateResponse" type="tns:save_TemplateResponse" />
+      <xs:complexType name="save_TemplateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:template" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getAll_Template" type="tns:getAll_Template" />
+      <xs:complexType name="getAll_Template">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="getAll_TemplateResponse" type="tns:getAll_TemplateResponse" />
+      <xs:complexType name="getAll_TemplateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:template" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByText_Media" type="tns:searchByText_Media" />
+      <xs:complexType name="searchByText_Media">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" type="xs:string" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByText_MediaResponse" type="tns:searchByText_MediaResponse" />
+      <xs:complexType name="searchByText_MediaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:media" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="resetPassword_User" type="tns:resetPassword_User" />
+      <xs:complexType name="resetPassword_User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userId" type="xs:long" />
+          <xs:element minOccurs="0" name="newPasswordInPlainText" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="resetPassword_UserResponse" type="tns:resetPassword_UserResponse" />
+      <xs:complexType name="resetPassword_UserResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getOrderListByStatus_Order" type="tns:getOrderListByStatus_Order" />
+      <xs:complexType name="getOrderListByStatus_Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderStatus" type="tns:orderStatusEnum" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getOrderListByStatus_OrderResponse" type="tns:getOrderListByStatus_OrderResponse" />
+      <xs:complexType name="getOrderListByStatus_OrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_Category" type="tns:removeMany_Category" />
+      <xs:complexType name="removeMany_Category">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idList" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="removeMany_CategoryResponse" type="tns:removeMany_CategoryResponse" />
+      <xs:complexType name="removeMany_CategoryResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Tab" type="tns:save_Tab" />
+      <xs:complexType name="save_Tab">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tab" type="tns:tab" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_TabResponse" type="tns:save_TabResponse" />
+      <xs:complexType name="save_TabResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:tab" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByText_Item" type="tns:searchByText_Item" />
+      <xs:complexType name="searchByText_Item">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" type="xs:string" />
+          <xs:element name="firstResult" type="xs:int" />
+          <xs:element name="maxResult" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="searchByText_ItemResponse" type="tns:searchByText_ItemResponse" />
+      <xs:complexType name="searchByText_ItemResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:item" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Article" type="tns:save_Article" />
+      <xs:complexType name="save_Article">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="article" type="tns:article" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_ArticleResponse" type="tns:save_ArticleResponse" />
+      <xs:complexType name="save_ArticleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:article" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_Paypal" type="tns:save_Paypal" />
+      <xs:complexType name="save_Paypal">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="paypalAccessInfo" type="tns:paypalAccessInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="save_PaypalResponse" type="tns:save_PaypalResponse" />
+      <xs:complexType name="save_PaypalResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:paypalAccessInfo" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getAll_Tab">
+    <wsdl:part name="parameters" element="ns1:getAll_Tab" />
+  </wsdl:message>
+  <wsdl:message name="getSalesByBrand">
+    <wsdl:part name="parameters" element="ns1:getSalesByBrand" />
+  </wsdl:message>
+  <wsdl:message name="getOrderListByStatus_Order">
+    <wsdl:part name="parameters" element="ns1:getOrderListByStatus_Order" />
+  </wsdl:message>
+  <wsdl:message name="getByType_Template">
+    <wsdl:part name="parameters" element="ns1:getByType_Template" />
+  </wsdl:message>
+  <wsdl:message name="searchByTextCount_Item">
+    <wsdl:part name="parameters" element="ns1:searchByTextCount_Item" />
+  </wsdl:message>
+  <wsdl:message name="getByOrderNo_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:getByOrderNo_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOrderListByStatus_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:getOrderListByStatus_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_MyGlobResponse">
+    <wsdl:part name="parameters" element="ns1:save_MyGlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_Paypal">
+    <wsdl:part name="parameters" element="ns1:save_Paypal" />
+  </wsdl:message>
+  <wsdl:message name="save_Article">
+    <wsdl:part name="parameters" element="ns1:save_Article" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_ArticleResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_ArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_Media">
+    <wsdl:part name="parameters" element="ns1:getByCondition_Media" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_Item">
+    <wsdl:part name="parameters" element="ns1:getAllCount_Item" />
+  </wsdl:message>
+  <wsdl:message name="save_PaypalResponse">
+    <wsdl:part name="parameters" element="ns1:save_PaypalResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:getAll_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_UserResponse">
+    <wsdl:part name="parameters" element="ns1:getByCondition_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByEmail_User">
+    <wsdl:part name="parameters" element="ns1:getByEmail_User" />
+  </wsdl:message>
+  <wsdl:message name="save_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:save_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewUserTrend">
+    <wsdl:part name="parameters" element="ns1:getNewUserTrend" />
+  </wsdl:message>
+  <wsdl:message name="getAll_BrandResponse">
+    <wsdl:part name="parameters" element="ns1:getAll_BrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="createNew_Media">
+    <wsdl:part name="parameters" element="ns1:createNew_Media" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_User">
+    <wsdl:part name="parameters" element="ns1:getByCondition_User" />
+  </wsdl:message>
+  <wsdl:message name="setMappingStatus_Category">
+    <wsdl:part name="parameters" element="ns1:setMappingStatus_Category" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Category">
+    <wsdl:part name="parameters" element="ns1:removeMany_Category" />
+  </wsdl:message>
+  <wsdl:message name="save_Item">
+    <wsdl:part name="parameters" element="ns1:save_Item" />
+  </wsdl:message>
+  <wsdl:message name="getCountByCondition_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:getCountByCondition_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="setMappingStatus_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:setMappingStatus_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMappingStatus_Category">
+    <wsdl:part name="parameters" element="ns1:getMappingStatus_Category" />
+  </wsdl:message>
+  <wsdl:message name="getAll_Brand">
+    <wsdl:part name="parameters" element="ns1:getAll_Brand" />
+  </wsdl:message>
+  <wsdl:message name="fetch_PaypalResponse">
+    <wsdl:part name="parameters" element="ns1:fetch_PaypalResponse" />
+  </wsdl:message>
+  <wsdl:message name="enableDisableUserAccess_User">
+    <wsdl:part name="parameters" element="ns1:enableDisableUserAccess_User" />
+  </wsdl:message>
+  <wsdl:message name="getCountByCondition_Item">
+    <wsdl:part name="parameters" element="ns1:getCountByCondition_Item" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Article">
+    <wsdl:part name="parameters" element="ns1:removeMany_Article" />
+  </wsdl:message>
+  <wsdl:message name="getByOrderNo_Order">
+    <wsdl:part name="parameters" element="ns1:getByOrderNo_Order" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_Media">
+    <wsdl:part name="parameters" element="ns1:getAllCount_Media" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:getByCondition_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_Category">
+    <wsdl:part name="parameters" element="ns1:getByCondition_Category" />
+  </wsdl:message>
+  <wsdl:message name="getMappingStatus_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:getMappingStatus_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_BrandResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_BrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:getByCondition_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchByText_Item">
+    <wsdl:part name="parameters" element="ns1:searchByText_Item" />
+  </wsdl:message>
+  <wsdl:message name="save_BrandResponse">
+    <wsdl:part name="parameters" element="ns1:save_BrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_Order">
+    <wsdl:part name="parameters" element="ns1:getByCondition_Order" />
+  </wsdl:message>
+  <wsdl:message name="searchByTextCount_Media">
+    <wsdl:part name="parameters" element="ns1:searchByTextCount_Media" />
+  </wsdl:message>
+  <wsdl:message name="save_Order">
+    <wsdl:part name="parameters" element="ns1:save_Order" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchByTextCount_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:searchByTextCount_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_Category">
+    <wsdl:part name="parameters" element="ns1:getAll_Category" />
+  </wsdl:message>
+  <wsdl:message name="save_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:save_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:getAllCount_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Brand">
+    <wsdl:part name="parameters" element="ns1:removeMany_Brand" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_User">
+    <wsdl:part name="parameters" element="ns1:getAllCount_User" />
+  </wsdl:message>
+  <wsdl:message name="save_TabResponse">
+    <wsdl:part name="parameters" element="ns1:save_TabResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeOrderStatus_Order">
+    <wsdl:part name="parameters" element="ns1:changeOrderStatus_Order" />
+  </wsdl:message>
+  <wsdl:message name="createNew_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:createNew_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Media">
+    <wsdl:part name="parameters" element="ns1:removeMany_Media" />
+  </wsdl:message>
+  <wsdl:message name="resetPassword_User">
+    <wsdl:part name="parameters" element="ns1:resetPassword_User" />
+  </wsdl:message>
+  <wsdl:message name="enableDisableUserAccess_UserResponse">
+    <wsdl:part name="parameters" element="ns1:enableDisableUserAccess_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_Template">
+    <wsdl:part name="parameters" element="ns1:save_Template" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:getAllCount_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:save_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetch_MyGlob">
+    <wsdl:part name="parameters" element="ns1:fetch_MyGlob" />
+  </wsdl:message>
+  <wsdl:message name="getMappingStatus_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:getMappingStatus_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMappingStatus_Item">
+    <wsdl:part name="parameters" element="ns1:getMappingStatus_Item" />
+  </wsdl:message>
+  <wsdl:message name="getSalesByBrandResponse">
+    <wsdl:part name="parameters" element="ns1:getSalesByBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByEmail_UserResponse">
+    <wsdl:part name="parameters" element="ns1:getByEmail_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:save_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetch_Paypal">
+    <wsdl:part name="parameters" element="ns1:fetch_Paypal" />
+  </wsdl:message>
+  <wsdl:message name="save_TemplateResponse">
+    <wsdl:part name="parameters" element="ns1:save_TemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:getAllCount_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="createNewAdmin_UserResponse">
+    <wsdl:part name="parameters" element="ns1:createNewAdmin_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_Category">
+    <wsdl:part name="parameters" element="ns1:save_Category" />
+  </wsdl:message>
+  <wsdl:message name="setMappingStatus_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:setMappingStatus_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_ArticleResponse">
+    <wsdl:part name="parameters" element="ns1:getAll_ArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Tab">
+    <wsdl:part name="parameters" element="ns1:removeMany_Tab" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_TabResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_TabResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_Article">
+    <wsdl:part name="parameters" element="ns1:getAll_Article" />
+  </wsdl:message>
+  <wsdl:message name="getAll_TemplateResponse">
+    <wsdl:part name="parameters" element="ns1:getAll_TemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_UserResponse">
+    <wsdl:part name="parameters" element="ns1:getAllCount_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeOrderStatus_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:changeOrderStatus_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetch_MyGlobResponse">
+    <wsdl:part name="parameters" element="ns1:fetch_MyGlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_Media">
+    <wsdl:part name="parameters" element="ns1:save_Media" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:removeMany_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_Template">
+    <wsdl:part name="parameters" element="ns1:getAll_Template" />
+  </wsdl:message>
+  <wsdl:message name="searchByText_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:searchByText_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="resetPassword_UserResponse">
+    <wsdl:part name="parameters" element="ns1:resetPassword_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_ArticleResponse">
+    <wsdl:part name="parameters" element="ns1:save_ArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewUserTrendResponse">
+    <wsdl:part name="parameters" element="ns1:getNewUserTrendResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_Brand">
+    <wsdl:part name="parameters" element="ns1:save_Brand" />
+  </wsdl:message>
+  <wsdl:message name="removeMany_Item">
+    <wsdl:part name="parameters" element="ns1:removeMany_Item" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_Item">
+    <wsdl:part name="parameters" element="ns1:getByCondition_Item" />
+  </wsdl:message>
+  <wsdl:message name="setMappingStatus_Item">
+    <wsdl:part name="parameters" element="ns1:setMappingStatus_Item" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_OrderResponse">
+    <wsdl:part name="parameters" element="ns1:getByCondition_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchByTextCount_ItemResponse">
+    <wsdl:part name="parameters" element="ns1:searchByTextCount_ItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="createNewAdmin_User">
+    <wsdl:part name="parameters" element="ns1:createNewAdmin_User" />
+  </wsdl:message>
+  <wsdl:message name="getByType_TemplateResponse">
+    <wsdl:part name="parameters" element="ns1:getByType_TemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAll_TabResponse">
+    <wsdl:part name="parameters" element="ns1:getAll_TabResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllCount_Order">
+    <wsdl:part name="parameters" element="ns1:getAllCount_Order" />
+  </wsdl:message>
+  <wsdl:message name="searchByText_MediaResponse">
+    <wsdl:part name="parameters" element="ns1:searchByText_MediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getByCondition_CategoryResponse">
+    <wsdl:part name="parameters" element="ns1:getByCondition_CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="save_MyGlob">
+    <wsdl:part name="parameters" element="ns1:save_MyGlob" />
+  </wsdl:message>
+  <wsdl:message name="save_Tab">
+    <wsdl:part name="parameters" element="ns1:save_Tab" />
+  </wsdl:message>
+  <wsdl:message name="searchByText_Media">
+    <wsdl:part name="parameters" element="ns1:searchByText_Media" />
+  </wsdl:message>
+  <wsdl:portType name="WSEntryManager">
+    <wsdl:operation name="getMappingStatus_Item">
+      <wsdl:input name="getMappingStatus_Item" message="ns1:getMappingStatus_Item" />
+      <wsdl:output name="getMappingStatus_ItemResponse" message="ns1:getMappingStatus_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchByTextCount_Item">
+      <wsdl:input name="searchByTextCount_Item" message="ns1:searchByTextCount_Item" />
+      <wsdl:output name="searchByTextCount_ItemResponse" message="ns1:searchByTextCount_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Media">
+      <wsdl:input name="removeMany_Media" message="ns1:removeMany_Media" />
+      <wsdl:output name="removeMany_MediaResponse" message="ns1:removeMany_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Brand">
+      <wsdl:input name="removeMany_Brand" message="ns1:removeMany_Brand" />
+      <wsdl:output name="removeMany_BrandResponse" message="ns1:removeMany_BrandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createNew_Media">
+      <wsdl:input name="createNew_Media" message="ns1:createNew_Media" />
+      <wsdl:output name="createNew_MediaResponse" message="ns1:createNew_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Tab">
+      <wsdl:input name="removeMany_Tab" message="ns1:removeMany_Tab" />
+      <wsdl:output name="removeMany_TabResponse" message="ns1:removeMany_TabResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Item">
+      <wsdl:input name="getByCondition_Item" message="ns1:getByCondition_Item" />
+      <wsdl:output name="getByCondition_ItemResponse" message="ns1:getByCondition_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_MyGlob">
+      <wsdl:input name="save_MyGlob" message="ns1:save_MyGlob" />
+      <wsdl:output name="save_MyGlobResponse" message="ns1:save_MyGlobResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByOrderNo_Order">
+      <wsdl:input name="getByOrderNo_Order" message="ns1:getByOrderNo_Order" />
+      <wsdl:output name="getByOrderNo_OrderResponse" message="ns1:getByOrderNo_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMappingStatus_Category">
+      <wsdl:input name="getMappingStatus_Category" message="ns1:getMappingStatus_Category" />
+      <wsdl:output name="getMappingStatus_CategoryResponse" message="ns1:getMappingStatus_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setMappingStatus_Category">
+      <wsdl:input name="setMappingStatus_Category" message="ns1:setMappingStatus_Category" />
+      <wsdl:output name="setMappingStatus_CategoryResponse" message="ns1:setMappingStatus_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Category">
+      <wsdl:input name="save_Category" message="ns1:save_Category" />
+      <wsdl:output name="save_CategoryResponse" message="ns1:save_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByType_Template">
+      <wsdl:input name="getByType_Template" message="ns1:getByType_Template" />
+      <wsdl:output name="getByType_TemplateResponse" message="ns1:getByType_TemplateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_User">
+      <wsdl:input name="getAllCount_User" message="ns1:getAllCount_User" />
+      <wsdl:output name="getAllCount_UserResponse" message="ns1:getAllCount_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesByBrand">
+      <wsdl:input name="getSalesByBrand" message="ns1:getSalesByBrand" />
+      <wsdl:output name="getSalesByBrandResponse" message="ns1:getSalesByBrandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Brand">
+      <wsdl:input name="getAll_Brand" message="ns1:getAll_Brand" />
+      <wsdl:output name="getAll_BrandResponse" message="ns1:getAll_BrandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Order">
+      <wsdl:input name="save_Order" message="ns1:save_Order" />
+      <wsdl:output name="save_OrderResponse" message="ns1:save_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Article">
+      <wsdl:input name="getAll_Article" message="ns1:getAll_Article" />
+      <wsdl:output name="getAll_ArticleResponse" message="ns1:getAll_ArticleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="fetch_MyGlob">
+      <wsdl:input name="fetch_MyGlob" message="ns1:fetch_MyGlob" />
+      <wsdl:output name="fetch_MyGlobResponse" message="ns1:fetch_MyGlobResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountByCondition_Item">
+      <wsdl:input name="getCountByCondition_Item" message="ns1:getCountByCondition_Item" />
+      <wsdl:output name="getCountByCondition_ItemResponse" message="ns1:getCountByCondition_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Item">
+      <wsdl:input name="removeMany_Item" message="ns1:removeMany_Item" />
+      <wsdl:output name="removeMany_ItemResponse" message="ns1:removeMany_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Category">
+      <wsdl:input name="getAll_Category" message="ns1:getAll_Category" />
+      <wsdl:output name="getAll_CategoryResponse" message="ns1:getAll_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Media">
+      <wsdl:input name="save_Media" message="ns1:save_Media" />
+      <wsdl:output name="save_MediaResponse" message="ns1:save_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewUserTrend">
+      <wsdl:input name="getNewUserTrend" message="ns1:getNewUserTrend" />
+      <wsdl:output name="getNewUserTrendResponse" message="ns1:getNewUserTrendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="enableDisableUserAccess_User">
+      <wsdl:input name="enableDisableUserAccess_User" message="ns1:enableDisableUserAccess_User" />
+      <wsdl:output name="enableDisableUserAccess_UserResponse" message="ns1:enableDisableUserAccess_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Brand">
+      <wsdl:input name="save_Brand" message="ns1:save_Brand" />
+      <wsdl:output name="save_BrandResponse" message="ns1:save_BrandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_User">
+      <wsdl:input name="getByCondition_User" message="ns1:getByCondition_User" />
+      <wsdl:output name="getByCondition_UserResponse" message="ns1:getByCondition_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Order">
+      <wsdl:input name="getByCondition_Order" message="ns1:getByCondition_Order" />
+      <wsdl:output name="getByCondition_OrderResponse" message="ns1:getByCondition_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Item">
+      <wsdl:input name="save_Item" message="ns1:save_Item" />
+      <wsdl:output name="save_ItemResponse" message="ns1:save_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Tab">
+      <wsdl:input name="getAll_Tab" message="ns1:getAll_Tab" />
+      <wsdl:output name="getAll_TabResponse" message="ns1:getAll_TabResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Order">
+      <wsdl:input name="getAllCount_Order" message="ns1:getAllCount_Order" />
+      <wsdl:output name="getAllCount_OrderResponse" message="ns1:getAllCount_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Category">
+      <wsdl:input name="getByCondition_Category" message="ns1:getByCondition_Category" />
+      <wsdl:output name="getByCondition_CategoryResponse" message="ns1:getByCondition_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Media">
+      <wsdl:input name="getAllCount_Media" message="ns1:getAllCount_Media" />
+      <wsdl:output name="getAllCount_MediaResponse" message="ns1:getAllCount_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Article">
+      <wsdl:input name="removeMany_Article" message="ns1:removeMany_Article" />
+      <wsdl:output name="removeMany_ArticleResponse" message="ns1:removeMany_ArticleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="fetch_Paypal">
+      <wsdl:input name="fetch_Paypal" message="ns1:fetch_Paypal" />
+      <wsdl:output name="fetch_PaypalResponse" message="ns1:fetch_PaypalResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Media">
+      <wsdl:input name="getByCondition_Media" message="ns1:getByCondition_Media" />
+      <wsdl:output name="getByCondition_MediaResponse" message="ns1:getByCondition_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createNewAdmin_User">
+      <wsdl:input name="createNewAdmin_User" message="ns1:createNewAdmin_User" />
+      <wsdl:output name="createNewAdmin_UserResponse" message="ns1:createNewAdmin_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Item">
+      <wsdl:input name="getAllCount_Item" message="ns1:getAllCount_Item" />
+      <wsdl:output name="getAllCount_ItemResponse" message="ns1:getAllCount_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderStatus_Order">
+      <wsdl:input name="changeOrderStatus_Order" message="ns1:changeOrderStatus_Order" />
+      <wsdl:output name="changeOrderStatus_OrderResponse" message="ns1:changeOrderStatus_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setMappingStatus_Item">
+      <wsdl:input name="setMappingStatus_Item" message="ns1:setMappingStatus_Item" />
+      <wsdl:output name="setMappingStatus_ItemResponse" message="ns1:setMappingStatus_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getByEmail_User">
+      <wsdl:input name="getByEmail_User" message="ns1:getByEmail_User" />
+      <wsdl:output name="getByEmail_UserResponse" message="ns1:getByEmail_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchByTextCount_Media">
+      <wsdl:input name="searchByTextCount_Media" message="ns1:searchByTextCount_Media" />
+      <wsdl:output name="searchByTextCount_MediaResponse" message="ns1:searchByTextCount_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Template">
+      <wsdl:input name="save_Template" message="ns1:save_Template" />
+      <wsdl:output name="save_TemplateResponse" message="ns1:save_TemplateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Template">
+      <wsdl:input name="getAll_Template" message="ns1:getAll_Template" />
+      <wsdl:output name="getAll_TemplateResponse" message="ns1:getAll_TemplateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchByText_Media">
+      <wsdl:input name="searchByText_Media" message="ns1:searchByText_Media" />
+      <wsdl:output name="searchByText_MediaResponse" message="ns1:searchByText_MediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="resetPassword_User">
+      <wsdl:input name="resetPassword_User" message="ns1:resetPassword_User" />
+      <wsdl:output name="resetPassword_UserResponse" message="ns1:resetPassword_UserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderListByStatus_Order">
+      <wsdl:input name="getOrderListByStatus_Order" message="ns1:getOrderListByStatus_Order" />
+      <wsdl:output name="getOrderListByStatus_OrderResponse" message="ns1:getOrderListByStatus_OrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Category">
+      <wsdl:input name="removeMany_Category" message="ns1:removeMany_Category" />
+      <wsdl:output name="removeMany_CategoryResponse" message="ns1:removeMany_CategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Tab">
+      <wsdl:input name="save_Tab" message="ns1:save_Tab" />
+      <wsdl:output name="save_TabResponse" message="ns1:save_TabResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchByText_Item">
+      <wsdl:input name="searchByText_Item" message="ns1:searchByText_Item" />
+      <wsdl:output name="searchByText_ItemResponse" message="ns1:searchByText_ItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Article">
+      <wsdl:input name="save_Article" message="ns1:save_Article" />
+      <wsdl:output name="save_ArticleResponse" message="ns1:save_ArticleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="save_Paypal">
+      <wsdl:input name="save_Paypal" message="ns1:save_Paypal" />
+      <wsdl:output name="save_PaypalResponse" message="ns1:save_PaypalResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

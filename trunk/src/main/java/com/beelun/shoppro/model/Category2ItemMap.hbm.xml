@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Category2ItemMap" table="shoppro_category2itemmap">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="itemOrder" column="itemOrder" not-null="true"/>
+        <many-to-one name="category" column="shoppro_category" cascade="save-update" 
+      		foreign-key="FK_C2I_C"/>
+        <many-to-one name="item" column="shoppro_item" cascade="save-update" 
+      		foreign-key="FK_C2I_I"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://impl.service.shoppro.beelun.com/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://service.shoppro.beelun.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://cxf.apache.org/bindings/xformat" name="WSEntryManagerImplService" targetNamespace="http://impl.service.shoppro.beelun.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://service.shoppro.beelun.com/" location="http://localhost:8080/services/WSEntryManager?wsdl=WSEntryManager.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="WSEntryManagerImplServiceSoapBinding" type="ns1:WSEntryManager">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMappingStatus_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getMappingStatus_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMappingStatus_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchByTextCount_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="searchByTextCount_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchByTextCount_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNew_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="createNew_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createNew_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Brand">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Brand">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_BrandResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Tab">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Tab">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_TabResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByCondition_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByCondition_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByOrderNo_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByOrderNo_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByOrderNo_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_MyGlob">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_MyGlob">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_MyGlobResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMappingStatus_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getMappingStatus_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMappingStatus_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByType_Template">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByType_Template">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByType_TemplateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMappingStatus_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="setMappingStatus_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setMappingStatus_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAllCount_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllCount_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Brand">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAll_Brand">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAll_BrandResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesByBrand">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getSalesByBrand">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSalesByBrandResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetch_MyGlob">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="fetch_MyGlob">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="fetch_MyGlobResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Article">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAll_Article">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAll_ArticleResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountByCondition_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getCountByCondition_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCountByCondition_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAll_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAll_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewUserTrend">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getNewUserTrend">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getNewUserTrendResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enableDisableUserAccess_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="enableDisableUserAccess_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="enableDisableUserAccess_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Brand">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Brand">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_BrandResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByCondition_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByCondition_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByCondition_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByCondition_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Tab">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAll_Tab">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAll_TabResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAllCount_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllCount_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAllCount_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllCount_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByCondition_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByCondition_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetch_Paypal">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="fetch_Paypal">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="fetch_PaypalResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Article">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Article">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_ArticleResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByCondition_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByCondition_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByCondition_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewAdmin_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="createNewAdmin_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createNewAdmin_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderStatus_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="changeOrderStatus_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeOrderStatus_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCount_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAllCount_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllCount_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMappingStatus_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="setMappingStatus_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setMappingStatus_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getByEmail_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getByEmail_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getByEmail_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Template">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Template">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_TemplateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchByTextCount_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="searchByTextCount_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchByTextCount_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAll_Template">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getAll_Template">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAll_TemplateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchByText_Media">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="searchByText_Media">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchByText_MediaResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderListByStatus_Order">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getOrderListByStatus_Order">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getOrderListByStatus_OrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resetPassword_User">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="resetPassword_User">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="resetPassword_UserResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeMany_Category">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="removeMany_Category">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeMany_CategoryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Tab">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Tab">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_TabResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchByText_Item">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="searchByText_Item">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchByText_ItemResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Article">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Article">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_ArticleResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save_Paypal">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="save_Paypal">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="save_PaypalResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSEntryManagerImplService">
+    <wsdl:port name="WSEntryManagerPort" binding="tns:WSEntryManagerImplServiceSoapBinding">
+      <soap:address location="http://localhost:8080/services/WSEntryManager" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

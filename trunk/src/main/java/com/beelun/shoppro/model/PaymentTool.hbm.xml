@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.PaymentTool" table="shoppro_paymenttool" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>        
+        <property name="name" column="name" not-null="true"/>
+        <property name="description" column="description" />
+        <property name="enabled" column="enabled" not-null="true"/>
+    </class>
+</hibernate-mapping>

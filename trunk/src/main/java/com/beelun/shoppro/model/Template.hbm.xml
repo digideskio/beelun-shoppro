@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Template" table="shoppro_template" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        
+        <property name="name" column="name" not-null="true" unique="true"/>
+        <property name="fileNamePrefix" column="fileNamePrefix" not-null="true" unique="true" />
+        <property name="description" column="description" />
+        <property name="templateContent" column="templateContent" type="text" not-null="true"/>
+        <property name="templateType" column="templateType" type="com.beelun.shoppro.model.type.TemplateTypeHib" not-null="true"/>
+                        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,1 @@
+This folder contains the SL binary file of admin console. The file name should be: HappyDog.SL.xap.(DONT RENAME UNLESS YOU KNOW WHAT YOU ARE DOING.)

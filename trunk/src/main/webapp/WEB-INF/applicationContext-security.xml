@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	This config file borrows ideas from spring-security-samples-tutorial-2.0.5.RELEASE and appFuse 
+-->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.1.xsd">
+
+	<global-method-security secured-annotations="enabled">
+		<!-- AspectJ pointcut expression that locates our "post" method and applies security that way
+		<protect-pointcut expression="execution(* bigbank.*Service.post*(..))" access="ROLE_TELLER"/>
+		-->
+	</global-method-security>
+
+    <http auto-config="true">
+        <intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/customer/**" access="ROLE_CUSTOMER" />
+
+		<!-- Web service only exposed to admin now, so we need auth -->
+		<!-- THIS MUST BE ENABLED IN PRODUCTION -->		
+        <intercept-url pattern="/services/**" access="ROLE_ADMIN" />
+ 		 		
+        <!--
+        TODO: configure this in production environment according to:
+        http://static.springsource.org/spring-security/site/docs/2.0.x/reference/ns-config.html#ns-requires-channel 
+        <intercept-url pattern="/login.html" requires-channel="https"/>
+        -->        
+        <form-login login-page="/membership/login.html" default-target-url="/login-success.html" authentication-failure-url="/membership/login.html?error=true" login-processing-url="/j_spring_security_check"/>
+        <logout logout-url="/logout.html"/>
+        <remember-me user-service-ref="userManager" key="b4c6d2ef-0c45-11dd-bd0b-0800200c9a66"/>
+        
+        <!-- Set max-session to 2 in case close the browser unintentionally -->
+        <concurrent-session-control max-sessions="2" exception-if-maximum-exceeded="true"/>	                
+    </http>
+        
+    <authentication-provider user-service-ref="userManager">
+        <password-encoder ref="passwordEncoder"/>
+    </authentication-provider>
+
+    <!--
+    Sample:
+    Usernames/Passwords are
+        rod/koala
+        dianne/emu
+        scott/wombat
+        peter/opal
+        
+    <authentication-provider>
+        <password-encoder hash="md5"/>
+        <user-service>
+            <user name="rod" password="a564de63c2d0da68cf47586ee05984d7" authorities="ROLE_ADMIN" />
+	        <user name="dianne" password="65d15fe9156f9c4bbffd98085992a44e" authorities="ROLE_USER" />
+            <user name="scott" password="2b58af6dddbd072ed27ffc86725d7d3a" authorities="ROLE_USER" />
+            <user name="peter" password="22b5c9accc6e1ba628cedc63a72d57f8" authorities="ROLE_USER" />
+	    </user-service>
+	</authentication-provider>
+	-->
+
+</beans:beans>

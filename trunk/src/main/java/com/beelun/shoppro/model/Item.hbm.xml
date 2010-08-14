@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Item" table="shoppro_item" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="netSuiteId" column="netSuiteId" unique="true"/>
+        <property name="name" column="itemName" not-null="true"/>
+        <property name="serialNumber" column="serialNumber"/>
+        <property name="shortDescription" column="shortDescription" length="1024"/>
+        <property name="detailedDescription" column="detailedDescription" type="text"/>
+        <property name="image" column="image"/>
+        <property name="thumbNail" column="thumbNail"/>
+        <property name="listPrice" column="listPrice" />
+        <property name="sellPrice" column="sellPrice" />
+        <property name="inventoryNumber" column="inventoryNumber"/>
+        <property name="isShown" column="isShown" not-null="true"/>        
+        <property name="pageTitle" column="pageTitle" not-null="true"/>
+        <property name="keywords" column="keywords" length="4000"/>
+        <property name="description" column="description" length="4000"/>
+        <property name="metaTag" column="metaTag" length="4000"/>
+        <property name="url" column="url" not-null="true"/>
+        <property name="updated" not-null="false" >
+        	<column name="updated" default="now()" not-null="true" sql-type="timestamp" />        	
+        </property>
+        
+        <many-to-one name="brand" column="shoppro_brand" cascade="save-update" 
+      		foreign-key="FK_ITEM_BRAND" lazy="false"/>
+
+        <many-to-one name="template" column="shoppro_template" cascade="save-update" 
+      		foreign-key="FK_ITEM_TEMPLATE" lazy="false"/>
+                
+    </class>
+</hibernate-mapping>

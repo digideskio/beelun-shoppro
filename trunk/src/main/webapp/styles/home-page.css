@@ -1,0 +1,22 @@
+div.sitestripe {
+	margin: 0 0 15px;
+}
+
+div.sitestripe img {
+	width:932px;
+}
+#content ul.multihero li.feature {
+	float:left;
+	height:318px;
+	margin: 0 0 0 0;
+}
+
+#content ul.multihero {
+	height:420px;
+	width:932px;
+}
+ol, ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}

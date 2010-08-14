@@ -1,0 +1,104 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.ItemListPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"                 
+           xmlns:grid="clr-namespace:DevExpress.Windows.Controls;assembly=DevExpress.AgDataGrid.v8.2"  
+           xmlns:layout="clr-namespace:HappyDog.SL.Controls"                 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:converters="clr-namespace:HappyDog.SL.ValueConverters"
+           xmlns:Res="clr-namespace:HappyDog.SL.Resources"              
+           xmlns:ListViewControl="clr-namespace:HappyDog.SL.Content"
+           xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"                 
+           d:DesignWidth="640" d:DesignHeight="480"
+           NavigationCacheMode="Enabled"
+           Title="ItemListPage Page">
+
+  <UserControl.Resources>
+    <converters:CurrencyConverter x:Key="currencyConverter" />
+    <converters:BrandConverter x:Key="brandConverter" />
+    <Res:UIResources x:Name="UILoc" />
+  </UserControl.Resources>
+
+  <Grid x:Name="foo">
+    <controlsToolkit:BusyIndicator x:Name="shopproBusyIndicator" IsBusy="false" DisplayAfter="0" BusyContent="Loading...">
+      <controlsToolkit:BusyIndicator.Content>
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+          </Grid.RowDefinitions>
+
+          <!-- Content page header -->
+          <Border x:Name="viewHeader" Style="{StaticResource ContentPageHeaderBorderStyle}" Grid.Row="0" >
+            <TextBlock x:Name="BodyViewTitle" Text="" Style="{StaticResource ContentPageHeaderTextBlockStyle}"/>
+          </Border>
+
+          <!--Action toolbar here-->
+          <Border Grid.Row="1" Style="{StaticResource ActionToolBarBorderStyle}">
+            <StackPanel x:Name="ActionToolBar" Orientation="Horizontal" >
+              <Button Content="{Binding TOOLBAR_NEW, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" ToolTipService.ToolTip="Create a new item" Click="Add_Button_Click" />
+              <Button Content="{Binding TOOLBAR_DELETE, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" Click="Delete_Button_Click" ToolTipService.ToolTip="Delete selected items permanently"/>
+              <Button Content="{Binding TOOLBAR_IMPORT, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" Click="Import_Button_Click" ToolTipService.ToolTip="Import items from a csv file"/>
+              <Button Content="{Binding TOOLBAR_EXPORT, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" ToolTipService.ToolTip="Download current list as a file" Click="Export_Button_Click"/>
+              <Button Content="{Binding TOOLBAR_REFRESH, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" Click="Refresh_Button_Click" ToolTipService.ToolTip="Refresh current view"/>
+              <Button Content="Category mapping" Style="{StaticResource ActionButtonStyle}" ToolTipService.ToolTip="Add items to category OR remove items from category" Click="CMap_Button_Click"/>
+              <!-- Hide Category selection ComboBox since we have categories listed in left side now. May delete this control later on -->
+              <ComboBox x:Name="categoriesComboBox" Visibility="Collapsed" Style="{StaticResource ComboBoxInToolBarStyle}" SelectionChanged="categoriesComboBox_SelectionChanged" DisplayMemberPath="Value" ToolTipService.ToolTip="Filter items by category"/>
+            </StackPanel>
+          </Border>
+
+          <!--Search and paging toolbar-->
+          <Border Grid.Row="2" Style="{StaticResource SearchAndPagingBorderStyle}">
+            <layout:SearchNListPagingToolbar x:Name="SummaryListToolbar" PromptText="Search all items..." Width="Auto" SearchList="SummaryListToolbar_SearchList" PageChanged="SummaryListToolbar_PageChanged" />
+          </Border>
+
+          <!--List view-->
+          <ListViewControl:AgDataGrid x:Name="MyList" Grid.Row="3" SortingChanged="MyList_SortingChanged" Style="{StaticResource AgDataGridStyle}" ColumnsAutoWidth="True" ShowGroupPanel="Collapsed" ChangeOddRowsAppearance="True" AllowEditing="False">
+            <ListViewControl:AgDataGrid.Columns>
+              <!-- HappyDog.SL.Beelun.Shoppro.WebService.ItemManager.item -->
+              <grid:AgDataGridTextColumn HeaderContent="ID" FieldName="id" x:Name="A0" Width="120" TextWrapping="Wrap" AllowResizing="False" FixedWidth="True">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <!-- TODO FIXME: certain external image is not shown as icon, but looks fine in web page. size issue? fix it in uriToImageConverter? -->
+                    <CheckBox x:Name="ItemSelected" Style="{StaticResource IdCheckBoxStyle}" Tag="{Binding RowValue.id}"   Checked="ItemSelected_Checked" Unchecked="ItemSelected_Unchecked">
+                      <Image Style="{StaticResource IdThumbnailStyle}" Source="{Binding RowValue.thumbNail, Converter={StaticResource uriToImageConverter}}" />
+                    </CheckBox>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Name" FieldName="name" x:Name="C1" TextWrapping="Wrap" Width="30">
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Brand"  FieldName="brand" x:Name="C2" Width="30" AllowSorting="False" TextWrapping="Wrap">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <TextBlock Text="{Binding CellValue, Converter={StaticResource brandConverter}}"/>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Sell price" FieldName="sellPrice" x:Name="C4" Width="30" TextWrapping="Wrap">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <TextBlock Text="{Binding CellValue, Converter={StaticResource currencyConverter}}"/>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Web Page Title" FieldName="pageTitle" x:Name="C3" TextWrapping="Wrap">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <HyperlinkButton NavigateUri="{Binding RowValue.myUrl}" TargetName="_blank" Background="Transparent" ToolTipService.ToolTip="Click to preview this item" >
+                      <TextBlock Text="{Binding CellValue}" TextWrapping="Wrap"></TextBlock>
+                    </HyperlinkButton>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+            </ListViewControl:AgDataGrid.Columns>
+          </ListViewControl:AgDataGrid>
+        </Grid>
+      </controlsToolkit:BusyIndicator.Content>
+    </controlsToolkit:BusyIndicator>
+  </Grid>
+</navigation:Page>

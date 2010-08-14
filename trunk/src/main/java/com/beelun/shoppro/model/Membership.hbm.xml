@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+
+  <class name="com.beelun.shoppro.model.Membership" table="shoppro_membership" lazy="false">
+    <id name="id" column="id" unsaved-value="null">
+         <generator class="increment"/>
+    </id>
+    <many-to-one name="user" column="user" cascade="save-update" 
+      foreign-key="FK_MEMSHIP_USER" not-null="true"/>
+    <many-to-one name="role" column="role" cascade="save-update" 
+      foreign-key="FK_MEMSHIP_ROLE" not-null="true"/>
+  </class>
+
+</hibernate-mapping>

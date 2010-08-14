@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CD017DBB-2C72-4311-84D7-5D813DE11851}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{C161347F-729C-47BC-AA84-090B0EBEA1DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95E34562-6F77-44DA-9EE2-B4790C0F94BF}"
+	ProjectSection(SolutionItems) = preProject
+		HappyDog.vsmdi = HappyDog.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DAE28473-A29C-4CDA-8595-5DA49903E31F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDog.SL", "HappyDog.SL\HappyDog.SL.csproj", "{58A4A63A-4327-45E1-8361-471C2EC2D6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDog.Test(don't start me)", "HappyDog.Test\HappyDog.Test(don't start me).csproj", "{A529143C-F4EF-4AD6-AA44-8C2727C32198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDog.Test.Host(start me)", "HappyDog.Test.Host\HappyDog.Test.Host(start me).csproj", "{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL.Hosting", "SL.Hosting\SL.Hosting.csproj", "{98A9E92F-1281-4C71-ACDB-9A802DF58487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Loc|Any CPU = Loc|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Loc|Any CPU.ActiveCfg = Loc|Any CPU
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Loc|Any CPU.Build.0 = Loc|Any CPU
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Loc|Any CPU.ActiveCfg = Release|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Loc|Any CPU.Build.0 = Release|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Loc|Any CPU.ActiveCfg = Release|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Loc|Any CPU.Build.0 = Release|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Loc|Any CPU.ActiveCfg = Release|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Loc|Any CPU.Build.0 = Release|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58A4A63A-4327-45E1-8361-471C2EC2D6DC} = {CD017DBB-2C72-4311-84D7-5D813DE11851}
+		{98A9E92F-1281-4C71-ACDB-9A802DF58487} = {C161347F-729C-47BC-AA84-090B0EBEA1DD}
+		{A529143C-F4EF-4AD6-AA44-8C2727C32198} = {DAE28473-A29C-4CDA-8595-5DA49903E31F}
+		{4675C191-3A6E-4D58-B0A4-14BD06D7B0EA} = {DAE28473-A29C-4CDA-8595-5DA49903E31F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 1.0//EN"
+    "http://tuckey.org/res/dtd/urlrewrite1.dtd">
+
+<!-- TODO: add .html to url which don't have extension to enable better seo -->
+
+<urlrewrite>
+	<!-- !!! Below rule must be put ahead of /$ -->
+    <rule>
+        <from>/admin/$</from>
+        <to type="forward">index.html</to>
+    </rule>
+    <rule>
+        <from>/$</from>
+        <to type="forward">index.html</to>
+    </rule>
+    <!-- 
+    <rule>
+		<from>/tab/(.*)</from>
+      	<to type="forward">/tab/showTab.html?tabUrl=$1</to>    	
+    </rule>
+    <rule>
+		<from>/category/(.*)</from>
+      	<to type="forward">/category/showCategory.html?categoryUrl=$1</to>    	
+    </rule>
+    <rule>
+		<from>/item/(.*)</from>
+      	<to type="forward">/item/showItem.html?itemUrl=$1</to>    	
+    </rule>
+    -->
+</urlrewrite>
+

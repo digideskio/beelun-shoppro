@@ -1,0 +1,52 @@
+<decorators defaultdir="/decorators">
+    <excludes>
+        <pattern>/images/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/styles/*</pattern>
+    </excludes> 
+    
+    <!-- xml format -->
+    <decorator name="none" >
+        <pattern>/cart/cartAjax.html</pattern>
+        <pattern>/clientaccesspolicy.xml</pattern>
+        <pattern>/crossdomain.xml</pattern>
+        <pattern>/admin-console.html</pattern>
+        <pattern>/sac.html</pattern>
+    </decorator>
+
+    <decorator name="admin-login" page="admin-login-main.ftl" >
+        <pattern>/membership/admin-login.html</pattern>
+    </decorator>
+    
+    <!-- Simple template, No nav, no tab -->
+    <decorator name="simple" page="simple.ftl" >
+    	<pattern>/article/*</pattern>
+        <pattern>/customer/*</pattern>
+        <pattern>/membership/*</pattern>
+    </decorator>
+
+	<!-- Most simple header/footer -->
+    <decorator name="simple2" page="simple2.ftl" >
+        <pattern>/sitemap.html</pattern>
+        <pattern>/foo/*</pattern>
+    </decorator>
+        
+    <!-- No nav side bar -->
+    <decorator name="cleanBody" page="cleanBody.ftl" >
+        <pattern>/cart/*</pattern>
+        <pattern>/google-cse-results.html</pattern>
+    </decorator>
+    
+    <!-- admin page -->
+    <!-- 
+    <decorator name="admin" page="admin.ftl" >
+        <pattern>/admin/*</pattern>
+    </decorator>
+    -->
+    
+    <!-- normal page with nav side bar -->
+    <decorator name="default" page="default.ftl">
+        <pattern>/*</pattern>
+    </decorator>
+    
+</decorators>

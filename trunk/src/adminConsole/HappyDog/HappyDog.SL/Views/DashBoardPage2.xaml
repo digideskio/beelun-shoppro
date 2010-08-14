@@ -1,0 +1,29 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.DashBoardPage2" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+           d:DesignWidth="640" d:DesignHeight="480"
+           xmlns:converters="clr-namespace:HappyDog.SL.ValueConverters"
+           NavigationCacheMode="Enabled"                 
+           Title="DashBoardPage2 Page">
+  <UserControl.Resources>
+    <converters:DateTimeConverter x:Key="dateTimeConverter" />
+
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <chartingToolkit:Chart x:Name="TestColumnChart" Title="New User Trend for Latest Week" Background="White">
+      <chartingToolkit:Chart.Series>
+        <chartingToolkit:ColumnSeries Title="New User Trend" IndependentValueBinding="{Binding xDate, Converter={StaticResource dateTimeConverter}}" DependentValueBinding="{Binding y}" />
+      </chartingToolkit:Chart.Series>
+    </chartingToolkit:Chart>
+
+  </Grid>
+</navigation:Page>

@@ -1,0 +1,1 @@
+All media files should be uploaded here.

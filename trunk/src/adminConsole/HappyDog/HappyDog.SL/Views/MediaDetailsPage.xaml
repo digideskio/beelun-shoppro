@@ -1,0 +1,126 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.MediaDetailsPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:Res="clr-namespace:HappyDog.SL.Resources"
+           xmlns:converters="clr-namespace:HappyDog.SL.ValueConverters"
+           xmlns:dataform="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+           xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"                 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"                 
+           NavigationCacheMode="Enabled"
+           Title="MediaDetailsPage Page">
+
+  <UserControl.Resources>
+    <Res:UIResources x:Name="UILoc" />
+    <converters:UriToImageConverter x:Name="uriToImageConverter" />
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot" Background="White">
+    <controlsToolkit:BusyIndicator x:Name="shopproBusyIndicator" IsBusy="false" DisplayAfter="0" BusyContent="Busy...">
+      <controlsToolkit:BusyIndicator.Content>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+
+          <!-- Content page header -->
+          <Border x:Name="viewHeader" Style="{StaticResource ContentPageHeaderBorderStyle}" Grid.Row="0" >
+            <TextBlock x:Name="BodyViewTitle" Text="" Style="{StaticResource ContentPageHeaderTextBlockStyle}"/>
+          </Border>
+
+          <Border Grid.Row="1"  Style="{StaticResource ActionToolBarBorderStyle}">
+            <StackPanel x:Name="ActionToolBar" Orientation="Horizontal" >
+              <Button Content="{Binding Path=BUTTON_DV_BACK, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}"  Click="BackButton_Click"/>
+            </StackPanel>
+          </Border>
+
+          <!-- Refer to: http://www.silverlightshow.net/items/Creating-Rich-Data-Forms-in-Silverlight-3-Customization.aspx -->
+          <!-- http://www.silverlightshow.net/items/Creating-Rich-Data-Forms-in-Silverlight-3-Validation.aspx -->
+          <ScrollViewer Grid.Row="2" Style="{StaticResource DetailsScrollViwer}">
+            <dataform:DataForm x:Name="mediaDataForm" Header="Media" Grid.Column="1" ItemsSource="{Binding}" Style="{StaticResource DetailsDataForm}" CommitButtonContent="Save"  CancelButtonContent="Cancel" EditEnded="mediaDataForm_EditEnded" CommandButtonsVisibility="Add,Edit,Navigation,Commit,Cancel" AddingNewItem="mediaDataForm_AddingNewItem" BeginningEdit="mediaDataForm_BeginningEdit" CurrentItemChanged="mediaDataForm_CurrentItemChanged" ContentLoaded="mediaDataForm_ContentLoaded">
+              <dataform:DataForm.ReadOnlyTemplate>
+                <DataTemplate>
+                  <StackPanel>
+                    <dataform:DataField Label="Image">
+                      <!-- TODO fixme: this link button is not working. is not clickable -->
+                      <HyperlinkButton NavigateUri="{Binding myUrl}" TargetName="_blank" Background="Transparent" ToolTipService.ToolTip="Click to preview this image in web page" HorizontalAlignment="Center" >
+                        <Image Height="350" Source="{Binding myUrl, Converter={StaticResource uriToImageConverter}}" />
+                      </HyperlinkButton>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding title}" Style="{StaticResource TextBoxReadOnly_normal}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding caption}" Style="{StaticResource TextBoxReadOnly_normal}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding description}" Style="{StaticResource TextBoxReadOnly_normal}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding myUrl}" Style="{StaticResource TextBoxReadOnly_normal}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding updated}" Style="{StaticResource TextBoxReadOnly_narrow}"/>
+                    </dataform:DataField>
+                  </StackPanel>
+                </DataTemplate>
+              </dataform:DataForm.ReadOnlyTemplate>
+              <dataform:DataForm.EditTemplate>
+                <DataTemplate>
+                  <StackPanel>
+                    <dataform:DataField Label="Image">
+                      <HyperlinkButton NavigateUri="{Binding myUrl}" TargetName="_blank" Background="Transparent" ToolTipService.ToolTip="Click to preview this image in web page" HorizontalAlignment="Center" >
+                        <Image Height="350" Source="{Binding myUrl, Converter={StaticResource uriToImageConverter}}" />
+                      </HyperlinkButton>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding title, Mode=TwoWay}" Style="{StaticResource TextBox_normal}"  />
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding caption, Mode=TwoWay}" Style="{StaticResource TextBox_normal}" />
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding description, Mode=TwoWay}" Style="{StaticResource TextBox_multiplLines}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding myUrl, Mode=OneWay}" Style="{StaticResource TextBoxReadOnly_normal}"/>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding updated, Mode=OneWay}" Style="{StaticResource TextBoxReadOnly_narrow}"/>
+                    </dataform:DataField>
+                  </StackPanel>
+                </DataTemplate>
+              </dataform:DataForm.EditTemplate>
+              <dataform:DataForm.NewItemTemplate>
+                <DataTemplate>
+                  <StackPanel>
+                    <dataform:DataField Label="Select a file">
+                      <StackPanel Orientation="Horizontal">
+                        <Button  x:Name="fileSelector" Content="Select a file" Click="fileSelector_Click" Style="{StaticResource DataFormItem_normal}"/>
+                        <TextBlock Margin="10" x:Name="fileName" Text="{Binding fileName, Mode=TwoWay}" TextWrapping="Wrap" />
+                      </StackPanel>
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding title, Mode=TwoWay}" Style="{StaticResource TextBox_normal}" />
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding caption, Mode=TwoWay}" Style="{StaticResource TextBox_normal}" />
+                    </dataform:DataField>
+                    <dataform:DataField>
+                      <TextBox  Text="{Binding description, Mode=TwoWay}" Style="{StaticResource TextBox_multiplLines}"/>
+                    </dataform:DataField>
+                  </StackPanel>
+                </DataTemplate>
+              </dataform:DataForm.NewItemTemplate>
+            </dataform:DataForm>
+          </ScrollViewer>
+        </Grid>
+      </controlsToolkit:BusyIndicator.Content>
+    </controlsToolkit:BusyIndicator>
+  </Grid>
+</navigation:Page>

@@ -1,0 +1,88 @@
+﻿<navigation:Page x:Class="HappyDog.SL.Views.OrderListPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:grid="clr-namespace:DevExpress.Windows.Controls;assembly=DevExpress.AgDataGrid.v8.2"
+           xmlns:layout="clr-namespace:HappyDog.SL.Controls"
+           xmlns:converters="clr-namespace:HappyDog.SL.ValueConverters"
+           xmlns:Res="clr-namespace:HappyDog.SL.Resources"              
+           xmlns:ListViewControl="clr-namespace:HappyDog.SL.Content"
+           xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"                 
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           NavigationCacheMode="Enabled"
+           Title="OrderListPage Page">
+
+  <UserControl.Resources>
+    <converters:CurrencyConverter x:Key="currencyConverter" />
+    <converters:BrandConverter x:Key="brandConverter" />
+    <Res:UIResources x:Name="UILoc" />
+  </UserControl.Resources>
+
+  <Grid x:Name="foo">
+    <controlsToolkit:BusyIndicator x:Name="shopproBusyIndicator" IsBusy="false" DisplayAfter="0" BusyContent="Loading...">
+      <controlsToolkit:BusyIndicator.Content>
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+          </Grid.RowDefinitions>
+
+          <!-- Content page header -->
+          <Border x:Name="viewHeader" Style="{StaticResource ContentPageHeaderBorderStyle}" Grid.Row="0" >
+            <TextBlock x:Name="BodyViewTitle" Text="" Style="{StaticResource ContentPageHeaderTextBlockStyle}"/>
+          </Border>
+
+          <!--Action toolbar here-->
+          <Border Grid.Row="1"  Style="{StaticResource ActionToolBarBorderStyle}">
+            <StackPanel x:Name="ActionToolBar" Orientation="Horizontal" >
+              <Button Content="{Binding TOOLBAR_REFRESH, Source={StaticResource UILoc}}" Style="{StaticResource ActionButtonStyle}" Click="Refresh_Button_Click" ToolTipService.ToolTip="Refresh current view"/>
+            </StackPanel>
+          </Border>
+
+          <!--Search and paging toolbar-->
+          <Border Grid.Row="2" Style="{StaticResource SearchAndPagingBorderStyle}">
+            <layout:SearchNListPagingToolbar x:Name="SummaryListToolbar" Width="Auto" PromptText="Search by order No..."  SearchList="SummaryListToolbar_SearchList" PageChanged="SummaryListToolbar_PageChanged" />
+          </Border>
+
+          <!--List view-->
+          <ListViewControl:AgDataGrid x:Name="MyList" Grid.Row="3" ColumnsAutoWidth="True" ShowGroupPanel="Collapsed"  ChangeOddRowsAppearance="True" SortingChanged="MyList_SortingChanged"  Style="{StaticResource AgDataGridStyle}"  >
+            <ListViewControl:AgDataGrid.Columns>
+              <grid:AgDataGridTextColumn HeaderContent="Order No." FieldName="serialNumber" x:Name="A0" AllowEditing="False" Width="15" TextWrapping="Wrap" AllowResizing="False">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="ItemSelected" Tag="{Binding RowValue.id}" Checked="ItemSelected_Checked" Unchecked="ItemSelected_Unchecked" Content="{Binding CellValue}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Order Date" FieldName="orderDate" x:Name="C1" AllowEditing="False" TextWrapping="Wrap" Width="30">
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Status" FieldName="status" x:Name="C2" AllowEditing="False" TextWrapping="Wrap" Width="30">
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="Amount" FieldName="amount" x:Name="C8" AllowEditing="False" TextWrapping="Wrap" Width="30">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <TextBlock Text="{Binding CellValue, Converter={StaticResource currencyConverter}}"/>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+              <grid:AgDataGridTextColumn HeaderContent="User"  FieldName="user" x:Name="C3" AllowEditing="False" Width="30" AllowSorting="False" TextWrapping="Wrap">
+                <grid:AgDataGridTextColumn.CellDisplayTemplate>
+                  <DataTemplate>
+                    <TextBlock Text="{Binding CellValue.name}"/>
+                  </DataTemplate>
+                </grid:AgDataGridTextColumn.CellDisplayTemplate>
+              </grid:AgDataGridTextColumn>
+            </ListViewControl:AgDataGrid.Columns>
+          </ListViewControl:AgDataGrid>
+
+        </Grid>
+      </controlsToolkit:BusyIndicator.Content>
+    </controlsToolkit:BusyIndicator>
+  </Grid>
+  
+</navigation:Page>

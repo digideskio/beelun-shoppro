@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="HappyDog.SL.Controls.Header"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Res="clr-namespace:HappyDog.SL.Resources" 
+    xmlns:t="clr-namespace:HappyDog.SL.Controls"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"     
+    Loaded="UserControl_Loaded"
+    Width="auto" Height="60">
+
+  <UserControl.Resources>
+    <Res:UIResources x:Name="UILoc" />
+  </UserControl.Resources>
+  <Grid>
+    <Border >
+      <!--<Border Background="#FFFF7F50" >-->
+      <Grid x:Name="LayoutRoot" Grid.Row="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="500" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="15" />
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="12" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+            <GradientStop Color="#A2ACC0" Offset="0"/>
+            <GradientStop Color="#758AAE" Offset="1"/>
+          </LinearGradientBrush>
+        </Grid.Background>
+
+        <!--Header-->
+        <Border x:Name="SmallHeader"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Gray" BorderThickness="0,0,0,1" >
+          <Grid Background="#E2E200A7" >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20"/>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="../Img/computer.png" Grid.Column="0" x:Name="smalllogo" Height="20" Width="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" FontWeight="Bold" FontFamily="Verdana " Text="{Binding SYSTEM_NAME, Source={StaticResource UILoc}}" Foreground="#FFFFFFFF"></TextBlock>
+          </Grid>
+        </Border>
+
+        <!--ToolBar-->
+        <StackPanel Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+          <Border BorderBrush="Black" Background="Transparent"  BorderThickness="0" Grid.Column="0" VerticalAlignment="Center" x:Name="toolbar" >
+            <t:Toolbar x:Name="ToolBar" VerticalAlignment="Center" VerticalContentAlignment="Center">
+              <t:Toolbar.ButtonGroup>
+                <t:ToolbarButton ImageSource="../Img/chart.png" Text="Dash board" Tag="WorkSpaceBody/DashBoard" MouseLeftButtonDown="ToolbarButton_MouseLeftButtonDown" ToolTipService.ToolTip="At a glance of the whole site" />
+                <t:ToolbarButton ImageSource="../Img/favorite.png" Text="Web page" Tag="WorkSpaceBody/Item" MouseLeftButtonDown="ToolbarButton_MouseLeftButtonDown" ToolTipService.ToolTip="Web page and image management"/>
+                <t:ToolbarButton ImageSource="../Img/user.png" Text="User" Tag="WorkSpaceBody/User" MouseLeftButtonDown="ToolbarButton_MouseLeftButtonDown" ToolTipService.ToolTip="User management"/>
+                <t:ToolbarButton ImageSource="../Img/order.png" Text="Order" Tag="WorkSpaceBody/Order" MouseLeftButtonDown="ToolbarButton_MouseLeftButtonDown" ToolTipService.ToolTip="Order management"/>
+                <t:ToolbarButton ImageSource="../Img/setting.png" Text="Settings"  Tag="WorkSpaceBody/Setting" MouseLeftButtonDown="ToolbarButton_MouseLeftButtonDown" ToolTipService.ToolTip="Site settings"/>
+              </t:Toolbar.ButtonGroup>
+            </t:Toolbar>
+          </Border>
+
+          <!--User Customer toolbar-->
+          <Border BorderBrush="Silver" Padding="5" Background="Transparent" Margin="60, 0, 100, 0" BorderThickness="2, 0, 0, 0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="userToolbar" >
+            <t:Toolbar VerticalAlignment="Center" VerticalContentAlignment="Center">
+              <t:Toolbar.ButtonGroup>
+                <t:ToolbarButton ImageSource="../Img/Logout.png" Text="{Binding HEADER_LOGOFF, Source={StaticResource UILoc}}" MouseLeftButtonDown="LogoutButton_Click"  />
+              </t:Toolbar.ButtonGroup>
+            </t:Toolbar>
+          </Border>
+        </StackPanel>
+
+        <!--User name-->
+        <Grid x:Name="GridUserName" HorizontalAlignment="Right" Grid.Column="0" Height="Auto" VerticalAlignment="Center">
+          <TextBlock x:Name="txtBlkUserName" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"></TextBlock>
+        </Grid>
+
+        <Rectangle x:Name="PowerByBg"  Height="15" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Fill="#E2E200A7" Stroke="{x:Null}"/>
+        <Canvas x:Name="Canvas1" Grid.Column="2" Grid.RowSpan="3">
+          <Path Stretch="Fill" Stroke="Transparent" StrokeThickness="0" Data="M0,0 L50,48 L50,60 L0,15" Fill="#E2E200A7"/>
+        </Canvas>
+
+        <Canvas x:Name="Canvas2" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2">
+          <Path Margin="0,0,0,0" Stretch="Fill" StrokeThickness="0" Data="M0,0 L150,0 L150,48 L50,48 L0,0" Fill="#FF0091F6"/>
+        </Canvas>
+
+        <!--Logo-->
+        <Grid x:Name="Logo"  HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3" Grid.RowSpan="4" Height="Auto" >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Canvas x:Name="LogoShowArea" Width="100" Height="50">
+          </Canvas>
+          <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Powered by " Foreground="Silver" FontFamily="Comic Sans MS " FontSize="9" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+            <HyperlinkButton Foreground="Silver" FontFamily="Comic Sans MS " FontSize="9" Content="Beelun" NavigateUri="http://www.beelun.com" TargetName="_blank" />
+          </StackPanel>
+        </Grid>
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

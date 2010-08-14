@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Category" table="shoppro_category" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        
+        <!-- Name will be used during category selection. So it should be unique -->
+        <property name="name" column="name" not-null="true" unique="true"/>
+        <property name="isShown" column="isShown" />
+        <property name="pageTitle" column="pageTitle" not-null="true"/>
+        <property name="keywords" column="keywords" length="4000"/>
+        <property name="description" column="description" length="4000"/>
+        <property name="metaTag" column="metaTag"/>
+        <property name="url" column="url" not-null="true" unique="true"/>
+        <property name="updated" not-null="false" >
+        	<column name="updated" default="now()" not-null="true" sql-type="timestamp" />        	
+        </property>
+        
+        <many-to-one name="template" column="shoppro_template" cascade="save-update" 
+      		foreign-key="FK_CATEGORY_TEMPLATE" lazy="false"/>
+        
+	    <set name="itemMap" cascade="all" lazy="false">
+	      <key column="shoppro_category" />
+	      <one-to-many class="com.beelun.shoppro.model.Category2ItemMap" />
+	    </set>        
+    </class>
+</hibernate-mapping>

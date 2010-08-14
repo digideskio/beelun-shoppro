@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.beelun.shoppro.model.Address" table="shoppro_address" lazy="false">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>        
+        <property name="name" column="name"/>
+        <property name="address" column="address" not-null="true"/>
+        <property name="zip" column="zip" not-null="true"/>
+        <property name="recipientName" column="recipientName"/>
+        <property name="phoneNumber" column="phoneNumber" not-null="true" />
+        <property name="mobileNumber" column="mobileNumber" />
+        <property name="firstName" column="firstName" />
+        <property name="lastName" column="lastName" />
+        <property name="address2" column="address2" />
+        <property name="city" column="city" />
+        <property name="state" column="state" type="com.beelun.shoppro.model.type.USStateHib" />
+    </class>
+</hibernate-mapping>
